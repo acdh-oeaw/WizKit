@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wizkit.pol">
+  <include file="build.worksdir.xml"/>
+  <property name="saxon" value="net.sf.saxon.TransformerFactoryImpl"/>
+  <property name="corr" value="${basedir}/200_xslt/corrections"/>
+  <property name="works" value="${worksDir}"/>
+  <property name="library" value="${basedir}/600_library"/>
+  <property name="tmp" value="${basedir}/tmp"/>
+  <property name="works_corr" value="${tmp}/works_corr"/>
+  <property name="library_1" value="${tmp}/library_1"/>
+  <property name="library_corr" value="${tmp}/library_corr"/>
+  <delete dir="${tmp}"/>
+  <xslt style="${corr}/add_IDs_POL.xsl"
+        basedir="${library}"
+        destdir="${library_1}">
+    <mapper type="identity"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${corr}/sort_POL.xsl"
+        basedir="${library_1}"
+        destdir="${library_corr}">
+    <mapper type="identity"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${corr}/check_POL.xsl"
+        basedir="${works}"
+        includes="*.xml"
+        destdir="${works_corr}">
+    <mapper type="identity"/>
+    <param name="worksDir" type="STRING" expression="file:///${worksDir}"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <!-- make sure the PIs at the top still have newlines between them -->
+  <replace summary="true" token="?&gt;&lt;" value="?&gt;&#xA;&lt;">
+    <fileset dir="${library_corr}"/>
+    <fileset dir="${works_corr}"/>
+  </replace>
+  <move file="${works_corr}" tofile="${works}"/>
+  <move file="${library_corr}" tofile="${library}"/>
+  <delete dir="${tmp}"/>
+</project>

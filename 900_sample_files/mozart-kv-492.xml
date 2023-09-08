@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: 800_frameworks/schema/mei-all_wizkit.rng is used for schema validation. -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Le nozze di Figaro – MEI-Werkdatei</title>
+                <respStmt>
+                    <persName role="cmp" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Ludwig van Beethoven</persName>
+                    <persName role="lyr" auth="GND" codedval="118607626" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Friedrich Schiller</persName>
+                    <persName role="edt" xml:id="PP" corresp="not_found">Peter Provaznik</persName>
+                    <persName role="edt" xml:id="PG" corresp="not_found">Paul Gulewycz</persName>
+                    <persName role="edt" xml:id="CG" corresp="not_found">Clemens Gubsch</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Digital catalogue raisonné</title>
+                <identifier type="file-collection">000004</identifier>
+            </seriesStmt>
+            <sourceDesc>
+                <source>
+                    <notesStmt/>
+                </source>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> </encodingDesc>
+        <workList>
+            <work xml:id="work_op125">
+                <identifier label="KV" type="work">492</identifier>
+                <title xml:lang="de" xml:id="Sinfonie">Le nozze di Figaro</title>
+                <contributor>
+                    <persName auth.uri="" codedval="-" auth="-" role="cmp">Mozart, Wolfgang Amadeus</persName>
+                    <persName codedval="" auth="" role="lbt">Da Ponte, Lorenzo</persName>
+                </contributor>
+                <tempo/>
+                <key/>
+                <creation>
+                    <date/>
+                </creation>
+                <history>
+                    <eventList type="composition">
+                        <event>
+                            <date/>
+                            <desc/>
+                        </event>
+                    </eventList>
+                    <eventList type="performances">
+                        <event>
+                            <date/>
+                            <geogName role="place" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <geogName role="venue" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <persName role="" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <corpName role="emb"/>
+                            <desc/>
+                        </event>
+                    </eventList>
+                </history>
+                <perfMedium analog="marc:048" auth.uri="https://www.loc.gov/marc/bibliographic/bd048.html">
+                    <castList>
+                        <castItem>
+                            <role>Graf Almaviva</role>
+                            <perfRes codedval="ve"/>
+                            <roleDesc/>
+                        </castItem>
+                        <castItem>
+                            <role>Gräfin Almaviva</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc>(Rosina)</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Susanna</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc>Mündel und Kammerzofe der Gräfin, Figaros Verlobte</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Figaro</role>
+                            <perfRes codedval="vf"/>
+                            <roleDesc>Kammerdiener</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Cherubino</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc>Page des Grafen</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Marcellina</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc>Beschließerin im gräflichen Schloss</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Bartolo</role>
+                            <perfRes codedval="vf"/>
+                            <roleDesc>Arzt aus Sevilla</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Basilio</role>
+                            <perfRes codedval="vd"/>
+                            <roleDesc>Musiklehrer der Gräfin</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Don Curzio</role>
+                            <perfRes codedval="vd"/>
+                            <roleDesc>Richter</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Barbarina</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc>Tochter Antonios</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Antonio</role>
+                            <perfRes codedval="vf"/>
+                            <roleDesc>Gärtner und Susannas Onkel, zugleich Vater Barbarinas</roleDesc>
+                        </castItem>
+                        <castItem>
+                            <role>Zwei Frauen</role>
+                            <perfRes codedval="va"/>
+                            <roleDesc/>
+                        </castItem>
+                        <castItem>
+                            <role>Bauern, Bäuerinnen, Bauernmädchen, Jäger, Leute vom Gericht, Diener</role>
+                            <perfRes codedval="zn"/>
+                            <roleDesc/>
+                        </castItem>
+                    </castList>
+                    <perfResList>
+                        <perfResList codedval="oa">
+                            <head>Orchestra</head>
+                            <perfRes codedval="we" count="1">Piccolo flute</perfRes>
+                            <perfRes codedval="wa" count="1">Flute</perfRes>
+                            <perfRes codedval="wb" count="1">Oboe</perfRes>
+                            <perfRes codedval="wc" count="1">Clarinet</perfRes>
+                            <perfRes codedval="wd" count="1">Bassoon</perfRes>
+                            <perfRes codedval="wz" count="1">Contrabassoon</perfRes>
+                            <perfRes codedval="ba" count="1">Horn</perfRes>
+                            <perfRes codedval="bb" count="1">Trumpet</perfRes>
+                            <perfRes codedval="bd" count="1">Trombone</perfRes>
+                            <perfRes codedval="pa" count="1">Timpani</perfRes>
+                            <perfRes codedval="pd" count="1">Bass drum</perfRes>
+                            <perfRes codedval="pz" count="1">Cymbals</perfRes>
+                            <perfRes codedval="pz" count="1">Triangle</perfRes>
+                            <perfRes codedval="sa" count="1">Violin I</perfRes>
+                            <perfRes codedval="sa" count="1">Violin II</perfRes>
+                            <perfRes codedval="sb" count="1">Viola</perfRes>
+                            <perfRes codedval="sc" count="1">Violoncello</perfRes>
+                            <perfRes codedval="sd" count="1">Double bass</perfRes>
+                        </perfResList>
+                    </perfResList>
+                </perfMedium>
+                <classification>
+                    <termList>
+                        <term/>
+                    </termList>
+                </classification>
+                <expressionList>
+                    <expression xml:id="expression_op125">
+                        <title/>
+                        <componentList>
+                            <expression xml:id="expression_125-1" n="1">
+                                <title type="main" xml:lang="de"/>
+                                <tempo/>
+                                <key mode="major"/>
+                                <meter/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem>
+                                            <role/>
+                                            <perfRes/>
+                                            <roleDesc/>
+                                        </castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList codedval="-">
+                                            <head/>
+                                            <perfRes codedval="-" count="1"/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                        </componentList>
+                    </expression>
+                </expressionList>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation singleton="true">
+                <titleStmt>
+                    <title/>
+                </titleStmt>
+                <physDesc>
+                    <physMedium/>
+                    <condition/>
+                    <titlePage label="single">
+                        <p/>
+                    </titlePage>
+                    <titlePage label="head">
+                        <p/>
+                    </titlePage>
+                    <handList>
+                        <hand medium="" type="-" xml:id="hand_a929b301">
+                            <persName auth="GND" auth.uri="http://d-nb.info/gnd" codedval="-" corresp="-"/>
+                        </hand>
+                    </handList>
+                    <supportDesc>
+                        <foliation/>
+                    </supportDesc>
+                    <addDesc>
+                        <annot label="autograph"/>
+                        <annot label="foreign"/>
+                        <annot label="dating"/>
+                    </addDesc>
+                </physDesc>
+                <physLoc>
+                    <repository>
+                        <corpName/>
+                        <geogName/>
+                        <identifier auth.uri="http://www.rism.info" auth="RISM"/>
+                        <ptr label="catalog" target="-"/>
+                        <ptr label="digital_image" target="-"/>
+                    </repository>
+                    <identifier label="shelf_mark"/>
+                </physLoc>
+                <creation>
+                    <date isodate="-"/>
+                </creation>
+            </manifestation>
+        </manifestationList>
+        <revisionDesc>
+            <change isodate="2023" resp="#CG">
+                <changeDesc>
+                    <p>Example created by CG</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+    <music>
+        <body>
+            <div/>
+        </body>
+    </music>
+</mei>

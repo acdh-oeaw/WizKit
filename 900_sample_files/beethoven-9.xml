@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: 800_frameworks/schema/mei-all_wizkit.rng is used for schema validation. -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>9. Sinfonie op. 125 – MEI-Werkdatei</title>
+                <respStmt>
+                    <persName role="cmp" codedval="118508288" auth="GND" auth.uri="https://d-nb.info/gnd/" corresp="P-000002">Beethoven, Ludwig van</persName>
+                    <persName role="lyr" auth="GND" codedval="118607626" auth.uri="https://d-nb.info/gnd/" corresp="P-000006">Schiller, Friedrich</persName>
+                    <persName role="edt" xml:id="PP" corresp="not_found">Peter Provaznik</persName>
+                    <persName role="edt" xml:id="PG" corresp="not_found">Paul Gulewycz</persName>
+                    <persName role="edt" xml:id="CG" corresp="not_found">Clemens Gubsch</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Digital catalogue raisonné</title>
+                <identifier type="file-collection">000001</identifier>
+            </seriesStmt>
+            <sourceDesc>
+                <source/>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> </encodingDesc>
+        <workList>
+            <work xml:id="work_op125">
+                <identifier label="opus" type="opus">125</identifier>
+                <identifier type="Normdata" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="300016433"/>
+                <identifier type="Normdata" auth.uri="http://viaf.org/viaf/" auth="VIAF" codedval="179828695"/>
+                <identifier type="Normdata" auth.uri="https://lccn.loc.gov/" auth="LCCN" codedval="n81018172"/>
+                <title xml:lang="de" xml:id="Sinfonie">9. Sinfonie in d-Moll, op. 125</title>
+                <contributor>
+                    <persName codedval="118508288" auth="GND" role="cmp" auth.uri="https://d-nb.info/gnd/" corresp="P-000002">Beethoven, Ludwig van</persName>
+                    <persName codedval="118607626" auth="GND" role="lyr" auth.uri="https://d-nb.info/gnd/" corresp="P-000006">Schiller, Friedrich</persName>
+                </contributor>
+                <tempo/>
+                <key pname="d" mode="minor" accid="n">D minor</key>
+                <creation>
+                    <date enddate="1824" startdate="1815-02-03">1815–1824</date>
+                    <annot><p/></annot>
+                </creation>
+                <history>
+                    <eventList type="composition">
+                        <event>
+                            <date>1815</date>
+                            <desc>Preparing of first sketches</desc>
+                        </event>
+                        <event>
+                            <date notbefore="1822-09">approx. Autumn 1822</date>
+                            <desc>Resumption of composition</desc>
+                        </event>
+                        <event>
+                            <date notafter="1824-02">February 1824</date>
+                            <desc>Completion of the symphony</desc>
+                        </event>
+                    </eventList>
+                    <eventList type="performances">
+                        <event>
+                            <date isodate="1824-05-07">07.05.1824</date>
+                            <geogName role="place" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="4066009-6">Wien</geogName>
+                            <geogName role="venue" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="110902-9">Theater am Kärntnertor</geogName>
+                            <persName role="cnd" auth="GND" codedval="139625143" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Umlauf, Michael</persName>
+                            <corpName role="emb" type="oa" corresp="O-000001">Orchester der Gesellschaft der Musikfreunde</corpName>
+                            <corpName role="emb" corresp="not_found" type="oa">Orchester des Kärntnertortheaters</corpName>
+                            <persName role="sng" auth="GND" codedval="118797999" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Sontag, Henriette</persName>
+                            <persName role="sng" auth="GND" codedval="11729392X" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Unger, Caroline</persName>
+                            <persName role="sng" auth="GND" codedval="116393661" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Haizinger, Anton</persName>
+                            <persName role="sng" auth="GND" codedval="139683658" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Seipelt, Joseph</persName>
+                            <desc>The first performance of the symphony took place in the second part of the program. Before that, the ouverture of <rend rend="italic">Die Weihe des Hauses, op. 124</rend> and excerpts from the <rend rend="italic">Missa solemnis, op. 123</rend> were performed.</desc>
+                        </event>
+                        <event>
+                            <date isodate="1846-04-05">05.04.1846</date>
+                            <geogName role="place" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="4012995-0">Dresden</geogName>
+                            <geogName role="venue" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="5166995-X">Königliches Hoftheater</geogName>
+                            <persName role="cnd" auth="GND" codedval="118594117" auth.uri="https://d-nb.info/gnd/" corresp="P-000004">Wagner, Richard</persName>
+                            <corpName role="emb" type="ca" corresp="not_found">Theaterchor</corpName>
+                            <corpName role="emb" type="ca" corresp="not_found">Dreissigsche Singakademie</corpName>
+                            <corpName role="emb" type="cd" corresp="not_found">Knaben des Kreuzchores</corpName>
+                            <corpName role="emb" type="ca" corresp="not_found">Chor des Dresdner Lehrer-Seminars</corpName>
+                            <desc>Wagner’s first performance of the Ninth is described in the literature as a milestone in the reception history of the work.</desc>
+                        </event>
+
+                    </eventList>
+                </history>
+                <perfMedium analog="marc:048" auth.uri="https://www.loc.gov/marc/bibliographic/bd048.html">
+                    <perfResList>
+                        <perfResList codedval="oa" xml:id="Orchester_op125">
+                            <head>Orchestra</head>
+                            <perfRes codedval="we" count="1">Piccolo flute</perfRes>
+                            <perfRes codedval="wa" count="2">Flute</perfRes>
+                            <perfRes codedval="wb" count="2">Oboe</perfRes>
+                            <perfRes codedval="wc" count="2">Clarinet</perfRes>
+                            <perfRes codedval="wd" count="2">Bassoon</perfRes>
+                            <perfRes codedval="wz" count="1">Contrabassoon</perfRes>
+                            <perfRes codedval="ba" count="4">Horn</perfRes>
+                            <perfRes codedval="bb" count="2">Trumpet</perfRes>
+                            <perfRes codedval="bd" count="3">Trombone</perfRes>
+                            <perfRes codedval="pa" count="1">Timpani</perfRes>
+                            <perfRes codedval="pd" count="1">Bass drum</perfRes>
+                            <perfRes codedval="pz" count="1">Cymbals</perfRes>
+                            <perfRes codedval="pz" count="1">Triangle</perfRes>
+                            <perfRes codedval="sa" count="1">Violin I</perfRes>
+                            <perfRes codedval="sa" count="1">Violin II</perfRes>
+                            <perfRes codedval="sb" count="1">Viola</perfRes>
+                            <perfRes codedval="sc" count="1">Violoncello</perfRes>
+                            <perfRes codedval="sd" count="1">Double bass</perfRes>
+                        </perfResList>
+                        <perfResList codedval="ca" xml:id="Chor_op125">
+                            <head>Choir</head>
+                            <perfRes codedval="va" solo="false">Soprano</perfRes>
+                            <perfRes codedval="vc" solo="false">Alto</perfRes>
+                            <perfRes codedval="vd" solo="false">Tenor</perfRes>
+                            <perfRes codedval="vf" solo="false">Bass</perfRes>
+                        </perfResList>
+                        <perfResList xml:id="Solisten_op125" codedval="cn">
+                            <head>Soloists</head>
+                            <perfRes codedval="va" count="1" solo="true">Soprano</perfRes>
+                            <perfRes codedval="vc" count="1" solo="true">Alto</perfRes>
+                            <perfRes codedval="vd" count="1" solo="true">Tenor</perfRes>
+                            <perfRes codedval="vf" count="1" solo="true">Bass</perfRes>
+                        </perfResList>
+                    </perfResList>
+                </perfMedium>
+                <classification>
+                    <termList>
+                        <term label="an" type="1">Instrumental music</term>
+                        <term label="an" type="2">Orchestra works</term>
+                        <term label="sy" type="3">Symphony</term>
+                    </termList>
+                </classification>
+                <expressionList>
+                    <expression xml:id="expression_op125">
+                        <title/>
+                        <componentList>
+                            <expression xml:id="expression_125-1" n="1">
+                                <title type="main" xml:lang="de">1. Satz – Allegro ma non troppo, un poco maestoso</title>
+                                <tempo>Allegro ma non troppo, un poco maestoso</tempo>
+                                <key mode="minor" pname="d" accid="n">d-Moll</key>
+                                <meter count="2" unit="4"/>
+                                <incip>
+                                    <score>
+               <scoreDef>
+                  <staffGrp>
+                       <staffDef n="2" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                          <label>Flauto 1/2</label>
+                          <labelAbbr>Fl. 1</labelAbbr>
+                          <clef shape="G" line="2"/>
+                       </staffDef>
+                       <staffDef n="4" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                          <label>Oboe 1/2</label>
+                          <labelAbbr>Ob. 1</labelAbbr>
+                          <clef shape="G" line="2"/>
+                       </staffDef>
+                      <staffDef n="7" lines="5" key.sig="1s" meter.count="2" meter.unit="4" trans.diat="-1" trans.semi="-2">
+                         <label>Clarinetto 1/2 in B</label>
+                         <labelAbbr>Cl. 1 in B</labelAbbr>
+                         <clef shape="G" line="2"/>
+                      </staffDef>
+                       <staffDef n="12" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                          <label>Fagotto 1/2</label>
+                          <labelAbbr>Fag. 1</labelAbbr>
+                          <clef shape="F" line="4"/>
+                       </staffDef>
+                        <staffGrp bar.thru="true" symbol="bracket">
+                          <staffDef n="15" lines="5" key.sig="3f" meter.count="2" meter.unit="4" trans.diat="-6" trans.semi="-10">
+                             <label>Corno 1/2 in D</label>
+                             <labelAbbr>Cor. 1 in D</labelAbbr>
+                             <clef shape="G" line="2"/>
+                          </staffDef>
+                          <staffDef n="21" lines="5" key.sig="1s" meter.count="2" meter.unit="4" trans.diat="-8" trans.semi="-14">
+                             <label>Corno 3/4 in B basso</label>
+                             <labelAbbr>Cor. 3 in B ba.</labelAbbr>
+                             <clef shape="G" line="2"/>
+                          </staffDef>
+                          <staffDef n="25" lines="5" key.sig="3f" meter.count="2" meter.unit="4" trans.diat="1" trans.semi="2">
+                             <label>Tromba 1/2 in D</label>
+                             <labelAbbr>Tr. 1 in D</labelAbbr>
+                             <clef shape="G" line="2"/>
+                          </staffDef>
+                        </staffGrp>
+                     <staffGrp bar.thru="true" symbol="bracket">
+                        <staffDef n="32" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                           <label>Timpani in D, A</label>
+                           <labelAbbr>Timp. in D, A</labelAbbr>
+                           <clef shape="F" line="4"/>
+                        </staffDef>
+                     </staffGrp>
+                     <staffGrp bar.thru="true" symbol="bracket">
+                        <staffDef n="48" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                           <label>Violini I</label>
+                           <labelAbbr>Vl. I</labelAbbr>
+                           <clef shape="G" line="2"/>
+                        </staffDef>
+                        <staffDef n="49" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                           <label>Violini II</label>
+                           <labelAbbr>Vl. II</labelAbbr>
+                           <clef shape="G" line="2"/>
+                        </staffDef>
+                        <staffGrp bar.thru="true" symbol="bracketsq">
+                           <label>Viole</label>
+                           <labelAbbr>Vle.</labelAbbr>
+                           <staffDef n="50" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                              <clef shape="C" line="3"/>
+                           </staffDef>
+                        </staffGrp>
+                        <staffDef n="52" lines="5" key.sig="1f" meter.count="2" meter.unit="4">
+                           <label>Violoncelli</label>
+                           <labelAbbr>Vc.</labelAbbr>
+                           <clef shape="F" line="4"/>
+                        </staffDef>
+                        <staffDef n="53" lines="5" key.sig="1f" meter.count="2" meter.unit="4" trans.diat="-7" trans.semi="-12">
+                           <label>Contrabbassi</label>
+                           <labelAbbr>Cb.</labelAbbr>
+                           <clef shape="F" line="4"/>
+                        </staffDef>
+                     </staffGrp>
+                  </staffGrp>
+               </scoreDef>
+               <section xml:id="s1">
+                  <pb/>
+                  <measure xml:id="m1g8l7b3" n="1">
+                     <staff xml:id="m1s2" n="2">
+                        <layer xml:id="m1s2l1" n="1">
+                            <note xml:id="n1mgebmap" dur="2" pname="c" oct="5" stem.dir="up"/>
+                        </layer>
+                        <layer xml:id="m1s2l2" n="2">
+                           <note xml:id="n1mgebmp" dur="2" pname="c" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s4" n="4">
+                        <layer xml:id="m1s4l1" n="1">
+                            <note xml:id="n199uya4k" dur="2" pname="c" oct="5" stem.dir="up"/>
+                        </layer>
+                        <layer xml:id="m1s4l2" n="2">
+                           <note xml:id="n199uy4k" dur="2" pname="c" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s7" n="7">
+                        <layer xml:id="m1s7l1" n="1">
+                            <note xml:id="n1n4xbwy" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                        <layer xml:id="m1s7l2" n="2">
+                           <note xml:id="nonaza7" dur="2" pname="d" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s12" n="12">
+                        <layer xml:id="m1s12l1" n="1">
+                            <note xml:id="n1lqkvnz" dur="2" pname="c" oct="3" stem.dir="up"/>
+                        </layer>
+                        <layer xml:id="m1s12l2" n="2">
+                           <note xml:id="nsn4dww" dur="2" pname="c" oct="3"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s15" n="15">
+                        <layer xml:id="m1s15l1" n="1">
+                           <note xml:id="n1tkr1f" dur="2" pname="d" oct="5" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m1s15lx1" n="2">
+                             <note xml:id="n1tkr1xf" dur="2" pname="d" oct="5" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m1s21" n="21">
+                        <layer xml:id="m1s21l1" n="1">
+                            <note xml:id="nxfal02" dur="2" pname="g" oct="4" stem.dir="down"/>
+                        </layer>
+                        <layer xml:id="m1s21l2" n="2">
+                           <note xml:id="n1jewpn8" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                     </staff>
+                      <staff xml:id="m1s25" n="25">
+                          <layer xml:id="m1s25l1" n="1">
+                              <note xml:id="n5sig9r" dur="2" pname="b" oct="4" stem.dir="up">
+                                  <accid accid.ges="f"/>
+                              </note>
+                          </layer>
+                          <layer xml:id="m1s25l2" n="2">
+                              <note xml:id="n1t0z2of" dur="2" pname="b" oct="4">
+                                  <accid accid.ges="f"/>
+                              </note>
+                          </layer>
+                      </staff>
+                     <staff xml:id="m1s32" n="32">
+                        <layer xml:id="m1s32l1" n="1">
+                           <mRest xml:id="m3y4ydc"/>
+                        </layer>
+                        <layer xml:id="m1s32l2" n="2">
+                           <note xml:id="nyjr8dl" dur="2" pname="c" oct="3"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s48" n="48">
+                        <layer xml:id="m1s48l1" n="1">
+                           <mRest xml:id="maf7hxj"/>
+                        </layer>
+                        <layer xml:id="m1s48l2" n="2">
+                           <note xml:id="n1kwaqmw" dur="2" pname="c" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s49" n="49">
+                        <layer xml:id="m1s49l1" n="1">
+                           <beam>
+                              <tuplet xml:id="tdoe38j" num="6" numbase="4">
+                                 <chord xml:id="c14au4a7" dur="16">
+                                    <note xml:id="ndolsne" pname="a" oct="3"/>
+                                    <note xml:id="n2gfso8" pname="e" oct="4"/>
+                                 </chord>
+                                 <chord xml:id="c1tmt9z" dur="16">
+                                    <note xml:id="nr92nx" pname="a" oct="3"/>
+                                    <note xml:id="nbjdkzx" pname="e" oct="4"/>
+                                 </chord>
+                                 <chord xml:id="c19dd4jj" dur="16">
+                                    <note xml:id="n112iks7" pname="a" oct="3"/>
+                                    <note xml:id="n1xoj6ct" pname="e" oct="4"/>
+                                 </chord>
+                                 <chord xml:id="cqgbmqt" dur="16">
+                                    <note xml:id="n1cdytp1" pname="a" oct="3"/>
+                                    <note xml:id="nn3kbx2" pname="e" oct="4"/>
+                                 </chord>
+                                 <chord xml:id="cybbjbp" dur="16">
+                                    <note xml:id="n157hy8l" pname="a" oct="3"/>
+                                    <note xml:id="ni92ujd" pname="e" oct="4"/>
+                                 </chord>
+                                 <chord xml:id="c1vntyo" dur="16">
+                                    <note xml:id="nxdk0pg" pname="a" oct="3"/>
+                                    <note xml:id="n1dlw2hy" pname="e" oct="4"/>
+                                 </chord>
+                              </tuplet>
+                           </beam>
+                           <tuplet xml:id="t17vfk3f" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1y4qnf5" dots="1" dur="4">
+                                 <note xml:id="n1oulwyz" pname="a" oct="3"/>
+                                 <note xml:id="n1tmwm2k" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s50" n="50">
+                        <layer xml:id="m1s50l1" n="1">
+                           <mRest xml:id="m181i5qm"/>
+                        </layer>
+                        <layer xml:id="m1s50l2" n="2">
+                           <note xml:id="n1bx9w0q" dur="2" pname="c" oct="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s52" n="52">
+                        <layer xml:id="m1s52l1" n="1">
+                           <beam>
+                              <tuplet xml:id="txj3kzp" num="6" numbase="4">
+                                 <chord xml:id="c1809gr5" dur="16">
+                                    <note xml:id="n18ostqr" pname="a" oct="2"/>
+                                    <note xml:id="nehhegh" pname="e" oct="3"/>
+                                 </chord>
+                                 <chord xml:id="c13nybfj" dur="16">
+                                    <note xml:id="nkqndn8" pname="a" oct="2"/>
+                                    <note xml:id="n100una3" pname="e" oct="3"/>
+                                 </chord>
+                                 <chord xml:id="cziax1s" dur="16">
+                                    <note xml:id="n1w07lge" pname="a" oct="2"/>
+                                    <note xml:id="n1h4dbn1" pname="e" oct="3"/>
+                                 </chord>
+                                 <chord xml:id="c1hqjted" dur="16">
+                                    <note xml:id="neyp7zp" pname="a" oct="2"/>
+                                    <note xml:id="n197f4xt" pname="e" oct="3"/>
+                                 </chord>
+                                 <chord xml:id="c1lxd72j" dur="16">
+                                    <note xml:id="n7tzc0i" pname="a" oct="2"/>
+                                    <note xml:id="nviok7s" pname="e" oct="3"/>
+                                 </chord>
+                                 <chord xml:id="c11dth7o" dur="16">
+                                    <note xml:id="n1pd4984" pname="a" oct="2"/>
+                                    <note xml:id="n1ot53gj" pname="e" oct="3"/>
+                                 </chord>
+                              </tuplet>
+                           </beam>
+                           <tuplet xml:id="tdyzczs" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1vut0uz" dots="1" dur="4">
+                                 <note xml:id="nz5isis" pname="a" oct="2"/>
+                                 <note xml:id="nd7ypyz" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m1s53" n="53">
+                        <layer xml:id="m1s53l1" n="1">
+                           <mRest xml:id="m1u8uxhq"/>
+                        </layer>
+                        <layer xml:id="m1s53l2" n="2">
+                           <note xml:id="ne8xla9" dur="2" pname="c" oct="3"/>
+                        </layer>
+                     </staff>
+                     <tempo xml:id="t1bvthmr" type="mscore-infer-from-text" startid="#m161uz7n">Allegro ma non troppo, un poco maestoso <rend glyph.auth="smufl"></rend> = 88</tempo>
+                     <dynam xml:id="d1c3j6fi" label="pp" startid="#n1tkr1f">pp</dynam>
+                     <tie xml:id="t1f32zj8" startid="#n1tkr1f" endid="#n1glog8d"/>
+                     <dynam xml:id="d1htnywq" label="pp" startid="#nxfal02">pp</dynam>
+                     <tie xml:id="t14i8nj9" startid="#nxfal02" endid="#n4h3knd"/>
+                     <dir xml:id="d1ir0ygd" type="mscore-playtech-annotation" startid="#maf7hxj">arco</dir>
+                     <dynam xml:id="d1ubyaqp" label="pp" startid="#c14au4a7">pp</dynam>
+                     <dir xml:id="d1d6jhk8" type="mscore-playtech-annotation" startid="#c14au4a7">arco</dir>
+                     <dir xml:id="d1b6pm0n" type="mscore-playtech-annotation" startid="#m181i5qm">arco</dir>
+                     <dynam xml:id="dju5kkf" label="pp" startid="#c1809gr5">pp</dynam>
+                     <dir xml:id="d6i63yx" type="mscore-playtech-annotation" startid="#c1809gr5">arco</dir>
+                     <dir xml:id="d1w9zyks" type="mscore-playtech-annotation" startid="#m1u8uxhq">arco</dir>
+                  </measure>
+                  <measure xml:id="mb3ssj" n="2">
+                     <staff xml:id="m2s2" n="2">
+                        <layer xml:id="m2s2l1" n="1">
+                           <mRest xml:id="m1kazi91"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s4" n="4">
+                        <layer xml:id="m2s4l1" n="1">
+                           <mRest xml:id="mt9b2w9"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s7" n="7">
+                        <layer xml:id="m2s7l1" n="1">
+                           <mRest xml:id="mic9pnt"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s12" n="12">
+                        <layer xml:id="m2s12l1" n="1">
+                           <mRest xml:id="m28sam7"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s15" n="15">
+                        <layer xml:id="m2s15l1" n="1">
+                           <note xml:id="n1glog8d" dur="2" pname="d" oct="5" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m2as15l1" n="2">
+                             <note xml:id="n1galog8d" dur="2" pname="d" oct="5" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m2s21" n="21">
+                        <layer xml:id="m2s21l1" n="1">
+                           <mRest xml:id="mdkbed4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s25" n="25">
+                        <layer xml:id="m2s25l1" n="1">
+                           <mRest xml:id="m1nye8u7"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s32" n="32">
+                        <layer xml:id="m2s32l1" n="1">
+                           <mRest xml:id="me5mq7x"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s48" n="48">
+                        <layer xml:id="m2s48l1" n="1">
+                           <rest xml:id="r5ut0oo" dur="4"/>
+                           <rest xml:id="r18zwkvt" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="rpko6x8" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="ndnknrq" dur="32" pname="e" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s49" n="49">
+                        <layer xml:id="m2s49l1" n="1">
+                           <tuplet xml:id="t16tl5fx" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cqsb5sl" dots="1" dur="4">
+                                 <note xml:id="npbc5fh" pname="a" oct="3"/>
+                                 <note xml:id="n1ya4jxx" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tzdxavt" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cwluurm" dots="1" dur="4">
+                                 <note xml:id="n1azfouj" pname="a" oct="3"/>
+                                 <note xml:id="n14d2eu1" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s50" n="50">
+                        <layer xml:id="m2s50l1" n="1">
+                           <mRest xml:id="mo5i5qr"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s52" n="52">
+                        <layer xml:id="m2s52l1" n="1">
+                           <tuplet xml:id="t1tuwb23" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c192iqz1" dots="1" dur="4">
+                                 <note xml:id="no2xk19" pname="a" oct="2"/>
+                                 <note xml:id="nr6vfrg" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t1tbs5f0" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1ipd2f6" dots="1" dur="4">
+                                 <note xml:id="n1pxqdgb" pname="a" oct="2"/>
+                                 <note xml:id="neo4dvu" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m2s53" n="53">
+                        <layer xml:id="m2s53l1" n="1">
+                           <mRest xml:id="m1dwvn03"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="tzk14hy" startid="#n1glog8d" endid="#n1rdtybm"/>
+                     <tie xml:id="t1dw33np" startid="#n4h3knd" endid="#nogatik"/>
+                     <dynam xml:id="dug4500" label="pp" startid="#ndnknrq">pp sotto voce</dynam>
+                  </measure>
+                  <measure xml:id="mnh4jen" n="3">
+                     <staff xml:id="m3s2" n="2">
+                        <layer xml:id="m3s2l1" n="1">
+                           <mRest xml:id="mcisw74"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s4" n="4">
+                        <layer xml:id="m3s4l1" n="1">
+                           <mRest xml:id="m75g51k"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s7" n="7">
+                        <layer xml:id="m3s7l1" n="1">
+                           <mRest xml:id="m1k4m4a3"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s12" n="12">
+                        <layer xml:id="m3s12l1" n="1">
+                           <mRest xml:id="m1fsk4u7"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s15" n="15">
+                        <layer xml:id="m3s15l1" n="1">
+                           <note xml:id="n1rdtybm" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m3s15l1s" n="2">
+                             <note xml:id="n1rdtsybm" dur="2" pname="d" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m3s21" n="21">
+                        <layer xml:id="m3s21l1" n="1">
+                           <mRest xml:id="m12jp9y3"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s25" n="25">
+                        <layer xml:id="m3s25l1" n="1">
+                           <mRest xml:id="mpdom5q"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s32" n="32">
+                        <layer xml:id="m3s32l1" n="1">
+                           <mRest xml:id="mchct64"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s48" n="48">
+                        <layer xml:id="m3s48l1" n="1">
+                           <note xml:id="n2j4ks9" dur="4" pname="a" oct="4"/>
+                           <rest xml:id="r1wwpmrk" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="rispx8o" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="n189wug2" dur="32" pname="a" oct="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s49" n="49">
+                        <layer xml:id="m3s49l1" n="1">
+                           <tuplet xml:id="twoxvuz" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c15ljiva" dots="1" dur="4">
+                                 <note xml:id="nck90aa" pname="a" oct="3"/>
+                                 <note xml:id="n1j3tkpc" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t70lfvg" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cd4b3y2" dots="1" dur="4">
+                                 <note xml:id="n16w75si" pname="a" oct="3"/>
+                                 <note xml:id="nvj6m9k" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s50" n="50">
+                        <layer xml:id="m3s50l1" n="1">
+                           <mRest xml:id="m74ur8p"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s52" n="52">
+                        <layer xml:id="m3s52l1" n="1">
+                           <tuplet xml:id="t1qh0tr0" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c3blz8t" dots="1" dur="4">
+                                 <note xml:id="nq598uv" pname="a" oct="2"/>
+                                 <note xml:id="nzdh9gm" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t1vham5p" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1ouzb6p" dots="1" dur="4">
+                                 <note xml:id="nhmr4ve" pname="a" oct="2"/>
+                                 <note xml:id="nk4qn9u" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m3s53" n="53">
+                        <layer xml:id="m3s53l1" n="1">
+                           <mRest xml:id="m1yy3pek"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="t12seutx" startid="#n1rdtybm" endid="#n128amf4"/>
+                     <tie xml:id="t1mirm75" startid="#nogatik" endid="#n10ocncq"/>
+                  </measure>
+                  <measure xml:id="mh1iq7j" n="4">
+                     <staff xml:id="m4s2" n="2">
+                        <layer xml:id="m4s2l1" n="1">
+                           <mRest xml:id="mv0jrot"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s4" n="4">
+                        <layer xml:id="m4s4l1" n="1">
+                           <mRest xml:id="mwr12qk"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s7" n="7">
+                        <layer xml:id="m4s7l1" n="1">
+                           <mRest xml:id="m1x0n83z"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s12" n="12">
+                        <layer xml:id="m4s12l1" n="1">
+                           <mRest xml:id="m1dfz1nx"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s15" n="15">
+                        <layer xml:id="m4s15ql1" n="1">
+                           <note xml:id="n128amf4" dur="2" pname="d" oct="5" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m4s15ql1q" n="2">
+                             <note xml:id="n128aqmf4" dur="2" pname="d" oct="5" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m4s21" n="21">
+                        <layer xml:id="m4s21l1" n="1">
+                           <mRest xml:id="mnk8vy1"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s25" n="25">
+                        <layer xml:id="m4s25l1" n="1">
+                           <mRest xml:id="m7q61y9"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s32" n="32">
+                        <layer xml:id="m4s32l1" n="1">
+                           <mRest xml:id="mtjozj8"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s48" n="48">
+                        <layer xml:id="m4s48l1" n="1">
+                           <note xml:id="n13itvqq" dur="4" pname="e" oct="4"/>
+                           <rest xml:id="reoi595" dur="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s49" n="49">
+                        <layer xml:id="m4s49l1" n="1">
+                           <tuplet xml:id="thrp5zw" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cz5ic5b" dots="1" dur="4">
+                                 <note xml:id="n1f6ex0n" pname="a" oct="3"/>
+                                 <note xml:id="n11q90j0" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="txjbptb" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1e492z6" dots="1" dur="4">
+                                 <note xml:id="n1k1vezz" pname="a" oct="3"/>
+                                 <note xml:id="nbfj7rb" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s50" n="50">
+                        <layer xml:id="m4s50l1" n="1">
+                           <rest xml:id="re5yg1a" dur="4"/>
+                           <rest xml:id="r1477lhz" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="rmzl1kn" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="nxqmp84" dur="32" pname="e" oct="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s52" n="52">
+                        <layer xml:id="m4s52l1" n="1">
+                           <tuplet xml:id="t195spox" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c19fuc5t" dots="1" dur="4">
+                                 <note xml:id="n1h22rne" pname="a" oct="2"/>
+                                 <note xml:id="n15j2pix" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t2hqxtc" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="ci7ubl2" dots="1" dur="4">
+                                 <note xml:id="nwqpf9s" pname="a" oct="2"/>
+                                 <note xml:id="nboolky" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m4s53" n="53">
+                        <layer xml:id="m4s53l1" n="1">
+                           <rest xml:id="rs13yvz" dur="4"/>
+                           <rest xml:id="rltmi2o" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="rqydjw" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="n16iywkd" dur="32" pname="e" oct="3"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="t2s3xph" startid="#n128amf4" endid="#n1v9l5c8"/>
+                     <tie xml:id="t1a0usc8" startid="#n10ocncq" endid="#nm2xc5l"/>
+                     <dynam xml:id="d1rmsjht" label="pp" startid="#nxqmp84">pp</dynam>
+                     <dynam xml:id="dzho0i9" label="pp" startid="#n16iywkd">pp</dynam>
+                  </measure>
+                  <measure xml:id="m1chxzyi" n="5">
+                     <staff xml:id="m5s2" n="2">
+                        <layer xml:id="m5s2l1" n="1">
+                           <mRest xml:id="m2ueffh"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s4" n="4">
+                        <layer xml:id="m5s4l1" n="1">
+                           <mRest xml:id="m1i76b9d"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s7" n="7">
+                        <layer xml:id="m5s7l1" n="1">
+                           <note xml:id="nqz8gpy" dur="2" pname="b" oct="4" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m5s7l12" n="2">
+                             <note xml:id="nqz8gp2y" dur="2" pname="b" oct="4" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m5s12" n="12">
+                        <layer xml:id="m5s12l1" n="1">
+                           <mRest xml:id="mbt6aqm"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s15" n="15">
+                        <layer xml:id="m5s15l1" n="1">
+                           <note xml:id="n1v9l5c8" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m5s15l1q" n="2">
+                             <note xml:id="n1v9l5qc8" dur="2" pname="d" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m5s21" n="21">
+                        <layer xml:id="m5s21l1" n="1">
+                           <mRest xml:id="m1eoilmy"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s25" n="25">
+                        <layer xml:id="m5s25l1" n="1">
+                           <mRest xml:id="mnywpmp"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s32" n="32">
+                        <layer xml:id="m5s32l1" n="1">
+                           <mRest xml:id="mwdk6do"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s48" n="48">
+                        <layer xml:id="m5s48l1" n="1">
+                           <mRest xml:id="m10grxo"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s49" n="49">
+                        <layer xml:id="m5s49l1" n="1">
+                           <tuplet xml:id="t177rt99" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1iigvp8" dots="1" dur="4">
+                                 <note xml:id="n1wmudl6" pname="a" oct="3"/>
+                                 <note xml:id="n69idm2" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tvqyjze" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c209p84" dots="1" dur="4">
+                                 <note xml:id="n4n1t7i" pname="a" oct="3"/>
+                                 <note xml:id="nlqrjng" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s50" n="50">
+                        <layer xml:id="m5s50l1" n="1">
+                           <note xml:id="n3c3o2n" dur="4" pname="a" oct="3"/>
+                           <rest xml:id="rcjbvmg" dur="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s52" n="52">
+                        <layer xml:id="m5s52l1" n="1">
+                           <tuplet xml:id="t1by7s7d" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cglhgzj" dots="1" dur="4">
+                                 <note xml:id="nu70vss" pname="a" oct="2"/>
+                                 <note xml:id="no1pnp7" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t5m8152" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c11nnmkl" dots="1" dur="4">
+                                 <note xml:id="n1o488gw" pname="a" oct="2"/>
+                                 <note xml:id="n1h8fdxi" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m5s53" n="53">
+                        <layer xml:id="m5s53l1" n="1">
+                           <note xml:id="n5a1nrt" dur="4" pname="a" oct="2"/>
+                           <rest xml:id="rglj40i" dur="4"/>
+                        </layer>
+                     </staff>
+                     <dynam xml:id="dm0v8n6" label="pp" startid="#nqz8gpy">pp</dynam>
+                     <tie xml:id="t1je3mg7" startid="#nqz8gpy" endid="#nza7ssh"/>
+                     <tie xml:id="t1told5q" startid="#n1v9l5c8" endid="#n1uwemmg"/>
+                     <tie xml:id="trv66id" startid="#nm2xc5l" endid="#n1p7wyts"/>
+                     <dynam xml:id="d12f82ar" label="pp" startid="#c1iigvp8">sempre pp</dynam>
+                     <dynam xml:id="d1rumokh" label="pp" startid="#cglhgzj">sempre pp</dynam>
+                  </measure>
+                  <measure xml:id="m14k35my" n="6">
+                     <staff xml:id="m6s2" n="2">
+                        <layer xml:id="m6s2l1" n="1">
+                           <mRest xml:id="mh4e6l8"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s4" n="4">
+                        <layer xml:id="m6s4l1" n="1">
+                           <mRest xml:id="m9zwvda"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s7" n="7">
+                        <layer xml:id="m6s7l1" n="1">
+                           <note xml:id="nza7ssh" dur="2" pname="b" oct="4" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m6s7l1r" n="2">
+                             <note xml:id="nza7sshr" dur="2" pname="b" oct="4" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m6s12" n="12">
+                        <layer xml:id="m6s12l1" n="1">
+                           <mRest xml:id="mj0y7kf"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s15" n="15">
+                        <layer xml:id="m6s15l1" n="1">
+                           <note xml:id="n1uwemmg" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m6s15l1q" n="2">
+                             <note xml:id="n1uwemmwg" dur="2" pname="d" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m6s21" n="21">
+                        <layer xml:id="m6s21l1" n="1">
+                           <mRest xml:id="m1fde9go"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s25" n="25">
+                        <layer xml:id="m6s25l1" n="1">
+                           <mRest xml:id="m1byg2eq"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s32" n="32">
+                        <layer xml:id="m6s32l1" n="1">
+                           <mRest xml:id="m108te97"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s48" n="48">
+                        <layer xml:id="m6s48l1" n="1">
+                           <rest xml:id="r5z4uh" dur="4"/>
+                           <rest xml:id="r136alvr" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="rfdy2pu" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="nxj4z16" dur="32" pname="a" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s49" n="49">
+                        <layer xml:id="m6s49l1" n="1">
+                           <tuplet xml:id="t17v8idz" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cgdwnxw" dots="1" dur="4">
+                                 <note xml:id="n18ib6kb" pname="a" oct="3"/>
+                                 <note xml:id="n1hob3qv" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tlqjwa8" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="ctq1qc8" dots="1" dur="4">
+                                 <note xml:id="n1xmj5bp" pname="a" oct="3"/>
+                                 <note xml:id="nhxay4m" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s50" n="50">
+                        <layer xml:id="m6s50l1" n="1">
+                           <mRest xml:id="m1k7ypkb"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s52" n="52">
+                        <layer xml:id="m6s52l1" n="1">
+                           <tuplet xml:id="t1z0d18d" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c17blg9g" dots="1" dur="4">
+                                 <note xml:id="nsj0ken" pname="a" oct="2"/>
+                                 <note xml:id="n5dsqqf" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tbmhl04" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c105m8f" dots="1" dur="4">
+                                 <note xml:id="n4whg88" pname="a" oct="2"/>
+                                 <note xml:id="n1939zv2" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m6s53" n="53">
+                        <layer xml:id="m6s53l1" n="1">
+                           <mRest xml:id="mfraaxa"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="tgvqo6c" startid="#nza7ssh" endid="#n17koca8"/>
+                     <tie xml:id="tlswdch" startid="#n1uwemmg" endid="#n1grit3q"/>
+                     <tie xml:id="t1r3c6i9" startid="#n1p7wyts" endid="#n1v5ueom"/>
+                  </measure>
+                  <measure xml:id="m1k8im6i" n="7">
+                     <staff xml:id="m7s2" n="2">
+                        <layer xml:id="m7s2l1" n="1">
+                           <mRest xml:id="mfdfuy5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s4" n="4">
+                        <layer xml:id="m7s4l1" n="1">
+                           <mRest xml:id="mp7o5tx"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s7" n="7">
+                        <layer xml:id="m7s7l1" n="1">
+                           <note xml:id="n17koca8" dur="2" pname="b" oct="4" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m7s7l11" n="2">
+                             <note xml:id="n17koc1a8" dur="2" pname="b" oct="4" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m7s12" n="12">
+                        <layer xml:id="m7s12l1" n="1">
+                           <mRest xml:id="m12y0ifm"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s15" n="15">
+                        <layer xml:id="m7s15l1" n="1">
+                           <note xml:id="n1grit3q" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m7s15l11" n="2">
+                             <note xml:id="n1gri1t3q" dur="2" pname="d" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m7s21" n="21">
+                        <layer xml:id="m7s21l1" n="1">
+                           <mRest xml:id="mrzs5xa"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s25" n="25">
+                        <layer xml:id="m7s25l1" n="1">
+                           <mRest xml:id="mqms8tt"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s32" n="32">
+                        <layer xml:id="m7s32l1" n="1">
+                           <mRest xml:id="mfdutvl"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s48" n="48">
+                        <layer xml:id="m7s48l1" n="1">
+                           <note xml:id="n1nkb1kx" dur="4" pname="e" oct="5"/>
+                           <rest xml:id="r1uc1yzt" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="r17jdnh4" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="n1cea2xo" dur="32" pname="e" oct="5"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s49" n="49">
+                        <layer xml:id="m7s49l1" n="1">
+                           <tuplet xml:id="tjbk5gx" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cgt42q3" dots="1" dur="4">
+                                 <note xml:id="n1gybxns" pname="a" oct="3"/>
+                                 <note xml:id="ndo1nx8" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tuxkljn" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="cluorfa" dots="1" dur="4">
+                                 <note xml:id="ng44i5" pname="a" oct="3"/>
+                                 <note xml:id="nolcr2z" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s50" n="50">
+                        <layer xml:id="m7s50l1" n="1">
+                           <mRest xml:id="m117gery"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s52" n="52">
+                        <layer xml:id="m7s52l1" n="1">
+                           <tuplet xml:id="t8pb78l" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="ckctdg2" dots="1" dur="4">
+                                 <note xml:id="n1thjcgi" pname="a" oct="2"/>
+                                 <note xml:id="nwq2tt4" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t1464p12" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c25wgjn" dots="1" dur="4">
+                                 <note xml:id="n11at72b" pname="a" oct="2"/>
+                                 <note xml:id="n1q9kwvw" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m7s53" n="53">
+                        <layer xml:id="m7s53l1" n="1">
+                           <mRest xml:id="mzxllye"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="t1fa61uj" startid="#n17koca8" endid="#n1i2o8hh"/>
+                     <tie xml:id="t1ueuzg1" startid="#n1grit3q" endid="#n1vy698n"/>
+                     <tie xml:id="t1984clv" startid="#n1v5ueom" endid="#nwbn538"/>
+                  </measure>
+                  <measure xml:id="m1rqbq9a" n="8">
+                     <staff xml:id="m8s2" n="2">
+                        <layer xml:id="m8s2l1" n="1">
+                           <mRest xml:id="m19t152u"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s4" n="4">
+                        <layer xml:id="m8s4l1" n="1">
+                           <mRest xml:id="m9itcqn"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s7" n="7">
+                        <layer xml:id="m8s7l1" n="1">
+                           <note xml:id="n1i2o8hh" dur="2" pname="b" oct="4" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m8s7l1q" n="2">
+                             <note xml:id="n1i2o8hqh" dur="2" pname="b" oct="4" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m8s12" n="12">
+                        <layer xml:id="m8s12l1" n="1">
+                           <mRest xml:id="m1orzkv2"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s15" n="15">
+                        <layer xml:id="m8s15l1" n="1">
+                           <note xml:id="n1vy698n" dur="2" pname="d" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m8s15l11" n="2">
+                             <note xml:id="n1vy6981n" dur="2" pname="d" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m8s21" n="21">
+                        <layer xml:id="m8s21l1" n="1">
+                           <mRest xml:id="mlatjxz"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s25" n="25">
+                        <layer xml:id="m8s25l1" n="1">
+                           <mRest xml:id="mq8prki"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s32" n="32">
+                        <layer xml:id="m8s32l1" n="1">
+                           <mRest xml:id="m1kuyfzq"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s48" n="48">
+                        <layer xml:id="m8s48l1" n="1">
+                           <note xml:id="nl92bz2" dur="4" pname="a" oct="4"/>
+                           <rest xml:id="r4i9hj3" dur="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s49" n="49">
+                        <layer xml:id="m8s49l1" n="1">
+                           <tuplet xml:id="td5r95u" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c39zpso" dots="1" dur="4">
+                                 <note xml:id="n166hz7p" pname="a" oct="3"/>
+                                 <note xml:id="n1kzuvcd" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t12ef9k9" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c11ug2me" dots="1" dur="4">
+                                 <note xml:id="nzpt8m9" pname="a" oct="3"/>
+                                 <note xml:id="nagpe0k" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s50" n="50">
+                        <layer xml:id="m8s50l1" n="1">
+                           <rest xml:id="r1i27rxu" dur="4"/>
+                           <rest xml:id="r128a38l" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="r17rpodc" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="ne597sb" dur="32" pname="e" oct="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s52" n="52">
+                        <layer xml:id="m8s52l1" n="1">
+                           <tuplet xml:id="t1iowt2w" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c13ivmlh" dots="1" dur="4">
+                                 <note xml:id="nv351r5" pname="a" oct="2"/>
+                                 <note xml:id="n11pskh2" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tsn8fxf" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="clvjmap" dots="1" dur="4">
+                                 <note xml:id="nrdfyvi" pname="a" oct="2"/>
+                                 <note xml:id="n1ofy64e" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m8s53" n="53">
+                        <layer xml:id="m8s53l1" n="1">
+                           <rest xml:id="r1qmr8sk" dur="4"/>
+                           <rest xml:id="r9ky76m" type="mscore-beam-none" dur="8"/>
+                           <rest xml:id="r1u8zk5c" type="mscore-beam-none" dots="1" dur="16"/>
+                           <note xml:id="n6769p7" dur="32" pname="e" oct="3"/>
+                        </layer>
+                     </staff>
+                     <tie xml:id="tdrwaam" startid="#n1i2o8hh" endid="#ng6urjm"/>
+                     <tie xml:id="tgh8232" startid="#n1vy698n" endid="#nwak7uf"/>
+                     <tie xml:id="t1uq2r28" startid="#nwbn538" endid="#n1vt0z4g"/>
+                  </measure>
+                  <measure xml:id="m190tugw" n="9">
+                     <staff xml:id="m9s2" n="2">
+                        <layer xml:id="m9s2l1" n="1">
+                           <mRest xml:id="muidz83"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s4" n="4">
+                        <layer xml:id="m9s4l1" n="1">
+                           <note xml:id="n9rth03" dur="2" pname="e" oct="5" stem.dir="up"/>
+                        </layer>
+                         <layer xml:id="m9s4l11" n="2">
+                             <note xml:id="n9rth013" dur="2" pname="e" oct="5" stem.dir="down"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m9s7" n="7">
+                        <layer xml:id="m9s7l1" n="1">
+                           <note xml:id="ng6urjm" dur="2" pname="b" oct="4" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m9s7la1" n="2">
+                             <note xml:id="ng6urjma" dur="2" pname="b" oct="4" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m9s12" n="12">
+                        <layer xml:id="m9s12l1" n="1">
+                           <mRest xml:id="m7xt43e"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s15" n="15">
+                        <layer xml:id="m9s15l1" n="1">
+                           <note xml:id="nwak7uf" dur="2" pname="d" oct="5" stem.dir="down"/>
+                        </layer>
+                         <layer xml:id="m9s15l1q" n="2">
+                             <note xml:id="nwak7uqf" dur="2" pname="d" oct="5" stem.dir="up"/>
+                         </layer>
+                     </staff>
+                     <staff xml:id="m9s21" n="21">
+                        <layer xml:id="m9s21l1" n="1">
+                           <mRest xml:id="m1d14q9g"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s25" n="25">
+                        <layer xml:id="m9s25l1" n="1">
+                           <mRest xml:id="m14pa8ic"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s32" n="32">
+                        <layer xml:id="m9s32l1" n="1">
+                           <mRest xml:id="me57yg2"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s48" n="48">
+                        <layer xml:id="m9s48l1" n="1">
+                           <mRest xml:id="m6tyeqt"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s49" n="49">
+                        <layer xml:id="m9s49l1" n="1">
+                           <tuplet xml:id="tkz3jpw" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c138fjag" dots="1" dur="4">
+                                 <note xml:id="n1eewhtu" pname="a" oct="3"/>
+                                 <note xml:id="n1nfu0u0" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="tgb6hv2" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1agj8pb" dots="1" dur="4">
+                                 <note xml:id="ngremp5" pname="a" oct="3"/>
+                                 <note xml:id="n1akhuhj" pname="e" oct="4"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s50" n="50">
+                        <layer xml:id="m9s50l1" n="1">
+                           <note xml:id="n1mff0t1" dur="4" pname="a" oct="3"/>
+                           <rest xml:id="rvqfkn5" dur="4"/>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s52" n="52">
+                        <layer xml:id="m9s52l1" n="1">
+                           <tuplet xml:id="truely6" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1jqsymz" dots="1" dur="4">
+                                 <note xml:id="n6uiz0r" pname="a" oct="2"/>
+                                 <note xml:id="n1con2yc" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                           <tuplet xml:id="t1rvdsn2" num="6" numbase="4" bracket.visible="false" num.visible="false">
+                              <chord xml:id="c1cq9l9h" dots="1" dur="4">
+                                 <note xml:id="n1mfc54f" pname="a" oct="2"/>
+                                 <note xml:id="n1le8mf2" pname="e" oct="3"/>
+                              </chord>
+                           </tuplet>
+                        </layer>
+                     </staff>
+                     <staff xml:id="m9s53" n="53">
+                        <layer xml:id="m9s53l1" n="1">
+                           <note xml:id="nk545r8" dur="4" pname="a" oct="2"/>
+                           <rest xml:id="r1546f1n" dur="4"/>
+                        </layer>
+                     </staff>
+                     <dynam xml:id="dtu5c9h" label="pp" startid="#n9rth03">pp</dynam>
+                     <tie xml:id="t1pcmpdr" startid="#n9rth03" endid="#n1m5tibt"/>
+                     <tie xml:id="tcx11w5" startid="#ng6urjm" endid="#n18m909q"/>
+                     <tie xml:id="t16i6yke" startid="#nwak7uf" endid="#n2shjc"/>
+                     <tie xml:id="tlaknrr" startid="#n1vt0z4g" endid="#n1vnp9so"/>
+                  </measure>
+               </section>
+            </score>
+                                </incip>
+                                <perfMedium>
+                                    <perfResList corresp="#Orchester_op125"/>
+                                </perfMedium>
+                            </expression>
+                            <expression xml:id="expression_125-2" n="2">
+                                <title type="main" xml:lang="de">2. Satz – Molto vivave</title>
+                                <key mode="minor" pname="d" accid="n">d-Moll</key>
+                                <perfMedium>
+                                    <perfResList corresp="#Orchester_op125"/>
+                                </perfMedium>
+                                <componentList>
+                                    <expression>
+                                        <title>Scherzo</title>
+                                        <tempo>Molto vivace</tempo>
+                                        <meter count="3" unit="4"/>
+                                    </expression>
+                                    <expression>
+                                        <title>Trio</title>
+                                        <tempo>Presto</tempo>
+                                        <meter count="2" unit="2"/>
+                                    </expression>
+                                </componentList>
+                            </expression>
+                            <expression xml:id="expression_125-3" n="3">
+                                <title type="main" xml:lang="de">3. Satz – Adagio molto e cantabile</title>
+                                <contributor>
+                                    <persName/>
+                                    <persName>Beethoven, Ludwig van</persName>
+                                </contributor>
+                                <tempo>Adagio molto e cantabile</tempo>
+                                <key mode="major" pname="b" accid="f">B-Dur</key>
+                                <meter count="4" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem>
+                                            <role/>
+                                            <perfRes label="va"/>
+                                            <roleDesc/>
+                                        </castItem>
+                                    </castList>
+                                    <perfResList/>
+                                </perfMedium>
+                            </expression>
+                            <expression xml:id="expression_125-4" n="4">
+                                <title type="main" xml:lang="de">4. Satz – Presto</title>
+                                <lyricist>
+                                    <persName codedval="118607626" auth="GND" role="lyr" auth.uri="https://d-nb.info/gnd/" corresp="P-000006">Schiller, Friedrich</persName>
+                                </lyricist>
+                                <componentList>
+                                    <expression>
+                                        <title>Presto</title>
+                                        <key mode="minor" pname="d" accid="n">d-Moll</key>
+                                        <meter count="3" unit="4"/>
+                                        <tempo>Presto</tempo>
+                                        <perfMedium>
+                                            <perfResList corresp="#Orchester_op125"/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Allegro assai</title>
+                                        <key mode="minor" pname="d" accid="n">D-Dur</key>
+                                        <meter count="2" unit="2" sym="common"/>
+                                        <tempo>Allegro assai</tempo>
+                                        <perfMedium>
+                                            <perfResList corresp="#Orchester_op125"/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Presto</title>
+                                        <key mode="minor" pname="d" accid="n">d-Moll</key>
+                                        <meter count="3" unit="4"/>
+                                        <tempo>Presto</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>O Freunden nicht diese Töne!</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList>
+                                                <perfResList corresp="#Orchester_op125"/>
+                                                <perfRes codedval="vf" count="1" solo="true">Bass</perfRes>
+                                            </perfResList>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>[Allegro assai] – „Freude, schöner Götterfunken”</title>
+                                        <key mode="minor" pname="d" accid="n">D-Dur</key>
+                                        <meter count="2" unit="2" sym="common"/>
+                                        <tempo>Allegro assai</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Freude, schöner Götterfunken,</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Allegro assai vivace alla marcia – „Froh, wie seine Sonne fliegen”</title>
+                                        <key mode="major" pname="b" accid="f">B-Dur</key>
+                                        <meter count="6" unit="8"/>
+                                        <tempo>Allegro assai vivace alla marcia</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Froh, wie seine Sonne fliegen</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Andante maestoso – „Seid umschlungen, Millionen!”</title>
+                                        <key mode="major" pname="g" accid="n">G-Dur</key>
+                                        <meter count="3" unit="2"/>
+                                        <tempo>Andante maestoso</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Seid umschlungen, Millionen!</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Allegro energico e sempre ben marcato – „Freude, schöner Götterfunken”</title>
+                                        <key mode="major" pname="d" accid="n">D-Dur</key>
+                                        <meter count="6" unit="4"/>
+                                        <tempo>Allegro energico e sempre ben marcato</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Freude, schöner Götterfunken</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Allegro ma non tanto – „Tochter aus Elysium”</title>
+                                        <key mode="major" pname="d" accid="n">D-Dur</key>
+                                        <meter count="2" unit="2" sym="cut"/>
+                                        <tempo>Allegro ma non tanto</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Tochter aus Elysium</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                    <expression>
+                                        <title>Prestissimo – „Seid umschlungen, Millionen!”</title>
+                                        <key mode="major" pname="d" accid="n">D-Dur</key>
+                                        <meter count="2" unit="2" sym="cut"/>
+                                        <tempo>Prestissimo</tempo>
+                                        <incip>
+                                            <incipText>
+                                                <p>Seid umschlungen, Millionen!</p>
+                                            </incipText>
+                                        </incip>
+                                        <perfMedium>
+                                            <perfResList/>
+                                        </perfMedium>
+                                    </expression>
+                                </componentList>
+                            </expression>
+                        </componentList>
+                    </expression>
+                </expressionList>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation singleton="true">
+                <titleStmt>
+                    <title>autograph score</title>
+                </titleStmt>
+                <physDesc>
+                    <physMedium>137 folios (sequence of double leaves, single leaves: fol. 58, 69, 116, 121, 122), 16–23 staves, 23,5x31,0 cm (trimmed), at least three different types of paper with watermarks of the paper mill Anton Kiesling und Söhne ("A K &amp; S), yellowish to light grey paper. Autograph notation with ink, lead and red chalk. Fol. 67v–68v, 71v, 114v–115v are blank.</physMedium>
+                    <condition>Fol. 1r and 49v heavier soiling; occasional minor loss of text as a result of trimming during binding. Traces of previous binding near the folds. </condition>
+                    <titlePage label="cover">
+                        <p>Sinfonie No 9. | von | L. van Beethoven. | Handschrift des Componisten</p>
+                    </titlePage>
+                    <titlePage label="single">
+                        <p/>
+                    </titlePage>
+                    <handList>
+                        <hand medium="ink brown" type="main" xml:id="hand_a929b301">
+                            <persName role="scr" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="000002">Beethoven, Ludwig van</persName>
+                        </hand>
+                        <hand medium="ruddle" type="main" xml:id="hand_a929b302">
+                            <persName role="scr" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="000002">Beethoven, Ludwig van</persName>
+                        </hand>
+                        <hand medium="pencil" type="main" xml:id="hand_a929b303">
+                            <persName role="scr" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="000002">Beethoven, Ludwig van</persName>
+                        </hand>
+                    </handList>
+                    <bindingDesc>
+                        <binding>
+                            <p>Half leather binding from the 19th century, covers coated with red paper.</p>
+                        </binding>
+                    </bindingDesc>
+                    <supportDesc>
+                        <foliation>Layer counting for movements I-III with ruddle. The manuscript has been foliated from 1–136 in pencil in the upper right corners by the library. One supplementary sheet was skipped and subsequently counted as "17a".</foliation>
+                    </supportDesc>
+                    <addDesc>
+                        <annot label="autograph"/>
+                        <annot label="foreign"/>
+                        <annot label="dating"/>
+                    </addDesc>
+                </physDesc>
+                <physLoc>
+                    <repository>
+                        <corpName corresp="not_found">Staatsbibliothek zu Berlin, Musiksammlung</corpName>
+                        <geogName>Berlin</geogName>
+                        <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000655">D-B</identifier>
+                        <ptr label="catalog" target="https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=756658373"/>
+                        <ptr label="digital_image" target="http://resolver.staatsbibliothek-berlin.de/SBB0000EB8600000000"/>
+                    </repository>
+                    <identifier label="shelf_mark">Mus.ms.autogr. Beethoven, L. v. 2</identifier>
+                </physLoc>
+                <creation>
+                    <date isodate="1822">May 1822–November 1824</date>
+                </creation>
+            </manifestation>
+        </manifestationList>
+        <revisionDesc>
+            <change isodate="2023" resp="#CG">
+                <changeDesc>
+                    <p>Example created by CG</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+    <music>
+        <body>
+            <div/>
+        </body>
+    </music>
+</mei>

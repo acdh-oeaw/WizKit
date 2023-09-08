@@ -1,0 +1,1331 @@
+* {
+    font-size: 18px;
+    display: block;
+    max-width: 1300px;
+    white-space: nowrap;
+    font-family: 'Georgia', 'Myriad Pro', 'Helvetica', sans-serif;
+    line-height: 0.1cm;
+}
+fileDesc > titleStmt > title {
+    visibility: -oxy-collapse-text;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 36px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: 467px;
+    content:
+    oxy_label(text, "File Title: ", width, 150px)
+    oxy_textfield(edit, '#text', fontInherit, true, width, 695px)
+}
+fileDesc > titleStmt {
+    border: thin solid grey;
+}
+encodingDesc {
+    border: thin solid grey;
+}
+workList {
+    border: thin solid grey;
+}
+manifestationList {
+    background: #eafafa;
+    width: 1300px;
+    border: thin solid grey;
+    text-align: left;
+    font-size: 22px;
+    content: oxy_label(text, "Manifestation List:", styles, "font-weight:bold;")
+}
+fileDesc > titleStmt > respStmt {
+    width: 1400px;
+    padding: 10px;
+    text-align: left;
+    border-top: thin solid grey;
+    background: #e6f2ff;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Responsibility Statement: ", styles, "font-weight: bold;");
+}
+fileDesc > titleStmt > respStmt > persName {
+    text-align: left;
+    font-size: 14px;
+    visibility: -oxy-collapse-text;
+    content: 
+/*    oxy_label(text, "Editor: ", width, 160px) 
+*/    oxy_label(text, "Name: ") 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 400px) 
+    oxy_label(text, " Role: ") 
+    oxy_combobox(edit, "@role", fontInherit, true, editable, false, width, 180px, values, "act, adp, anl, ann, arr, art, ard, asg, asn, att, auc, aut, aqt, aft, aud, aui, aus, bnd, bdd, blw, bkd, bkp, bjd, bpd, bsl, bor, cll, cns, chr, clb, col, cmm, com, cmp, ccp, cnd, con, csl, ctr, ctb, cpc, cph, crr, crp, cst, cov, cre, cur, dnc, dtc, dtm, dte, dto, dpt, dsr, drt, dst, dnr, drm, dub, edt, elt, eng, egr, etr, exp, fac, frg, fmo, fnd, ilu, ill, ins, itr, ive, ivr, led, len, lbt, lse, lso, lgd, ltg, lyr, mfr, mrb, mrk, mdc, mte, mod, mon, mcp, msd, mus, nrt, org, oth, own, ppm, pat, prf, pma, pht, plt, prt, pop, prm, pro, pmm, prd, prg, pdr, pfr, pbl, pbd, ppt, rcp, rce, red, rpt, rth, rtm, res, rpy, rev, rbr, sce, scr, scl, sec, std, sgn, sng, sds, spk, spn, stm, str, stl, srv, tch, trc, trl, tyd, tyg, vdg, voc, wit, wdc, wde, wam", labels, "actor, adapter, analyst, annotator, arranger, artist, artistic director, assignee, associated name, attributed name, auctioneer, author, author in quotations or text extracts, author of afterword/colophon etc., author of dialog, author of introduction etc., author of screenplay etc., binder, binding designer, blurb writer, book designer, book producer, bookjacket designer, bookplate designer, bookseller, borrower, calligrapher, censor, choreographer, collaborator, collector, commentator, compiler, composer, conceptor, conductor, conservator, consultant, contractor, contributor, copyright claimant, copyright holder, corrector, correspondent, costume designer, cover designer, creator, curator, dancer, data contributor, data manager, dedicatee, dedicator, depositor, designer, director, distributor, donor, draftsman, dubious author, editor, electrotyper, engineer, engraver, etcher, expert, facsimilist, forger, former owner, funder, illuminator, illustrator, inscriber, instrumentalist, interviewee, interviewer, lead, lender, librettist, licensee, licensor, lighting designer, lithographer, lyricist, manufacturer, marbler, markup editor, metadata contact, metal-engraver, moderator, monitor, music copyist, musical director, musician, narrator, originator, other, owner, papermaker, patron, performer, permitting agency, photographer, platemaker, printer, printer of plates, printmaker, producer, production manager, production personnel, programmer, project director, proofreader, publisher, publishing director, puppeteer, recipient, recording engineer, redactor, reporter, research team head, research team member, researcher, responsible party, reviewer, rubricator, scenarist, scribe, sculptor, secretary, set designer, signer, singer, sound designer, speaker, sponsor, stage manager, stereotyper, storyteller, surveyor, teacher, transcriber, translator, type designer, typographer, videographer, vocalist, witness, woodcutter, wood engraver, writer of accompanying material") 
+
+}
+fileDesc > titleStmt > respStmt > persName:after {
+    margin-right: 10px;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add person', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<persName xmlns="http://www.music-encoding.org/ns/mei" role="edt"></persName>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete person', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+     
+}
+fileDesc > pubStmt {
+    content: oxy_label(text, "Publication: ");
+    text-align: left;
+}
+fileDesc > sourceDesc {
+    content: oxy_label(text, "Source description: ");
+    text-align: left;
+}
+fileDesc > sourceDesc > source {
+    content: oxy_label(text, "Source: ");
+    text-align: left;
+}
+encodingDesc {
+    content: oxy_label(text, "Encoding description: ");
+    text-align: left;
+}
+work {
+    background: #eafaea;
+}
+work > identifier:nth-of-type(1):before{
+    content: 
+    oxy_label(text, "Core Data:\A", styles, "font-weight:bold; font-size: 22px")
+}
+work > identifier {
+    margin-left: 15px;
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: 
+    oxy_label(text, "Work Number: ", width, 150px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px, tooltip, 'This field contains the number of the work collection that is displayed in the output and should ONLY contain the number without any label, e.g. "Op.".') 
+    oxy_label(text, " Label: ", width, 100px)
+    oxy_textfield(fontInherit, true, edit, '@label', width, 114px, tooltip, ".") 
+    oxy_combobox(edit, "@type", fontInherit, true, editable, false, width, 230px, values, "opus, work, woo", labels, "Opus number, Work number, Work without opus");
+}
+work > identifier[type = 'Normdata'] {
+    /*padding: 10px;*/
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Norm Data: ", width, 150px) 
+    oxy_textfield(fontInherit, true, edit, '@codedval', width, 300px) 
+    oxy_label(text, " Authority: ", width, 100px)
+    oxy_combobox(edit, "@auth", fontInherit, true, editable, false, width, 345px, values, "VIAF, GND, LCCN");
+}
+work > identifier:after {
+    visibility: -oxy-collapse-text;
+        content: oxy_buttonGroup(label, '+|-', fontInherit, true, actions,
+    oxy_action_list(
+    oxy_action(name, 'Add work number', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" type="work" label=""></identifier>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add norm data', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" type="Normdata" label="" auth=""></identifier>', arg-insertLocation, '.', arg-insertPosition, 'After'),
+    oxy_action(name, 'Delete work number', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+work > identifier[type = 'Normdata']:after {
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+        oxy_action(name, 'Add work number', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" type="work" label=""></identifier>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add norm data', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" type="Normdata" label="" auth=""></identifier>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete norm data', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+
+work > title {
+    margin-left: 20px;
+    padding-top: 5px;
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: oxy_label(text, "Work Title: ", width, 150px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 807px);
+}
+work > contributor:before {
+    margin-left: 20px;
+    content: oxy_label(text, "Contributors:", styles, "font-weight:bold;")
+}
+work > contributor > persName {
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Name: ", width, 150px)
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    oxy_label(text, " Role: ", width, 100px)
+    oxy_combobox(edit, "@role", fontInherit, true, editable, false, width, 180px, values, "act, adp, anl, ann, arr, art, ard, asg, asn, att, auc, aut, aqt, aft, aud, aui, aus, bnd, bdd, blw, bkd, bkp, bjd, bpd, bsl, bor, cll, cns, chr, clb, col, cmm, com, cmp, ccp, cnd, con, csl, ctr, ctb, cpc, cph, crr, crp, cst, cov, cre, cur, dnc, dtc, dtm, dte, dto, dpt, dsr, drt, dst, dnr, drm, dub, edt, elt, eng, egr, etr, exp, fac, frg, fmo, fnd, ilu, ill, ins, itr, ive, ivr, led, len, lbt, lse, lso, lgd, ltg, lyr, mfr, mrb, mrk, mdc, mte, mod, mon, mcp, msd, mus, nrt, org, oth, own, ppm, pat, prf, pma, pht, plt, prt, pop, prm, pro, pmm, prd, prg, pdr, pfr, pbl, pbd, ppt, rcp, rce, red, rpt, rth, rtm, res, rpy, rev, rbr, sce, scr, scl, sec, std, sgn, sng, sds, spk, spn, stm, str, stl, srv, tch, trc, trl, tyd, tyg, vdg, voc, wit, wdc, wde, wam", labels, "actor, adapter, analyst, annotator, arranger, artist, artistic director, assignee, associated name, attributed name, auctioneer, author, author in quotations or text extracts, author of afterword/colophon etc., author of dialog, author of introduction etc., author of screenplay etc., binder, binding designer, blurb writer, book designer, book producer, bookjacket designer, bookplate designer, bookseller, borrower, calligrapher, censor, choreographer, collaborator, collector, commentator, compiler, composer, conceptor, conductor, conservator, consultant, contractor, contributor, copyright claimant, copyright holder, corrector, correspondent, costume designer, cover designer, creator, curator, dancer, data contributor, data manager, dedicatee, dedicator, depositor, designer, director, distributor, donor, draftsman, dubious author, editor, electrotyper, engineer, engraver, etcher, expert, facsimilist, forger, former owner, funder, illuminator, illustrator, inscriber, instrumentalist, interviewee, interviewer, lead, lender, librettist, licensee, licensor, lighting designer, lithographer, lyricist, manufacturer, marbler, markup editor, metadata contact, metal-engraver, moderator, monitor, music copyist, musical director, musician, narrator, originator, other, owner, papermaker, patron, performer, permitting agency, photographer, platemaker, printer, printer of plates, printmaker, producer, production manager, production personnel, programmer, project director, proofreader, publisher, publishing director, puppeteer, recipient, recording engineer, redactor, reporter, research team head, research team member, researcher, responsible party, reviewer, rubricator, scenarist, scribe, sculptor, secretary, set designer, signer, singer, sound designer, speaker, sponsor, stage manager, stereotyper, storyteller, surveyor, teacher, transcriber, translator, type designer, typographer, videographer, vocalist, witness, woodcutter, wood engraver, writer of accompanying material") 
+    " Authority: " 
+    oxy_combobox(edit, "@auth", fontInherit, true, editable, false, width, 100px, values, "http://d-nb.info/gnd/, VIAF, LoC", labels, "GND, VIAF, LoC") 
+    " ID: " 
+    oxy_textfield(tooltip, "Text field for coded value", fontInherit, true, edit, '@codedval', width, 130px);
+}
+work > contributor > persName:after {
+        content: 
+        oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add contributor', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<persName xmlns="http://www.music-encoding.org/ns/mei" codedval="" auth="" role=""></persName>\a', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete contributor', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+}
+work > tempo {
+    padding-top: 5px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Tempo: ", width, 150px) 
+    oxy_textfield(edit, '#text', fontInherit, true, width, 300px)
+}
+work > key {
+    margin-left: 20px;
+    padding-bottom: 10px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Key: ", width, 150px) 
+    oxy_textfield(edit, '#text', fontInherit, true, width, 300px)
+    
+    oxy_label(text, " Pitch Name: ", width, 100px)
+    oxy_combobox(edit, '@pname', fontInherit, true, width, 43px, 
+    editable, false,
+    values, 'c, g, d, a, e, b, f',
+    labels, 'C, G, D, A, E, B, F')
+    
+    oxy_label(text, " Accid: ")
+    oxy_combobox(edit, '@accid', fontInherit, true, width, 130px, 
+    editable, false,
+    values, 'f, ff, n, s, ss',
+    labels, 'flat, double flat, natural, sharp, double sharp')
+    
+    oxy_label(text, " Mode: ")
+    oxy_combobox(edit, '@mode', fontInherit, true, values, 'major, minor', width, 98px)
+}
+
+work > creation {
+    padding-left: 20px;
+    text-align: left;
+    content: oxy_label(text, "Creation: ", styles, "font-weight:bold;");
+}
+work > creation > date {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Date (ISO 8601): ", width, 150px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px)
+    
+    oxy_button(fontInherit, true, action,
+        oxy_action(
+                name, "Add date span",
+                description, 'Insert an attribute',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocation, '.',
+                arg-removeIfEmpty, false,
+                arg-values, ''
+                )
+            )
+    oxy_label(text, "\A Date (displayed): ", width, 150px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+work > creation > date[startdate][notbefore][enddate][notafter] {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Date (ISO 8601): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px) 
+    
+    oxy_button(showText, true, fontInherit, true, action, 
+            oxy_action(
+                name, "Remove date span",
+                description, 'Remove attributes',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocations, '.',
+                arg-removeIfEmpty, true,
+                arg-values, ''
+                ))
+                
+    oxy_label(text, "\A Beginning (span): ", width, 160px) 
+    oxy_textfield(edit, "@startdate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not before: ", width, 160px) 
+    oxy_textfield(edit, "@notbefore", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Ending (span): ", width, 160px) 
+    oxy_textfield(edit, "@enddate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not after: ", width, 160px) 
+    oxy_textfield(edit, "@notafter", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Date (displayed): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    
+    ;
+}
+work > creation > annot > p {
+    visibility: -oxy-collapse-text;
+    padding-bottom: 5px;
+    content:
+    oxy_label(text, "Comment: ", width, 150px)
+    oxy_textArea(fontInherit, true, edit, '#text', width, 962px, rows 5, contentType, 'text/xml')
+    
+}
+work > history {
+    width: 1300px;
+    background: #ffe6fa;
+    text-align: left;
+    font-size: 22px;
+    content: oxy_label(text, "History: ", styles, "font-weight:bold;")
+}
+eventList[type = "composition"]:before {
+    visibility: -oxy-collapse-text;
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    content: oxy_label(text, "Composition: ")
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(
+    oxy_action(name, 'Add composition event', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<event xmlns="http://www.music-encoding.org/ns/mei">\A<date></date>\A<desc></desc>\A</event>\A', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child')));
+
+}
+eventList[type = "composition"] > event {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Event: ")
+}
+eventList[type = "composition"] > event:after {
+        visibility: -oxy-collapse-text;
+    content: oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+        oxy_action_list(
+            oxy_action(name, 'Add composition event',
+                description, 'Insert an element after the current one',
+                operation, 'InsertFragmentOperation',
+                arg-fragment, '\A<event xmlns="http://www.music-encoding.org/ns/mei">\A<date></date>\A<desc></desc>\A</event>\A',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside as first child'),
+            
+            oxy_action(name, 'Delete composition event', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+eventList[type = "composition"] > event > date {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Date (ISO 8601): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px)
+    
+    oxy_button(showText, true, fontInherit, true, action, 
+            oxy_action(
+                name, "Add date span",
+                description, 'Insert date span attributes',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocation, '.',
+                arg-removeIfEmpty, false,
+                arg-values, ''
+                )
+            )
+                oxy_label(text, "\A Date (displayed): ", width, 160px) 
+    
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    
+    
+}
+eventList[type = "composition"] > event > date[startdate][enddate][notbefore][notafter] {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Date (ISO 8601): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px) 
+    
+    oxy_button(showText, true, fontInherit, true, action, 
+            oxy_action(
+                name, "Remove date span",
+                description, 'Remove date span attributes',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocations, '.',
+                arg-removeIfEmpty, true,
+                arg-values, ''
+                ))
+                
+    oxy_label(text, "\A Beginning (span): ", width, 160px) 
+    oxy_textfield(edit, "@startdate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not before: ", width, 160px) 
+    oxy_textfield(edit, "@notbefore", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Ending (span): ", width, 160px) 
+    oxy_textfield(edit, "@enddate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not after: ", width, 160px) 
+    oxy_textfield(edit, "@notafter", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Date (displayed): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    
+    ;
+}
+
+eventList[type = "composition"] > event > desc {
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Description: ", width, 160px) oxy_textArea(fontInherit, true, edit, '#text', width, 902px, rows 5, contentType, 'text/xml')
+}
+history > eventList[type = "performances"]:before {
+    visibility: -oxy-collapse-text;
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    content: oxy_label(text, "Performances: ")
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add performance event', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<event xmlns="http://www.music-encoding.org/ns/mei">\a<date></date>\a<geogName role="place" auth="" codedval=""></geogName>\a<geogName role="venue" auth="" codedval=""></geogName>\a<persName role="" auth="" codedval=""></persName>\a<corpName role="" auth="" codedval=""></corpName>\a<desc></desc>\a</event>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child')));
+;
+}
+eventList[type = "performances"] > event {
+    padding: 15px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+    }
+eventList[type = "performances"] > event:after {
+        visibility: -oxy-collapse-text;
+    content: oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add performance event', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<event xmlns="http://www.music-encoding.org/ns/mei">\a<date></date>\a<geogName role="place" auth="" codedval=""></geogName>\a<geogName role="venue" auth="" codedval=""></geogName>\a<persName role="" auth="" codedval=""></persName>\a<corpName role="" auth="" codedval=""></corpName>\a<desc></desc>\a</event>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'), oxy_action(name, 'Delete performance event', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+event > persName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: 
+    oxy_label(text, "Participant: ", width, 120px) 
+    oxy_label(text, "Name: ", width, 60px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 400px) oxy_label(text, " Role: ", width, 70px) 
+    oxy_combobox(edit, "@role", width, 300px, fontInherit, true, editable, false, values, "act, adp, anl, ann, arr, art, ard, asg, asn, att, auc, aut, aqt, aft, aud, aui, aus, bnd, bdd, blw, bkd, bkp, bjd, bpd, bsl, bor, cll, cns, chr, clb, col, cmm, com, cmp, ccp, cnd, con, csl, ctr, ctb, cpc, cph, crr, crp, cst, cov, cre, cur, dnc, dtc, dtm, dte, dto, dpt, dsr, drt, dst, dnr, drm, dub, edt, elt, eng, egr, etr, exp, fac, frg, fmo, fnd, ilu, ill, ins, itr, ive, ivr, led, len, lbt, lse, lso, lgd, ltg, lyr, mfr, mrb, mrk, mdc, mte, mod, mon, mcp, msd, mus, nrt, org, oth, own, ppm, pat, prf, pma, pht, plt, prt, pop, prm, pro, pmm, prd, prg, pdr, pfr, pbl, pbd, ppt, rcp, rce, red, rpt, rth, rtm, res, rpy, rev, rbr, sce, scr, scl, sec, std, sgn, sng, sds, spk, spn, stm, str, stl, srv, tch, trc, trl, tyd, tyg, vdg, voc, wit, wdc, wde, wam", labels, "actor, adapter, analyst, annotator, arranger, artist, artistic director, assignee, associated name, attributed name, auctioneer, author, author in quotations or text extracts, author of afterword/colophon etc., author of dialog, author of introduction etc., author of screenplay etc., binder, binding designer, blurb writer, book designer, book producer, bookjacket designer, bookplate designer, bookseller, borrower, calligrapher, censor, choreographer, collaborator, collector, commentator, compiler, composer, conceptor, conductor, conservator, consultant, contractor, contributor, copyright claimant, copyright holder, corrector, correspondent, costume designer, cover designer, creator, curator, dancer, data contributor, data manager, dedicatee, dedicator, depositor, designer, director, distributor, donor, draftsman, dubious author, editor, electrotyper, engineer, engraver, etcher, expert, facsimilist, forger, former owner, funder, illuminator, illustrator, inscriber, instrumentalist, interviewee, interviewer, lead, lender, librettist, licensee, licensor, lighting designer, lithographer, lyricist, manufacturer, marbler, markup editor, metadata contact, metal-engraver, moderator, monitor, music copyist, musical director, musician, narrator, originator, other, owner, papermaker, patron, performer, permitting agency, photographer, platemaker, printer, printer of plates, printmaker, producer, production manager, production personnel, programmer, project director, proofreader, publisher, publishing director, puppeteer, recipient, recording engineer, redactor, reporter, research team head, research team member, researcher, responsible party, reviewer, rubricator, scenarist, scribe, sculptor, secretary, set designer, signer, singer, sound designer, speaker, sponsor, stage manager, stereotyper, storyteller, surveyor, teacher, transcriber, translator, type designer, typographer, videographer, vocalist, witness, woodcutter, wood engraver, writer of accompanying material")
+    oxy_checkbox(edit, "@type", values, solo, uncheckedValues, "" labels, "solo") 
+}
+event > persName:after {
+        padding-bottom: 5px;
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add participant', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<persName xmlns="http://www.music-encoding.org/ns/mei" role="" auth="" codedval=""></persName>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add ensemble', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<corpName xmlns="http://www.music-encoding.org/ns/mei" role="emb"></corpName>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete participant', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+event > corpName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Ensemble: ", width, 120px) 
+    oxy_label(text, "Name: ", width, 60px) oxy_textfield(fontInherit, true, edit, '#text', width, 400px) oxy_label(text, " Type: ", width, 70px) 
+    oxy_combobox(fontInherit, true, edit, '@type', editable, false, width, 300px, values, "ca, cb, cc, cd, cn, cu, cy, oa, ob, oc, od, oe, of, on, ou, oy, oz", 
+    labels, "Choruses - Mixed, Choruses - Women, Choruses - Men, Choruses - Children, Choruses - Unspecified, Choruses - Unknown, Choruses - Ethnic, Larger ensemble - Full orchestra, Larger ensemble - Chamber orchestra, Larger ensemble - String orchestra, Larger ensemble - Band, Larger ensemble - Dance orchestra, Larger ensemble - Brass band (brass with some doubling or with or without percussion), Larger ensemble - Unspecified, Larger ensemble - Unknown, Larger ensemble - Ethnic, Larger ensemble - Other") 
+}
+event > corpName:after {
+    padding-left: 46px;
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(oxy_action(name, 'Add participant', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<persName xmlns="http://www.music-encoding.org/ns/mei" role="" auth="" codedval=""></persName>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add ensemble', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<corpName xmlns="http://www.music-encoding.org/ns/mei" role="emb"></corpName>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete ensemble', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+event > corpName:after {
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(oxy_action(name, 'Add participant', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<persName xmlns="http://www.music-encoding.org/ns/mei" role="" auth="" codedval=""></persName>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add ensemble', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<corpName xmlns="http://www.music-encoding.org/ns/mei" role="emb"></corpName>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete ensemble', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+event > date {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Date of Performance: ", width, 180px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 200px /* contentType, 'text/xml'*/) 
+    oxy_label(text, "\A Date (ISO 8601): ", width, 180px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 200px /* contentType, 'text/xml'*/) ;
+}
+event > geogName[role = 'place'] {
+    display: inline;
+    padding-bottom: 15px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Place: ", width, 120px) 
+    oxy_label(text, "Name: ", width, 60px) oxy_textfield(fontInherit, true, edit, '#text', width, 400px /* contentType, 'text/xml'*/);
+}
+event > geogName[role = 'venue'] {
+    visibility: -oxy-collapse-text;
+    display: inline;
+    padding-bottom: 15px;
+    content: oxy_label(text, " Venue: ", width, 70px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 408px);
+}
+event > desc {
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content:    
+    oxy_label(text, "Description: ", width, 180px) 
+    oxy_textArea(fontInherit, true,
+    edit, '#content',
+    width, 882px,
+    rows 5,
+    contentType, 'text/xml');
+}
+work > perfMedium {
+    width: 1300px;
+    background: #ffd5cc;
+    text-align: left;
+    content: 
+    oxy_label(text, "Cast List & Instrumentation: \A", styles, "font-weight:bold; font-size: 22px;")
+    oxy_label(text, "Cast List: ", styles, "font-weight:bold;", width, 170px)
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add cast role', description, 'Insert an element inside the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<castItem xmlns="http://www.music-encoding.org/ns/mei"><role/><perfRes/><roleDesc/></castItem>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'))) 
+
+}
+perfMedium > castList {
+    border: 1px solid #ccc;
+    padding: 15px;
+    visibility: -oxy-collapse-text;
+}
+perfMedium > castList > castItem > role {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Role: ", width, 120px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 260px)
+
+}
+perfMedium > castList > castItem > perfRes {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, " MARC-Value: ", width, 128px)
+    oxy_combobox(edit, "@codedval", editable, false, width, 220px, fontInherit, true, values, " , va, vb, vc, vd, ve, vf, vg, vh, vi, vj, vn, vu, vy ", labels, "[empty], Voices - Soprano, Voices - Mezzo Soprano, Voices - Alto, Voices - Tenor, Voices - Baritone, Voices - Bass, Voices - Counter tenor, Voices - High voice, Voices - Medium voice, Voices - Low voice, Voices - Unspecified, Voices - Unknown, Voices - Ethnic")
+
+}
+perfMedium > castList > castItem > roleDesc {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, " Description: ", width, 110px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 190px)
+}
+perfMedium > castList > castItem:after {
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add role', 
+    description, 'Insert an element after the current one', 
+    operation, 'InsertFragmentOperation', 
+    arg-fragment, '<castItem xmlns="http://www.music-encoding.org/ns/mei"><role></role><perfRes></perfRes><roleDesc></roleDesc></castItem>', 
+    arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Delete role', description, 'Deletes the current element', operation, 'DeleteElementOperation'))
+)
+oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          ;
+}
+
+perfMedium > perfResList {
+    content: 
+    oxy_label(text, "Instrument List: ", width, 170px, styles, "font-weight: bold;") 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add instrument list', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval=""><head></head><perfRes codedval="" count="1"></perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: orchestra', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="oa"><head>Orchestra</head><perfRes codedval="we" count="1">Piccolo flute</perfRes><perfRes codedval="wa" count="1">Flute</perfRes><perfRes codedval="wb" count="1">Oboe</perfRes><perfRes codedval="wc" count="1">Clarinet</perfRes><perfRes codedval="wd" count="1">Bassoon</perfRes><perfRes codedval="wz" count="1">Contrabassoon</perfRes><perfRes codedval="ba" count="1">Horn</perfRes><perfRes codedval="bb" count="1">Trumpet</perfRes><perfRes codedval="bd" count="1">Trombone</perfRes><perfRes codedval="pa" count="1">Timpani</perfRes><perfRes codedval="pd" count="1">Bass drum</perfRes><perfRes codedval="pz" count="1">Cymbals</perfRes><perfRes codedval="pz" count="1">Triangle</perfRes><perfRes codedval="sa" count="1">Violin I</perfRes><perfRes codedval="sa" count="1">Violin II</perfRes><perfRes codedval="sb" count="1">Viola</perfRes><perfRes codedval="sc" count="1">Violoncello</perfRes><perfRes codedval="sd" count="1">Double bass</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: choir', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="ca"><head>Choir</head><perfRes codedval="va" solo="false">Soprano</perfRes><perfRes codedval="vc" solo="false">Alto</perfRes><perfRes codedval="vd" solo="false">Tenor</perfRes><perfRes codedval="vf" solo="false">Bass</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: string quartet', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="oc"><head>String quartet</head><perfRes codedval="sa" count="1">Violin I</perfRes><perfRes codedval="sa" count="1">Violin II</perfRes><perfRes codedval="sb" count="1">Viola</perfRes><perfRes codedval="sc" count="1">Violoncello</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')))
+
+}
+perfResList > perfResList {
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: block;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "MARC-Value: ", width, 120px) 
+    oxy_combobox(edit, "@codedval", width, 260px, fontInherit, true, editable, false, values, "ca, cb, cc, cd, cn, cu, cy, oa, ob, oc, od, oe, of, on, ou, oy, oz", labels, "Choruses - Mixed, Choruses - Women, Choruses - Men, Choruses - Children, Choruses - Unspecified, Choruses - Unknown, Choruses - Ethnic, Larger ensemble - Full orchestra, Larger ensemble - Chamber orchestra, Larger ensemble - String orchestra, Larger ensemble - Band, Larger ensemble - Dance orchestra, Larger ensemble - Brass band (brass with some doubling or with or without percussion), Larger ensemble - Unspecified, Larger ensemble - Unknown, Larger ensemble - Ethnic, Larger ensemble - Other") 
+    oxy_button(showText, true, fontInherit, true, action, oxy_action(name, 'Delete instrument list', description, 'Deletes the current element', operation, 'DeleteElementOperation'))
+
+}
+
+head {
+    content: oxy_label(text, "Heading: ", width, 120px) oxy_textfield(edit, "#text", fontInherit, true, width, 260px) 
+}
+head:after {
+        content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add heading', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<head xmlns="http://www.music-encoding.org/ns/mei"></head>', arg-insertLocation, '.', arg-insertPosition, 'Before') oxy_action(name, 'Delete heading', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+}
+perfRes {
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: 
+    oxy_label(text, "Name: ", width, 120px) 
+    oxy_textfield(edit, "#text", fontInherit, true, width, 260px) oxy_label(text, " MARC-Value: ") 
+    oxy_combobox(edit, "@codedval", fontInherit, true, editable, false, width, 300px, values, " , wa, wb, wc, wd, we, wf, wg, wh, wi, wn, wu, wy, wz, ba, bb, bc, bd, be, bf, bn, bu, by, bz, pa, pb, pc, pd, pn, pu, py, pz, va, vb, vc, vd, ve, vf, vg, vh, vi, vj, vn, vu, vy, ka, kb, kc, kd, ke, kf, kn, ku, ky, kz, sa, sb, sc, sd, se, sf, sg, sn, su, sy, sz, ta, tb, tc, td, tn, tu, ty, tz, ea, eb, ec, ed, en, eu, ez, zn, zu", labels, "[empty], Woodwinds - Flute, Woodwinds - Oboe, Woodwinds - Clarinet, Woodwinds - Bassoon, Woodwinds - Piccolo, Woodwinds - English horn, Woodwinds - Bass clarinet, Woodwinds - Recorder, Woodwinds - Saxophone, Woodwinds - Unspecified, Woodwinds - Unknown, Woodwinds - Ethnic, Woodwinds - Other, Brass - Horn, Brass - Trumpet, Brass - Cornet, Brass - Trombone, Brass - Tuba, Brass - Baritone, Brass - Unspecified, Brass - Unknown, Brass - Ethnic, Brass - Other, Percussion - Timpani, Percussion - Xylophone, Percussion - Marimba, Percussion - Drum, Percussion - Unspecified, Percussion - Unknown, Percussion - Ethnic, Percussion - Other, Voices - Soprano, Voices - Mezzo Soprano, Voices - Alto, Voices - Tenor, Voices - Baritone, Voices - Bass, Voices - Counter tenor, Voices - High voice, Voices - Medium voice, Voices - Low voice, Voices - Unspecified, Voices - Unknown, Voices - Ethnic, Keyboard - Piano, Keyboard - Organ, Keyboard - Harpsichord, Keyboard - Clavichord, Keyboard - Continuo, Keyboard - Celeste, Keyboard - Unspecified, Keyboard - Unknown, Keyboard - Ethnic, Keyboard - Other, Strings (bowed) - Violin, Strings (bowed) - Viola, Strings (bowed) - Violoncello, Strings (bowed) - Double bass, Strings (bowed) - Viol, Strings (bowed) - Viola d'amore, Strings (bowed) - Viola da gamba, Strings (bowed) - Unspecified, Strings (bowed) - Unknown, Strings (bowed) - Ethnic, Strings (bowed) - Other, Strings (plucked) - Harp, Strings (plucked) - Guitar, Strings (plucked) - Lute, Strings (plucked) - Mandolin, Strings (plucked) - Unspecified, Strings (plucked) - Unknown, Strings (plucked) - Ethnic, Strings (plucked) - Other, Electronic - Synthesizer, Electronic - Tape, Electronic - Computer, Electronic - Ondes Martinot, Electronic - Unspecified, Electronic - Unknown, Electronic - Other, Unspecified instrument, Unknown") oxy_label(text, " Count: ") oxy_textfield(edit, "@count", fontInherit, true, width, 90px) 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(
+    oxy_action(name, 'Add instrument', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add 10 instruments', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>', arg-insertLocation, '.', arg-insertPosition, 'After'),
+    oxy_action(name, 'Delete instrument', description, 'Deletes the current element', operation, 'DeleteElementOperation') oxy_action(name, 'Add heading', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<head xmlns="http://www.music-encoding.org/ns/mei"></head>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete heading', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+work > classification {
+    width: 1300px;
+    background: #fffacc;
+    text-align: left;
+    font-size: 22px;
+    content: oxy_label(text, "Classification: ", styles, "font-weight:bold;");
+}
+work > classification > termList {
+    visibility: -oxy-collapse-text;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+term {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Term: ") oxy_textfield(edit, "#text", fontInherit, true, width, 200px) oxy_label(text, " MARC-Value: ", width, 100px) oxy_combobox(edit, "@label", editable, false, fontInherit, true, width, 250px, values, "an, bd, bg, bl, bt, ca, cb, cc, cg, ch, cl, cn, co, cp, cr, cs, ct, cy, cz, df, dv, fg, fl, fm, ft, gm, hy, jz, mc, md, mi, mo, mp, mr, ms, mu, mz, nc, nn, op, or, ov, pg, pm, po, pp, pr, ps, pt, pv, rc, rd, rg, ri, rp, rq, sd, sg, sn, sp, st, su, sy, tc, tl, ts, uu, vi, vr, wz, za, zz", labels, "Anthems, Ballads, Bluegrass music, Blues, Ballets, Chaconnes, Chants (Other religions), Chant (Christian), Concerti grossi, Chorales, Chorale preludes, Canons and rounds, Concertos, Chansons (polyphonic), Carols, Chance compositions, Cantatas, Country music, Canzonas, Dance forms, Divertimentos or serenades or cassations or divertissements or notturni, Fugues, Flamenco, Folk music, Fantasias, Gospel music, Hymns, Jazz, Musical revues and comedies, Madrigals, Minuets, Motets, Motion picture music, Marches, Masses, Multiple forms, Mazurkas, Nocturnes, Not applicable, Operas, Oratorios, Overtures, Program music, Passion music, Polonaises, Popular music, Preludes, Passacaglias, Part-songs, Pavans, Rock music, Rondos, Ragtime music, Ricercars, Rhapsodies, Requiems, Square dance music, Songs, Sonatas, Symphonic poems, Studies and exercises, Suites, Symphonies, Toccatas, Teatro lirico, Trio-sonatas, Unknown, Villancicos, Variations, Waltzes, Zarzuelas, Other") oxy_label(text, " Level: ") oxy_combobox(edit, "@type", editable, false, fontInherit, true, width, 50px, values, "1, 2, 3")
+}
+term:after {
+        content: 
+        oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add term', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<term xmlns="http://www.music-encoding.org/ns/mei"></term>' arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete term', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+        oxy_button(action, oxy_action(
+                 name, 'Move up', 
+                 description, 'Move current element up', 
+                 icon, url('images/arrow-up.png'), 
+                 operation, 'MoveElementOperation', 
+                 arg-sourceLocation, '.',
+                 arg-targetLocation, 'preceding-sibling::*[1]',
+                 arg-insertPosition, 'Before'))
+            oxy_button(action, oxy_action(
+                  name, 'Move down', 
+                  description, 'Move current element down', 
+                  icon, url('images/arrow-down.png'), 
+                  operation, 'MoveElementOperation', 
+                  arg-sourceLocation, '.',
+                  arg-targetLocation, 'following-sibling::*[1]',
+                  arg-insertPosition, 'After'));
+}
+work > expressionList {
+    width: 1300px;
+    background: #fffaf3;
+    text-align: left;
+    font-size: 22px;
+    content: oxy_label(text, "Work Parts: ", styles, "font-weight:bold;");
+}
+expressionList > expression > componentList > expression:after {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add work part', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<expression xmlns="http://www.music-encoding.org/ns/mei"><title></title><contributor></contributor><tempo></tempo><key pname="" accid="" mode=""></key><meter count="" unit=""></meter><incip><incipText><p/></incipText></incip><perfMedium><castList><castItem><role/><perfRes/><roleDesc/></castItem></castList><perfResList><perfResList><head/><perfRes/></perfResList></perfResList></perfMedium><componentList></componentList></expression>', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete work part', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+expressionList > expression > componentList > expression > componentList {
+    content:
+    oxy_label(text, 'Components:', styles, "font-weight:bold;", width, 180px)
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add component', description, 'Insert an element inside the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<expression xmlns="http://www.music-encoding.org/ns/mei"><title></title><tempo></tempo><meter count="" unit=""/></expression>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'))) 
+    
+}
+expressionList > expression > componentList > expression > componentList > expression {
+    content:
+    oxy_label(text, 'Component: \A')
+}
+expressionList > expression > componentList > expression > componentList > expression:after {
+    content:
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add component', description, 'Insert an element inside the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<expression xmlns="http://www.music-encoding.org/ns/mei"><title></title><tempo></tempo><meter count="" unit=""/></expression>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'),
+    oxy_action(name, 'Delete component', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+
+}
+expressionList > expression > title {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Title: ") oxy_textfield(fontInherit, true, edit, '#text', width, 25%)
+}
+componentList > expression {
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+componentList > expression > title {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Title: ", width, 136px) 
+    oxy_textfield(edit, "#text", fontInherit, true, width, 769px)
+}
+componentList > expression {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Work Part No.: ", width, 136px)
+    oxy_textfield(edit, oxy_xpath("@n"), fontInherit, true, width, 100px)
+}
+componentList > expression > contributor {
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_label(text, "Contributors: ", styles, "font-weight:bold;", width, 136px)
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add contributor', description, 'Insert an element inside the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<persName xmlns="http://www.music-encoding.org/ns/mei" role=""></persName>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'))) 
+    
+}
+componentList > expression > contributor > persName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Name: ", width, 136px)
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    " Role: " 
+    oxy_combobox(edit, "@role", fontInherit, true, editable, false, width, 180px, values, "act, adp, anl, ann, arr, art, ard, asg, asn, att, auc, aut, aqt, aft, aud, aui, aus, bnd, bdd, blw, bkd, bkp, bjd, bpd, bsl, bor, cll, cns, chr, clb, col, cmm, com, cmp, ccp, cnd, con, csl, ctr, ctb, cpc, cph, crr, crp, cst, cov, cre, cur, dnc, dtc, dtm, dte, dto, dpt, dsr, drt, dst, dnr, drm, dub, edt, elt, eng, egr, etr, exp, fac, frg, fmo, fnd, ilu, ill, ins, itr, ive, ivr, led, len, lbt, lse, lso, lgd, ltg, lyr, mfr, mrb, mrk, mdc, mte, mod, mon, mcp, msd, mus, nrt, org, oth, own, ppm, pat, prf, pma, pht, plt, prt, pop, prm, pro, pmm, prd, prg, pdr, pfr, pbl, pbd, ppt, rcp, rce, red, rpt, rth, rtm, res, rpy, rev, rbr, sce, scr, scl, sec, std, sgn, sng, sds, spk, spn, stm, str, stl, srv, tch, trc, trl, tyd, tyg, vdg, voc, wit, wdc, wde, wam", labels, "actor, adapter, analyst, annotator, arranger, artist, artistic director, assignee, associated name, attributed name, auctioneer, author, author in quotations or text extracts, author of afterword/colophon etc., author of dialog, author of introduction etc., author of screenplay etc., binder, binding designer, blurb writer, book designer, book producer, bookjacket designer, bookplate designer, bookseller, borrower, calligrapher, censor, choreographer, collaborator, collector, commentator, compiler, composer, conceptor, conductor, conservator, consultant, contractor, contributor, copyright claimant, copyright holder, corrector, correspondent, costume designer, cover designer, creator, curator, dancer, data contributor, data manager, dedicatee, dedicator, depositor, designer, director, distributor, donor, draftsman, dubious author, editor, electrotyper, engineer, engraver, etcher, expert, facsimilist, forger, former owner, funder, illuminator, illustrator, inscriber, instrumentalist, interviewee, interviewer, lead, lender, librettist, licensee, licensor, lighting designer, lithographer, lyricist, manufacturer, marbler, markup editor, metadata contact, metal-engraver, moderator, monitor, music copyist, musical director, musician, narrator, originator, other, owner, papermaker, patron, performer, permitting agency, photographer, platemaker, printer, printer of plates, printmaker, producer, production manager, production personnel, programmer, project director, proofreader, publisher, publishing director, puppeteer, recipient, recording engineer, redactor, reporter, research team head, research team member, researcher, responsible party, reviewer, rubricator, scenarist, scribe, sculptor, secretary, set designer, signer, singer, sound designer, speaker, sponsor, stage manager, stereotyper, storyteller, surveyor, teacher, transcriber, translator, type designer, typographer, videographer, vocalist, witness, woodcutter, wood engraver, writer of accompanying material") 
+}
+componentList > expression > contributor > persName:after {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add contributor', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<persName xmlns="http://www.music-encoding.org/ns/mei" role=""></persName>\a', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete contributor', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+componentList > expression > key {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Key: ", width, 136px)
+    oxy_textfield(edit, '#text', fontInherit, true, width, 260px)
+    
+    oxy_label(text, " Pitch name: ", width, 128px)
+    oxy_combobox(edit, '@pname', fontInherit, true, width, 43px, 
+    editable, false,
+    values, 'c, g, d, a, e, b, f',
+    labels, 'C, G, D, A, E, B, F')
+    
+    oxy_label(text, " Accid: ")
+    oxy_combobox(edit, '@accid', fontInherit, true, width, 118px, 
+    editable, false,
+    values, 'f, ff, n, s, ss',
+    labels, 'flat, double flat, natural, sharp, double sharp')
+    
+    oxy_label(text, " Mode: ")
+    oxy_combobox(edit, '@mode', fontInherit, true, values, 'major, minor', width, 94px)
+}
+componentList > expression > meter {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Meter: ", width, 136px) oxy_textfield(edit, '@count', fontInherit, true, width, 30px) " / " oxy_textfield(edit, '@unit', fontInherit, true, width, 30px) 
+    oxy_checkbox(edit, '@sym', values, 'cut')
+    oxy_checkbox(edit, '@sym', values, 'common')
+}
+componentList > expression > tempo {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Tempo: ", width, 136px) oxy_textfield(edit, "#text", fontInherit, true, width, 769px)
+}
+componentList > expression > perfMedium {
+    padding-top: 5px;
+    content:
+    oxy_label(text, "Cast List: ", styles, "font-weight:bold;", width, 136px)
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add cast role', description, 'Insert an element inside the current one', operation, 'InsertFragmentOperation', arg-fragment, '\a<castItem xmlns="http://www.music-encoding.org/ns/mei"><role/><perfRes/><roleDesc/></castItem>\a', arg-insertLocation, '.', arg-insertPosition, 'Inside as first child'))) 
+}
+componentList > expression > perfMedium > castList {
+    padding: 15px;
+    visibility: -oxy-collapse-text;
+    border: 1px solid #ccc;
+}
+componentList > expression > perfMedium > castList > castItem > role {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Role: ", width, 120px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 260px)
+
+}
+componentList > expression > perfMedium > castList > castItem > perfRes {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, " MARC-Value: ", width, 128px)
+    oxy_combobox(edit, "@codedval", editable, false, width, 220px, fontInherit, true, values, " , va, vb, vc, vd, ve, vf, vg, vh, vi, vj, vn, vu, vy ", labels, "[empty], Voices - Soprano, Voices - Mezzo Soprano, Voices - Alto, Voices - Tenor, Voices - Baritone, Voices - Bass, Voices - Counter tenor, Voices - High voice, Voices - Medium voice, Voices - Low voice, Voices - Unspecified, Voices - Unknown, Voices - Ethnic")
+
+}
+componentList > expression > perfMedium > castList > castItem > roleDesc {
+    display: inline;
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, " Description: ", width, 110px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 190px)
+}
+componentList > expression > perfMedium > castList > castItem:after {
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add role', 
+    description, 'Insert an element after the current one', 
+    operation, 'InsertFragmentOperation', 
+    arg-fragment, '<castItem xmlns="http://www.music-encoding.org/ns/mei"><role></role><perfRes></perfRes><roleDesc></roleDesc></castItem>', 
+    arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Delete role', description, 'Deletes the current element', operation, 'DeleteElementOperation'))
+)
+oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          ;
+}
+componentList > expression > perfMedium > perfResList {
+    padding-top: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Instrumentation: ", styles, "font-weight:bold;", width, 180px)
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add instrument list', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval=""><head></head><perfRes codedval="" count="1"></perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: orchestra', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="oa"><head>Orchestra</head><perfRes codedval="we" count="1">Piccolo flute</perfRes><perfRes codedval="wa" count="1">Flute</perfRes><perfRes codedval="wb" count="1">Oboe</perfRes><perfRes codedval="wc" count="1">Clarinet</perfRes><perfRes codedval="wd" count="1">Bassoon</perfRes><perfRes codedval="wz" count="1">Contrabassoon</perfRes><perfRes codedval="ba" count="1">Horn</perfRes><perfRes codedval="bb" count="1">Trumpet</perfRes><perfRes codedval="bd" count="1">Trombone</perfRes><perfRes codedval="pa" count="1">Timpani</perfRes><perfRes codedval="pd" count="1">Bass drum</perfRes><perfRes codedval="pz" count="1">Cymbals</perfRes><perfRes codedval="pz" count="1">Triangle</perfRes><perfRes codedval="sa" count="1">Violin I</perfRes><perfRes codedval="sa" count="1">Violin II</perfRes><perfRes codedval="sb" count="1">Viola</perfRes><perfRes codedval="sc" count="1">Violoncello</perfRes><perfRes codedval="sd" count="1">Double bass</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: choir', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="ca"><head>Choir</head><perfRes codedval="va" solo="false">Soprano</perfRes><perfRes codedval="vc" solo="false">Alto</perfRes><perfRes codedval="vd" solo="false">Tenor</perfRes><perfRes codedval="vf" solo="false">Bass</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')
+    oxy_action(name, 'Add template list: string quartet', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<perfResList xmlns="http://www.music-encoding.org/ns/mei" codedval="oc"><head>String quartet</head><perfRes codedval="sa" count="1">Violin I</perfRes><perfRes codedval="sa" count="1">Violin II</perfRes><perfRes codedval="sb" count="1">Viola</perfRes><perfRes codedval="sc" count="1">Violoncello</perfRes></perfResList>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child')))
+
+}
+componentList > expression > perfMedium > perfResList > perfResList > perfRes {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Name: ", width, 120px) 
+    oxy_textfield(edit, "#text", fontInherit, true, width, 260px) 
+    oxy_label(text, " MARC-Value: ", width, 128px) 
+    oxy_combobox(edit, "@codedval", fontInherit, true, editable, false, width, 220px, values, " , wa, wb, wc, wd, we, wf, wg, wh, wi, wn, wu, wy, wz, ba, bb, bc, bd, be, bf, bn, bu, by, bz, pa, pb, pc, pd, pn, pu, py, pz, va, vb, vc, vd, ve, vf, vg, vh, vi, vj, vn, vu, vy, ka, kb, kc, kd, ke, kf, kn, ku, ky, kz, sa, sb, sc, sd, se, sf, sg, sn, su, sy, sz, ta, tb, tc, td, tn, tu, ty, tz, ea, eb, ec, ed, en, eu, ez, zn, zu", labels, "[empty], Woodwinds - Flute, Woodwinds - Oboe, Woodwinds - Clarinet, Woodwinds - Bassoon, Woodwinds - Piccolo, Woodwinds - English horn, Woodwinds - Bass clarinet, Woodwinds - Recorder, Woodwinds - Saxophone, Woodwinds - Unspecified, Woodwinds - Unknown, Woodwinds - Ethnic, Woodwinds - Other, Brass - Horn, Brass - Trumpet, Brass - Cornet, Brass - Trombone, Brass - Tuba, Brass - Baritone, Brass - Unspecified, Brass - Unknown, Brass - Ethnic, Brass - Other, Percussion - Timpani, Percussion - Xylophone, Percussion - Marimba, Percussion - Drum, Percussion - Unspecified, Percussion - Unknown, Percussion - Ethnic, Percussion - Other, Voices - Soprano, Voices - Mezzo Soprano, Voices - Alto, Voices - Tenor, Voices - Baritone, Voices - Bass, Voices - Counter tenor, Voices - High voice, Voices - Medium voice, Voices - Low voice, Voices - Unspecified, Voices - Unknown, Voices - Ethnic, Keyboard - Piano, Keyboard - Organ, Keyboard - Harpsichord, Keyboard - Clavichord, Keyboard - Continuo, Keyboard - Celeste, Keyboard - Unspecified, Keyboard - Unknown, Keyboard - Ethnic, Keyboard - Other, Strings (bowed) - Violin, Strings (bowed) - Viola, Strings (bowed) - Violoncello, Strings (bowed) - Double bass, Strings (bowed) - Viol, Strings (bowed) - Viola d'amore, Strings (bowed) - Viola da gamba, Strings (bowed) - Unspecified, Strings (bowed) - Unknown, Strings (bowed) - Ethnic, Strings (bowed) - Other, Strings (plucked) - Harp, Strings (plucked) - Guitar, Strings (plucked) - Lute, Strings (plucked) - Mandolin, Strings (plucked) - Unspecified, Strings (plucked) - Unknown, Strings (plucked) - Ethnic, Strings (plucked) - Other, Electronic - Synthesizer, Electronic - Tape, Electronic - Computer, Electronic - Ondes Martinot, Electronic - Unspecified, Electronic - Unknown, Electronic - Other, Unspecified instrument, Unknown") 
+    oxy_label(text, " Count: ", width, 110px) 
+    oxy_textfield(edit, "@count", fontInherit, true, width, 190px) 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(
+    oxy_action(name, 'Add instrument', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add 10 instruments', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>\A<perfRes xmlns="http://www.music-encoding.org/ns/mei" codedval="" count="1"></perfRes>', arg-insertLocation, '.', arg-insertPosition, 'After'),
+    oxy_action(name, 'Delete instrument', description, 'Deletes the current element', operation, 'DeleteElementOperation') oxy_action(name, 'Add heading', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<head xmlns="http://www.music-encoding.org/ns/mei"></head>\A', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete heading', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+componentList > expression > incip:before {
+    padding-top: 5px;
+    content:
+    oxy_label(text, "Incipit: \A", styles, "font-weight: bold;")
+}
+componentList > expression > incip {
+    content:
+    oxy_label(text, "Incipit File: ", width, 136px)
+    oxy_urlChooser(
+        fontInherit, true,
+        edit, "@target", width, 769px)
+}
+componentList > expression > incip > incipText > p {
+    visibility: -oxy-collapse-text;
+    content: 
+    oxy_label(text, "Text Incipit: " width, 136px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 769px)
+
+}
+componentList > expression > incip > inciptText > p {
+    visibility: -oxy-collapse-text;
+    content: oxy_textfield(edit, "#text")
+}
+manifestation:after {
+        content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, 
+    oxy_action_list(
+    oxy_action(name, 'Add manuscript', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<manifestation xmlns="http://www.music-encoding.org/ns/mei" singleton="true"><titleStmt><title></title></titleStmt><physDesc><physMedium></physMedium><condition></condition><titlePage label="single"><p/></titlePage><titlePage label="head"><p></p></titlePage><handList><hand><persName auth="GND" auth.uri="http://d-nb.info/gnd" codedval="" corresp=""></persName></hand></handList><bindingDesc><binding><p/></binding></bindingDesc><supportDesc><foliation></foliation></supportDesc><addDesc><annot label="autograph"></annot><annot label="foreign"/><annot label="dating"></annot></addDesc></physDesc><physLoc><repository><corpName></corpName><geogName></geogName><identifier auth.uri="http://www.rism.info" auth="RISM"></identifier><ptr label="catalog" target=""/><ptr label="digital_image" target=""/></repository><identifier label="shelf_mark"></identifier></physLoc><creation><date isodate=""></date></creation></manifestation>' arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Add print', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<manifestation xmlns="http://www.music-encoding.org/ns/mei" singleton="false"><titleStmt><title></title></titleStmt><pubStmt><publisher><corpName></corpName></publisher><pubPlace></pubPlace><date></date></pubStmt><physDesc><physMedium></physMedium><plateNum></plateNum><condition></condition><titlePage label="head"><p/></titlePage><titlePage label="single"><p></p></titlePage></physDesc><itemList><item><physLoc><repository><corpName></corpName><geogName></geogName><identifier auth.uri="http://www.rism.info" auth="RISM"></identifier><ptr label="catalog" target=""/><ptr label="digital_image" target=""/></repository><identifier label="shelf_mark"></identifier></physLoc></item></itemList></manifestation>' arg-insertLocation, '.', arg-insertPosition, 'After'), 
+    oxy_action(name, 'Delete', description, 'Deletes the current element', operation, 'DeleteElementOperation')));
+}
+manifestation {
+    border: 1px solid #ccc;
+    text-align: left;
+    content: oxy_label(text, "Manifestation:", styles, "font-weight:bold;")
+}
+manifestation > titleStmt > title {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Title: ") oxy_textfield(fontInherit, true, edit, '#text', width, 25%)
+}
+manifestation > physDesc {
+    border: 1px solid #ccc;
+    padding: 10px;
+    content: oxy_label(text, "Physical Description:", styles, "font-weight:bold;")
+}
+manifestation > physDesc > physMedium {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Medium: ", width, 170px) oxy_textArea(fontInherit, true, edit, '#text', rows 5, width, 600px, contentType, 'text/xml');
+}
+manifestation > physDesc > condition {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Condition: ", width, 170px) oxy_textArea(fontInherit, true, edit, '#text', rows 5, width, 600px, contentType, 'text/xml');
+}
+manifestation > physDesc > titlePage {
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Title Page: ") 
+    "\A" 
+    oxy_label(text, "Type: ", width, 60px) 
+    oxy_combobox(edit, "@label", editable, false, width, 110px, fontInherit, true, values, "main, head, single, cover", labels, "Main title page, Head title, Single title, Cover")
+}
+manifestation > physDesc > titlePage:after {
+        content: "\A" oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add title page', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<titlePage xmlns="http://www.music-encoding.org/ns/mei" label="single"><p></p></titlePage>' arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete title page', description, 'Deletes the current element', operation, 'DeleteElementOperation'))) "\A";
+}
+manifestation > physDesc > titlePage > p {
+    padding-left: 2px;
+    display: inline;
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_textArea(fontInherit, true, edit, '#text', rows 5, width, 600px, contentType, 'text/xml');
+}
+manifestation > physDesc > plateNum {
+    padding: 5px;
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_label(text, 'Plate Number: ', width, 170px)
+    oxy_textfield(edit, '#text', fontInherit, true, width, 598px)
+}
+manifestation > itemList {
+    padding: 10px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_label(text, 'Reference Sources: ', styles, "font-weight:bold;")
+}
+manifestation > itemList > item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+    content:
+    oxy_label(text, 'Evidence: ')
+}
+itemList > item:after {
+        content:
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add evidence', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<item xmlns="http://www.music-encoding.org/ns/mei"><physLoc><repository><corpName/><geogName/><identifier/><ptr label="catalog"/><ptr label="digital_image"/></repository><identifier/></physLoc></item>' arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete evidence', description, 'Deletes the current element', operation, 'DeleteElementOperation'))) "\A";
+}
+itemList > item > physLoc > repository > corpName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Library: ", width, 130px) oxy_textfield(fontInherit, true, edit, '#text', width, 785px)
+}
+itemList > item > physLoc > repository > geogName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "City: ", width, 130px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+itemList > item > physLoc > repository > identifier {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "RISM-ID: ", width, 130px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+itemList > item > physLoc > repository > ptr[label = 'catalog'] {
+    padding-bottom: 5px;
+    display: inline;
+    content: oxy_label(text, "Catalog (Link): ", width, 130px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+itemList > item > physLoc > repository > ptr[label = 'digital_image'] {
+    padding-bottom: 5px;
+    display: inline;
+    content: oxy_label(text, " Reproduction (Link): ") oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+itemList > item > physLoc > identifier {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Shelfmark: ", width, 130px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+
+manifestation > physDesc > handList {
+    content: oxy_label(text, "Hand List:", styles, "font-weight:bold;")
+}
+hand:has(persName) {
+    border: 1px solid #ccc;
+    padding: 15px;
+    content: 
+        oxy_label(text, "Hand (Person): \A") oxy_label(text, "Medium: ")
+        oxy_combobox(edit, "@medium", fontInherit, true, editable, false, width, 20%, values, "pencil, ink light brown, ink brown, ink black-brown, ink black, ink red, ink, crayon, ruddle", labels, "Pencil, Light brown ink, Brown ink, Black brown ink, Black ink, Red ink, Ink, Crayon, Ruddle") oxy_label(text, " Type: ") 
+        oxy_combobox(edit, "@type", fontInherit, true, editable, false, width, 10%, values, "main, minor", labels, "Main, Minor")
+}
+hand:has(corpName) {
+    border: 1px solid #ccc;
+    padding: 15px;
+    content: oxy_label(text, "Hand (Organisation): \A") oxy_label(text, "Medium: ") oxy_combobox(edit, "@medium", fontInherit, true, editable, false, width, 20%, values, "pencil, ink light brown, ink brown, ink black-brown, ink black, ink red, ink, crayon, ruddle", labels, "Pencil, Light brown ink, Brown ink, Black brown ink, Black ink, Red ink, Ink, Crayon, Ruddle") oxy_label(text, " Type: ") oxy_combobox(edit, "@type", fontInherit, true, editable, false, width, 10%, values, "main, minor", labels, "Main, Minor")
+}
+hand:has(persName):after {
+        content: 
+        oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add Hand (Person)', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '\A<hand xmlns="http://www.music-encoding.org/ns/mei">\A<persName role="scribe" auth="" auth.uri="" codedval="" corresp=""/>\A</hand>', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Add Hand (Organisation)', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<hand xmlns="http://www.music-encoding.org/ns/mei">\A<corpName role="scribe" auth="" auth.uri="" codedval="" corresp=""/>\A</hand>', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+        oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+        oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+hand:has(corpName):after {
+    content: 
+    oxy_buttonGroup(label, '+|-', fontInherit, true, actions, oxy_action_list(oxy_action(name, 'Add Hand (Person)', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<hand xmlns="http://www.music-encoding.org/ns/mei">\A<persName role="scribe" auth="" auth.uri="" codedval="" corresp=""/>\A</hand>', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Add Hand (Organisation)', description, 'Insert an element after the current one', operation, 'InsertFragmentOperation', arg-fragment, '<hand xmlns="http://www.music-encoding.org/ns/mei">\A<corpName role="scribe" auth="" auth.uri="" codedval="" corresp=""/>\A</hand>', arg-insertLocation, '.', arg-insertPosition, 'After'), oxy_action(name, 'Delete', description, 'Deletes the current element', operation, 'DeleteElementOperation')))
+    oxy_button(action, oxy_action(
+          name, 'Move up', 
+          description, 'Move current element up', 
+          icon, url('images/arrow-up.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'preceding-sibling::*[1]',
+          arg-insertPosition, 'Before'))
+    oxy_button(action, oxy_action(
+          name, 'Move down', 
+          description, 'Move current element down', 
+          icon, url('images/arrow-down.png'), 
+          operation, 'MoveElementOperation', 
+          arg-sourceLocation, '.',
+          arg-targetLocation, 'following-sibling::*[1]',
+          arg-insertPosition, 'After'))      
+          
+          ;
+}
+hand > persName {
+    visibility: -oxy-collapse-text;
+    display: inline;
+    content: "Name: " oxy_textfield(fontInherit, true, edit, '#text', width, 25%) /*" Authority: "
+    oxy_combobox(edit, "@auth", fontInherit, true, editable, false, width, 10%, values, "GND, VIAF, LoC")
+    " ID: "
+    oxy_textfield(tooltip, "Text field for coded value", fontInherit, true, edit, '@codedval', width, 12%)
+*/
+}
+hand > corpName {
+    visibility: -oxy-collapse-text;
+    display: inline;
+    content: "Name: " oxy_textfield(fontInherit, true, edit, '#text', width, 25%) /*" Authority: "
+    oxy_combobox(edit, "@auth",
+    fontInherit, true, 
+    width, 10%,
+    editable, false, values, "GND, VIAF, LoC")
+    " ID: "
+    oxy_textfield(tooltip, "Text field for coded value", fontInherit, true, edit, '@codedval', width, 12%)
+*/
+}
+physDesc > bindingDesc > binding > p {
+    visibility: -oxy-collapse-text;
+    padding-top: 10px;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Binding Description: ", styles, "font-weight:bold;", width, 270px) oxy_textArea(fontInherit, true, edit, '#text', rows 5);
+ 
+}
+physDesc > supportDesc > foliation {
+    visibility: -oxy-collapse-text;
+    padding-top: 10px;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Foliation: ", styles, "font-weight:bold;", width, 270px) oxy_textArea(fontInherit, true, edit, '#text', rows 5);
+}
+physDesc > addDesc {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Additional Descriptions: ", styles, "font-weight:bold;");
+}
+addDesc > annot[label = 'autograph'] {
+    padding-bottom: 10px;
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Autograph Annotation: ", width, 270px) oxy_textArea(fontInherit, true, edit, '#text', rows 5);
+}
+addDesc > annot[label = 'foreign'] {
+    padding-bottom: 10px;
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Foreign Annotation: ", width, 270px) oxy_textArea(fontInherit, true, edit, '#text', rows 5, contentType, 'text/xml');
+}
+addDesc > annot[label = 'dating'] {
+    visibility: -oxy-collapse-text;
+    white-space: pre-wrap;
+    content: oxy_label(text, "Dating: ", width, 270px) oxy_textArea(fontInherit, true, edit, '#text', rows 5, contentType, 'text/xml');
+}
+manifestation > physLoc {
+    padding: 10px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+}
+manifestation > physLoc > repository {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Repository:", styles, "font-weight:bold;")
+}
+manifestation > physLoc > repository > corpName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Name: ", width, 160px) oxy_textfield(fontInherit, true, edit, '#text', width, 785px)
+}
+manifestation > physLoc > repository > geogName {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "City: ", width, 160px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > physLoc > repository > identifier {
+    padding-bottom: 5px;
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "RISM-ID: ", width, 160px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > physLoc > repository > ptr[label = 'catalog'] {
+    padding-bottom: 5px;
+    display: inline;
+    content: oxy_label(text, "Catalog (Link): ", width, 160px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > physLoc > repository > ptr[label = 'digital_image'] {
+    padding-bottom: 5px;
+    display: inline;
+    content: oxy_label(text, " Reproduction (Link): ") oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > physLoc > identifier {
+    visibility: -oxy-collapse-text;
+    content: oxy_label(text, "Shelfmark: ", width, 160px) oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > creation > date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: 
+    oxy_label(text, "Date (ISO 8601): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px)
+    
+    oxy_button(showText, true, fontInherit, true, action, 
+            oxy_action(
+                name, "Add date span\A",
+                description, 'Insert a date span attributes',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocation, '.',
+                arg-removeIfEmpty, false,
+                arg-values, ''
+                )
+            )
+                oxy_label(text, "\A Date (displayed): ", width, 160px) 
+    
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+}
+manifestation > creation > date[startdate][notbefore][enddate][notafter] {
+    visibility: -oxy-collapse-text;
+    text-align: left;
+    content: oxy_label(text, "Date (ISO 8601): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '@isodate', width, 300px) 
+    
+    oxy_button(showText, true, fontInherit, true, action, 
+            oxy_action(
+                name, "Remove date span",
+                description, 'Remove date span attributes',
+                operation, 'ChangeAttributesOperation',
+                arg-attributeNames, 'startdate\A enddate\A notbefore\A notafter',
+                arg-elementLocations, '.',
+                arg-removeIfEmpty, true,
+                arg-values, ''
+                ))
+                
+    oxy_label(text, "\A Beginning (span): ", width, 160px) 
+    oxy_textfield(edit, "@startdate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not before: ", width, 160px) 
+    oxy_textfield(edit, "@notbefore", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Ending (span): ", width, 160px) 
+    oxy_textfield(edit, "@enddate", fontInherit, true, width, 300px) 
+    oxy_label(text, "\A Not after: ", width, 160px) 
+    oxy_textfield(edit, "@notafter", fontInherit, true, width, 300px)
+    oxy_label(text, "\A Date (displayed): ", width, 160px) 
+    oxy_textfield(fontInherit, true, edit, '#text', width, 300px)
+    
+    ;
+}
+manifestation > creation > annot > p {
+    content:
+    oxy_label(text, "Comment: ", width, 160px)
+    oxy_textfield(edit, "#text", fontInherit, true, width, 250px)
+    
+}
+/* ELEMENT FOLDING */
+fileDesc > pubStmt {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+fileDesc > sourceDesc {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+encodingDesc {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+fileDesc > titleStmt > respStmt {
+    -oxy-foldable: true;
+    -oxy-folded: true;
+    padding: 0.6em;
+}
+workList > work > perfMedium {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.6em;
+}
+workList > work > contributor {
+    -oxy-foldable: false;
+    -oxy-folded: false;
+}
+workList > work > creation {
+    -oxy-foldable: false;
+    -oxy-folded: false;
+}
+workList > work > history {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+workList > work > history > eventList {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+workList > work > classification {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+workList > work > expressionList {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+manifestationList {
+    -oxy-foldable: true;
+    -oxy-folded: false;
+    padding: 0.5em;
+}
+manifestation {
+    -oxy-foldable: true;
+    /*  -oxy-folded: true;*/
+    padding: 0.5em;
+}
+/*NOT DISPLAY*/
+encodingDesc,
+revisionDesc,
+pubStmt,
+seriesStmt,
+sourceDesc,
+score,
+music {
+    display: none;
+}

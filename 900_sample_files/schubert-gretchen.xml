@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: 800_frameworks/schema/mei-all_wizkit.rng is used for schema validation. -->
+<mei xmlns="http://www.music-encoding.org/ns/mei">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Gretchen am Spinnrade</title>
+                <respStmt>
+                    <persName role="cmp" auth="GND" codedval="118610961" auth.uri="https://d-nb.info/gnd/" corresp="P-000001">Schubert, Franz</persName>
+                    <persName role="lyr" auth="GND" codedval="118540238" auth.uri="https://d-nb.info/gnd/" corresp="P-000005">Goethe, Johann Wolfgang von</persName>
+                    <persName role="edt" xml:id="PP" corresp="not_found">Peter Provaznik</persName>
+                    <persName role="edt" xml:id="PG" corresp="not_found">Paul Gulewycz</persName>
+                    <persName role="edt" xml:id="CG" corresp="not_found">Clemens Gubsch</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Digital catalogue raisonné</title>
+                <identifier type="file-collection">000002</identifier>
+            </seriesStmt>
+        </fileDesc>
+        <workList>
+            <work>
+                <identifier type="work" label="D²">118</identifier>
+                <identifier type="work" label="opus">2</identifier>
+                <identifier type="Normdata" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="300140541"/>
+                <identifier type="Normdata" auth.uri="http://viaf.org/viaf/" auth="VIAF" codedval="175773429"/>
+                <identifier type="work" label="-"/>
+                <title xml:lang="de">Gretchen am Spinnrade</title>
+                <contributor>
+                    <persName codedval="118610961" auth="GND" role="cmp" auth.uri="https://d-nb.info/gnd/" corresp="P-000001">Schubert, Franz</persName>
+                    <persName codedval="118540238" auth="GND" role="aut" auth.uri="https://d-nb.info/gnd/" corresp="P-000005">Goethe, Johann Wolfgang von</persName>
+                    <!--<persName auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="P-000002">Beethoven, Ludwig van</persName>-->
+                </contributor>
+                <tempo>Nicht zu geschwind</tempo>
+                <key pname="d" accid="n" mode="minor">D Minor</key>
+                <incip>
+                    <incipText>
+                        <p>Meine Ruh ist hin, mein Herz ist schwer</p>
+                    </incipText>
+                    <score>
+                        <scoreDef meter.count="6" meter.unit="8">
+                            <staffGrp>
+                                <staffGrp n="1">
+                                    <staffDef clef.line="2" clef.shape="G" key.mode="minor" key.sig="1f" lines="5" n="1"/>
+                                </staffGrp>
+                                <staffGrp n="2" symbol="brace" bar.thru="true">
+                                    <staffDef clef.line="2" clef.shape="G" key.mode="minor" key.sig="1f" lines="5" n="2"/>
+                                    <staffDef clef.line="4" clef.shape="F" key.mode="minor" key.sig="1f" lines="5" n="3"/>
+                                </staffGrp>
+                            </staffGrp>
+                        </scoreDef>
+                        <section>
+                            <measure n="1">
+                                <staff n="1">
+                                    <layer n="1">
+                                        <mRest/>
+                                    </layer>
+                                </staff>
+                                <staff n="2">
+                                    <layer n="1">
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                    </layer>
+                                </staff>
+                                <staff n="3">
+                                    <layer n="1">
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        <rest dur="8"/>
+                                        <beam>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        </beam>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                    </layer>
+                                    <layer n="2">
+                                        <note pname="d" oct="3" dur="2" stem.dir="down" dots="1"/>
+                                    </layer>
+                                </staff>
+                            </measure>
+                            <measure n="2">
+                                <staff n="1">
+                                    <layer n="1">
+                                        <rest dur="4"/>
+                                        <rest dur="8"/>
+                                        <rest dur="8"/>
+                                        <note pname="f" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="d">Mei</syl>
+                                            </verse>
+                                        </note>
+                                        <note pname="g" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl wordpos="t" con="d">ne</syl>
+                                            </verse>
+                                        </note>
+                                    </layer>
+                                </staff>
+                                <staff n="2">
+                                    <layer n="1">
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                    </layer>
+                                </staff>
+                                <staff n="3">
+                                    <layer n="1">
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        <rest dur="8"/>
+                                        <beam>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        </beam>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                    </layer>
+                                    <layer n="2">
+                                        <note pname="d" oct="3" dur="2" stem.dir="down" dots="1"/>
+                                    </layer>
+                                </staff>
+                            </measure>
+                            <measure n="3">
+                                <staff n="1">
+                                    <layer n="1">
+                                        <note pname="a" oct="4" dur="4" stem.dir="up" dots="1">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="u">Ruh</syl>
+                                            </verse>
+                                        </note>
+                                        <beam>
+                                            <note pname="a" oct="4" dur="8" stem.dir="up"/>
+                                            <note pname="b" oct="4" dur="8" stem.dir="up" accid.ges="f"/>
+                                        </beam>
+                                        <note pname="a" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl>ist</syl>
+                                            </verse>
+                                        </note>
+                                    </layer>
+                                </staff>
+                                <staff n="2">
+                                    <layer n="1">
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                    </layer>
+                                </staff>
+                                <staff n="3">
+                                    <layer n="1">
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        <rest dur="8"/>
+                                        <beam>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        </beam>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                    </layer>
+                                    <layer n="2">
+                                        <note pname="d" oct="3" dur="2" stem.dir="down" dots="1"/>
+                                    </layer>
+                                </staff>
+                            </measure>
+                            <measure n="4">
+                                <staff n="1">
+                                    <layer n="1">
+                                        <note pname="a" oct="4" dur="4" stem.dir="up" dots="1">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="u">hin</syl>
+                                            </verse>
+                                        </note>
+                                        <note pname="a" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl wordpos="t" con="u">,</syl>
+                                            </verse>
+                                        </note>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl>mein</syl>
+                                            </verse>
+                                        </note>
+                                    </layer>
+                                </staff>
+                                <staff n="2">
+                                    <layer n="1">
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                    </layer>
+                                </staff>
+                                <staff n="3">
+                                    <layer n="1">
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        <rest dur="8"/>
+                                        <beam>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        </beam>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                    </layer>
+                                    <layer n="2">
+                                        <note pname="d" oct="3" dur="2" stem.dir="down" dots="1"/>
+                                    </layer>
+                                </staff>
+                            </measure>
+                            <measure n="5">
+                                <staff n="1">
+                                    <layer n="1">
+                                        <note pname="d" oct="5" dur="4" stem.dir="down" dots="1">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="u">Herz</syl>
+                                            </verse>
+                                        </note>
+                                        <note pname="d" oct="5" dur="4" stem.dir="down"/>
+                                        <note pname="a" oct="4" dur="8" stem.dir="up">
+                                            <verse n="1">
+                                                <syl>ist</syl>
+                                            </verse>
+                                        </note>
+                                    </layer>
+                                </staff>
+                                <staff n="2">
+                                    <layer n="1">
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                        <beam>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="a" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="f" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="d" oct="4" dur="16" stem.dir="up"/>
+                                            <note pname="e" oct="4" dur="16" stem.dir="up"/>
+                                        </beam>
+                                    </layer>
+                                </staff>
+                                <staff n="3">
+                                    <layer n="1">
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        <rest dur="8"/>
+                                        <beam>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                            <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                        </beam>
+                                        <rest dur="8"/>
+                                        <note pname="a" oct="3" dur="8" stem.dir="up"/>
+                                    </layer>
+                                    <layer n="2">
+                                        <note pname="d" oct="3" dur="2" stem.dir="down" dots="1"/>
+                                    </layer>
+                                </staff>
+                                <dynam tstamp="1" vgrp="1" staff="2 3" place="between">pp</dynam>
+                                <hairpin staff="2 3" form="cres" vgrp="1" tstamp="2" tstamp2="3" place="between"/>
+                            </measure>
+                        </section>
+                    </score>
+                </incip>
+                <creation>
+                    <date isodate="1814-10-19" cert="high">October 19th, 1814</date>
+                    <annot><p/></annot>
+                </creation>
+                <history>
+                    <eventList type="composition">
+                        <event/>
+                    </eventList>
+                    <eventList type="performances">
+                        <event>
+                            <date isodate="1823-02-20">20. Februar 1823</date>
+                            <geogName role="place">Wien</geogName>
+                            <geogName role="venue">Musikverein</geogName>
+                            <desc>Uraufführung</desc>
+                        </event>
+                    </eventList>
+                </history>
+                <perfMedium analog="marc:048" auth.uri="https://www.loc.gov/marc/bibliographic/bd048.html">
+                    <perfResList>
+                        <perfResList codedval="oz">
+                            <head/>
+                            <perfRes codedval="va" count="1">Voice</perfRes>
+                            <perfRes codedval="ka" count="1">Piano</perfRes>
+                        </perfResList>
+                    </perfResList>
+                </perfMedium>
+                <classification>
+                    <termList>
+                        <term label="sg">Lied</term>
+                    </termList>
+                </classification>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation singleton="true">
+                <titleStmt>
+                    <title>autograph score</title>
+                </titleStmt>
+                <physDesc>
+                    <physMedium>4 folios (1 bifolio, 2 folios), fol. 1–2: 24,0x30,0 cm, fol. 3–4:
+                        23,5x31,0 cm, 12 staves, yellowish to light grey paper, one blank
+                        page.</physMedium>
+                    <condition>The bifolium was initially trimmed only at the top. Schubert later
+                        cut off the right margin of fol. 1–2, cutting away part of his name.
+                        Therefore, he wrote his surname under the date in black ink.</condition>
+                    <titlePage label="head">
+                        <p>On folio 1r at the top centre the heading by Schubert: "Gretchen am
+                            Spinnrade. | From Göthe's Faust."</p>
+                    </titlePage>
+                    <titlePage label="single">
+                        <p/>
+                    </titlePage>
+                    <handList>
+                        <hand medium="ink light brown" type="main" xml:id="hand_a929b301">
+                            <persName role="scr" auth="GND" codedval="118610961" auth.uri="https://d-nb.info/gnd/" corresp="P-000001">Schubert, Franz</persName>
+                        </hand>
+                        <hand medium="ink black-brown" type="main" xml:id="hand_846034eb">
+                            <persName role="scr" auth="GND" codedval="118610961" auth.uri="https://d-nb.info/gnd/" corresp="P-000001">Schubert, Franz</persName>
+                        </hand>
+                        <hand medium="ink black" type="minor" xml:id="hand_9134aaee">
+                            <persName role="scr" auth="GND" codedval="118610961" auth.uri="https://d-nb.info/gnd/" corresp="P-000001">Schubert, Franz</persName>
+                        </hand>
+                        <hand medium="pencil" type="minor" xml:id="hand_43efb49c">
+                            <corpName role="scr" auth="GND" codedval="2026851-8" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Wienbibliothek im Rathaus</corpName>
+                        </hand>
+                        <hand medium="pencil" type="main" xml:id="hand_a929b303">
+                            <persName role="scr" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="P-000002">Beethoven, Ludwig van</persName>
+                        </hand>
+                    </handList>
+                    <supportDesc>
+                        <foliation>The manuscript has been foliated in pencil in the upper right
+                            corners by Wienbibliothek staff.</foliation>
+                    </supportDesc>
+                    <addDesc>
+                        <annot label="autograph">In black ink Schubert wrote above the upper piano
+                            system: "sempre legato" and above the lower piano system: "sempre
+                            staccato". On fol. 4r Schubert wrote the name of the lyricist above the
+                            piano system of the penultimate bar: "Göthe".</annot>
+                        <annot label="foreign"/>
+                        <annot label="dating">Den 19. Oct 1814</annot>
+                    </addDesc>
+                </physDesc>
+                <physLoc>
+                    <repository>
+                        <corpName corresp="not_found">Musiksammlung der Wienbibliothek im Rathaus</corpName>
+                        <geogName>Wien</geogName>
+                        <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000407">A-Wst</identifier>
+                        <ptr label="catalog" target="https://permalink.obvsg.at/wbr/AC15946502"/>
+                        <ptr label="digital_image" target="https://resolver.obvsg.at/urn:nbn:at:AT-WBR-4906"/>
+                    </repository>
+                    <identifier label="shelf_mark">MHc-69</identifier>
+                </physLoc>
+                <creation>
+                    <date isodate="1814-10-19">19th october 1814</date>
+                </creation>
+            </manifestation>
+            <manifestation singleton="false">
+                <titleStmt>
+                    <title>piano score</title>
+                </titleStmt>
+                <pubStmt>
+                    <publisher>
+                        <corpName auth="GND" codedval="2093947-4" auth.uri="https://d-nb.info/gnd/" corresp="O-000002">Cappi und Diabelli</corpName>
+                    </publisher>
+                    <pubPlace>Wien</pubPlace>
+                    <date isodate="1821-04-30">April 30, 1821</date>
+                </pubStmt>
+                <physDesc>
+                    <physMedium>12 pages, 25,5x19,0 cm, plate print, landscape, watermark: UFF
+                        [1821]</physMedium>
+                    <condition/>
+                    <titlePage label="head">
+                        <p>Gretchen am Spinnrade. | Aus Göthe’s Faust.</p>
+                    </titlePage>
+                    <titlePage label="single">
+                        <p>Gretchen am Spinnrade | aus | GÖTHE’S „FAUST“ | in Musik gesetzt | und
+                            dem Hochgebohrnen Herrn Herrn | Moritz Reichsgrafen von Fries, | Ritter
+                            des oester: kais: Leopoldordens, | Sf k:k: Majestät wirklichen Kämmerer
+                            &amp;. &amp;. | ehrfurchtsvoll gewidmet | von | FRANZ SCHUBERT. | 2tes
+                            Werk. | WIEN, | in Comission bey Cappi und Diabelli, am Graben No 1133.
+                            [r:] Pr: 1 f 30 x.W.W. | 45 x.C.M.</p>
+                    </titlePage>
+                    <plateNum>[none]</plateNum>
+                </physDesc>
+                <itemList>
+                    <item>
+                        <physLoc>
+                            <repository>
+                                <corpName corresp="not_found">Musiksammlung der Wienbibliothek im Rathaus</corpName>
+                                <geogName>Wien</geogName>
+                                <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000407">A-Wst</identifier>
+                                <ptr label="catalog" target="https://permalink.obvsg.at/wbr/AC13590299"/>
+                            </repository>
+                            <identifier label="shelf_mark">Msch-6305</identifier>
+                        </physLoc>
+                    </item>
+                    <item>
+                        <physLoc>
+                            <repository>
+                                <corpName corresp="not_found">Musiksammlung Österreichische Nationalbibliothek</corpName>
+                                <geogName>Wien</geogName>
+                                <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000398">A-Wn</identifier>
+                                <ptr label="catalog" target="http://data.onb.ac.at/rec/AC09155319"/>
+                                <ptr label="digital_image" target="http://data.onb.ac.at/dtl/4882333"/>
+                            </repository>
+                            <identifier label="shelf_mark">SH.Schubert.9</identifier>
+                        </physLoc>
+                    </item>
+                    <item>
+                        <physLoc>
+                            <repository>
+                                <corpName corresp="not_found">Bayerische Staatsbibliothek, Musikabteilung</corpName>
+                                <geogName>München</geogName>
+                                <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000882">D-Mbs</identifier>
+                                <ptr label="catalog" target="https://opacplus.bsb-muenchen.de/title/BV007878462"/>
+                            </repository>
+                            <identifier label="shelf_mark">4 Mus.pr. 54083
+                                [compilation]</identifier>
+                        </physLoc>
+                    </item>
+                </itemList>
+            </manifestation>
+            <manifestation singleton="false">
+                <titleStmt>
+                    <title>piano score</title>
+                </titleStmt>
+                <pubStmt>
+                    <publisher>
+                        <corpName auth="GND" codedval="2093947-4" auth.uri="https://d-nb.info/gnd/" corresp="O-000002">Cappi und Diabelli</corpName>
+                    </publisher>
+                    <pubPlace>Wien</pubPlace>
+                    <date isodate="1839">approx. 1839</date>
+                </pubStmt>
+                <physDesc>
+                    <physMedium>12 pages, 20,0x27,0 cm, plate print, portrait, no watermarks, text
+                        multilingual (ger., it. &amp; fr.).</physMedium>
+                    <titlePage label="head">
+                        <p>GRETCHEN AM SPINNRADE. | Aus Goethe’s Faust. | RITA AL FILATOJO. -
+                            MARGUERITE. | (Paroles françaises de Bélanger.) | Musik von FR.
+                            SCHUBERT, Op. 2. | Wien, bei A. Diabelli und Comp. Graben No 1133.</p>
+                    </titlePage>
+                    <titlePage label="single">
+                        <p>Gretchen am Spinnrade | AUS GOETHE’S | FAUST | für | eine Singstimme |
+                            mit Begleitung des Piano-Forte. | In Musik gesetzt | von Franz Schubert.
+                            | 2tes Werk. | Neue Ausgabe. | Eigenthum der Verleger. | Eingetragen in
+                            das Vereins-Archiv. | WIEN | bei A. Diabelli u. Comp. | Graben No 1133.
+                            [l:] No 767 [r:] Pr. 45 x C.M.</p>
+                    </titlePage>
+                    <plateNum>D. &amp; C. N° 767.</plateNum>
+                </physDesc>
+                <itemList>
+                    <item>
+                        <physLoc>
+                            <repository>
+                                <corpName corresp="not_found">Musiksammlung Österreichische Nationalbibliothek</corpName>
+                                <geogName>Wien</geogName>
+                                <identifier auth.uri="http://www.rism.info" auth="RISM" codedval="ks30000398">A-Wn</identifier>
+                                <ptr label="catalog" target="http://data.onb.ac.at/rec/AC09155323"/>
+                                <ptr label="digital_image" target="http://data.onb.ac.at/dtl/4882488"/>
+                            </repository>
+                            <identifier label="shelf_mark">SH.Schubert.14</identifier>
+                        </physLoc>
+                    </item>
+                </itemList>
+            </manifestation>
+        </manifestationList>
+    </meiHead>
+    <music/>
+</mei>

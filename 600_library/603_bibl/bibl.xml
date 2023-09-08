@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../../700_oxygen_forms/form_for_bibls.css" title="Forms" alternate="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei"
+     xmlns:xl="http://www.w3.org/1999/xlink"
+     meiversion="4.0.0">
+   <meiHead meiversion="4.0.0">
+      <fileDesc>
+         <titleStmt>
+            <title>Register of bibliographic records</title>
+            <respStmt>
+               <persName role="edt">Peter Provaznik</persName>
+               <persName role="edt">Paul Gulewycz</persName>
+               <persName role="edt">Clemens Gubsch</persName>
+            </respStmt>
+         </titleStmt>
+         <pubStmt/>
+         <seriesStmt>
+            <title>WizKit</title>
+            <identifier type="file_collection">Register</identifier>
+         </seriesStmt>
+         <notesStmt>
+            <annot type="private_notes">
+               <p/>
+            </annot>
+         </notesStmt>
+         <sourceDesc>
+            <source/>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Each bibliographic records named in the database shall receive a entry. The
+                    register could contain monographs, articles in volumes and periodicals.</p>
+         </projectDesc>
+      </encodingDesc>
+      <workList>
+         <work>
+            <title/>
+         </work>
+      </workList>
+      <manifestationList>
+         <manifestation/>
+      </manifestationList>
+      <revisionDesc>
+         <change isodate="2023">
+            <respStmt>
+               <name>CG</name>
+            </respStmt>
+            <changeDesc>
+               <p>Examples created</p>
+            </changeDesc>
+         </change>
+      </revisionDesc>
+   </meiHead>
+   <music meiversion="4.0.0">
+      <body>
+         <div>
+            <list>
+               <head>literature</head>
+               <li>
+                  <bibl>
+                     <genre>article</genre>
+                     <genre>book</genre>
+                     <title level="a">Musikalische Interpretation und
+                                Interpretationsgeschichte</title>
+                     <title level="m">Historische Musikwissenschaft</title>
+                     <title level="s"/>
+                     <author>
+                        <persName>
+                           <famName>Hinrichsen</famName>
+                           <foreName>Hans-Joachim</foreName>
+                        </persName>
+                     </author>
+                     <editor>
+                        <persName>
+                           <famName>Calella</famName>
+                           <foreName>Michele</foreName>
+                        </persName>
+                     </editor>
+                     <editor>
+                        <persName>
+                           <famName>Urbanek</famName>
+                           <foreName>Nikolaus</foreName>
+                        </persName>
+                     </editor>
+                     <biblScope unit="vol"/>
+                     <biblScope unit="issue"/>
+                     <biblScope unit="page">S. 184–200</biblScope>
+                     <imprint>
+                        <publisher>J.B. Metzler</publisher>
+                        <pubPlace>Stuttgart</pubPlace>
+                        <date isodate="2013">2013</date>
+                     </imprint>
+                     <ptr label="DOI" target="https://doi.org/10.1007/978-3-476-05348-0_9"/>
+                     <identifier type="Bibl-Register-ID" codedval="000002">000002</identifier>
+                     <identifier auth="DOI">10.1007/978-3-476-05348-0_9</identifier>
+                     <annot label="full_citation">
+                        <p>Hinrichsen, Hans-Joachim, Art.: Musikalische Interpretation und Interpretationsgeschichte, in: Historische Musikwissenschaft hrsg. v. Michele Calella und Nikolaus Urbanek, Stuttgart: J.B. Metzler, 2013, S. 184–200.</p>
+                     </annot>
+                  </bibl>
+                  <bibl>
+                     <genre>article</genre>
+                     <genre>journal</genre>
+                     <title level="a">Das Handwörterbuch der musikalischen
+                                Terminologie</title>
+                     <title level="j">Archiv für Musikwissenschaft</title>
+                     <author>
+                        <persName>
+                           <famName>Eggebrecht</famName>
+                           <foreName>Hans Heinrich</foreName>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <famName>Reckow</famName>
+                           <foreName>Fritz</foreName>
+                        </persName>
+                     </author>
+                     <editor>
+                        <persName>
+                           <famName/>
+                           <foreName/>
+                        </persName>
+                     </editor>
+                     <biblScope unit="vol">Jg. 25</biblScope>
+                     <biblScope unit="issue">H. 4</biblScope>
+                     <biblScope unit="page">S. 241–277</biblScope>
+                     <imprint>
+                        <publisher>Franz Steiner Verlag</publisher>
+                        <pubPlace>Stuttgart</pubPlace>
+                        <date isodate="1968">1968</date>
+                     </imprint>
+                     <ptr label="DOI" target="https://doi.org/10.2307/930203"/>
+                     <ptr label="JSTOR" target="https://www.jstor.org/stable/930203"/>
+                     <identifier type="Bibl-Register-ID" codedval="000003">000003</identifier>
+                     <identifier auth="DOI">10.2307/930203 </identifier>
+                     <annot label="full_citation">
+                        <p>Eggebrecht, Hans Heinrich und Fritz Reckow, Art. „Das Handwörterbuch der musikalischen Terminologie“, in: Archiv für Musikwissenschaft, 25. Jg., H. 4 (1968), S. 241–277.</p>
+                     </annot>
+                  </bibl>
+                  <bibl>
+                     <genre>book</genre>
+                     <title level="m">Grundlagen der Musikgeschichte</title>
+                     <title level="s">Musik-Taschen-Bücher: Theoretica 15</title>
+                     <author>
+                        <persName>
+                           <famName>Dahlhaus</famName>
+                           <foreName>Carl</foreName>
+                        </persName>
+                     </author>
+                     <biblScope unit="vol"/>
+                     <biblScope unit="issue"/>
+                     <biblScope unit="page"/>
+                     <imprint>
+                        <publisher>Musikverlag Gerig</publisher>
+                        <pubPlace>Köln</pubPlace>
+                        <date isodate="1977">1977</date>
+                     </imprint>
+                     <identifier type="Bibl-Register-ID" codedval="000001">000001</identifier>
+                     <identifier auth=""/>
+                     <annot label="full_citation">
+                        <p>Dahlhaus, Carl: Grundlagen der Musikgeschichte. (= Musik-Taschen-Bücher : Theoretica 15), Köln: Musikverlag Gerig, 1977.</p>
+                     </annot>
+                     <ptr/>
+                  </bibl>
+               </li>
+            </list>
+         </div>
+      </body>
+   </music>
+</mei>

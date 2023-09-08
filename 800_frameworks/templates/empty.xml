@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: 800_frameworks/schema/mei-all_wizkit.rng is used for schema validation. -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>WizKit - Example File</title>
+                <respStmt>
+                    <persName role="edt"></persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Digital catalogue raisonné</title>
+                <identifier type="file-collection">000000</identifier>
+            </seriesStmt>
+            <sourceDesc>
+                <source/>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> </encodingDesc>
+        <workList>
+            <work xml:id="work_op125">
+                <identifier type="opus"/>
+                <identifier type="Normdata" label="-" auth="-"/>
+                <title xml:lang="de" xml:id="Sinfonie"/>
+                <contributor>
+                    <persName auth.uri="" codedval="-" auth="-" role=""/>
+                </contributor>
+                <tempo/>
+                <key/>
+                <creation>
+                    <date/>
+                    <annot><p/></annot>
+                </creation>
+                <history>
+                    <eventList type="composition">
+                        <event>
+                            <date/>
+                            <desc/>
+                        </event>
+                    </eventList>
+                    <eventList type="performances">
+                        <event>
+                            <date/>
+                            <geogName role="place" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <geogName role="venue" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <persName role="" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <corpName role="emb"/>
+                            <desc/>
+                        </event>
+                    </eventList>
+                </history>
+                <perfMedium analog="marc:048" auth.uri="https://www.loc.gov/marc/bibliographic/bd048.html">
+                    <castList>
+                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                    </castList>
+                    <perfResList>
+                        <perfResList codedval="">
+                            <head/>
+                            <perfRes count="1"/>
+                        </perfResList>
+                    </perfResList>
+                </perfMedium>
+                <classification>
+                    <termList>
+                        <term/>
+                    </termList>
+                </classification>
+                <expressionList>
+                    <expression xml:id="expression_op125">
+                        <title/>
+                        <componentList>
+                            <expression xml:id="expression_125-1">
+                                <title type="main" xml:lang="de"/>
+                                <contributor/>
+                                <tempo/>
+                                <key mode="major"/>
+                                <meter/>
+                                <incip>
+                                    <incipText>
+                                        <p/>
+                                    </incipText>
+                                </incip>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem>
+                                            <role/>
+                                            <perfRes/>
+                                            <roleDesc/>
+                                        </castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList codedval="-">
+                                            <head/>
+                                            <perfRes count="1"/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                                <componentList>
+                                    <expression>
+                                        <title/>
+                                        <tempo/>
+                                        <meter/>
+                                    </expression>
+                                </componentList>
+                            </expression>
+                        </componentList>
+                    </expression>
+                </expressionList>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation singleton="true">
+                <titleStmt>
+                    <title/>
+                </titleStmt>
+                <physDesc>
+                    <physMedium/>
+                    <condition/>
+                    <titlePage label="single">
+                        <p/>
+                    </titlePage>
+                    <titlePage label="head">
+                        <p/>
+                    </titlePage>
+                    <handList>
+                        <hand medium="" type="-" xml:id="hand_a929b301">
+                            <persName auth="GND" auth.uri="http://d-nb.info/gnd" codedval="-" corresp="-"/>
+                        </hand>
+                    </handList>
+                    <supportDesc>
+                        <foliation/>
+                    </supportDesc>
+                    <addDesc>
+                        <annot label="autograph"/>
+                        <annot label="foreign"/>
+                        <annot label="dating"/>
+                    </addDesc>
+                </physDesc>
+                <physLoc>
+                    <repository>
+                        <corpName/>
+                        <geogName/>
+                        <identifier auth.uri="http://www.rism.info" auth="RISM"/>
+                        <ptr label="catalog" target="-"/>
+                        <ptr label="digital_image" target="-"/>
+                    </repository>
+                    <identifier label="shelf_mark"/>
+                </physLoc>
+                <creation>
+                    <date isodate="-"/>
+                </creation>
+            </manifestation>
+            <manifestation singleton="false">
+                <titleStmt>
+                    <title/>
+                </titleStmt>
+                <pubStmt>
+                    <publisher><corpName/></publisher>
+                    <pubPlace/>
+                    <date/>
+                </pubStmt>
+                <physDesc>
+                    <physMedium/>
+                    <plateNum/>
+                    <condition/>
+                    <titlePage label="head"><p/></titlePage>
+                    <titlePage label="single"><p/></titlePage>
+                </physDesc>
+                <itemList>
+                    <item>
+                        <physLoc>
+                            <repository><corpName/><geogName/><identifier auth.uri="http://www.rism.info" auth="RISM"/><ptr label="catalog" target="-"/><ptr label="digital_image" target="-"/></repository>
+                            <identifier label="shelf_mark"/>
+                        </physLoc>
+                    </item>
+                </itemList>
+            </manifestation>
+        </manifestationList>
+        <revisionDesc>
+            <change isodate="2023" resp="#CG">
+                <changeDesc>
+                    <p>Example created by CG</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+    <music>
+        <body>
+            <div/>
+        </body>
+    </music>
+</mei>

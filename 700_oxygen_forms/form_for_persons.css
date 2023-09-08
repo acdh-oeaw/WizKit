@@ -1,0 +1,580 @@
+* {
+    display: block;
+    /*margin-left: 5px;*/
+    width: 1000px;
+    white-space: nowrap;
+    font-family: 'Georgia', 'Myriad Pro', 'Helvetica', sans-serif; 
+    line-height: 0.1cm;
+}
+
+fileDesc>titleStmt>title {
+    font-size: 28px;
+font-weight: 600;
+line-height: 36px;
+margin-top: 15px;
+margin-bottom: 15px;
+padding-bottom: 10px;
+padding-top: 10px;
+border-bottom: none;
+text-align: center;
+}
+
+
+respStmt {
+    border: thin solid grey;
+    height: 200px;
+    padding: 0.5em;
+    margin-left: 20px;
+    position: relative;
+    text-align: right;
+    width: 1120px;
+    /*margin: 50%;*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+     /*margin-left: auto; */
+      margin-right: auto; 
+}
+
+
+li>persName {
+    width: 100%;
+    border: thin solid grey;
+    /*margin-top:20px;*/
+    margin-left: 20px;
+    font-size: 18px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom:15px;
+    /*margin-top: 15px;
+    overflow-x: auto;
+    white-space: nowrap;*/
+}
+
+
+
+li>persName:after {
+    margin: 15px 15px 15px 850px;
+    margin-top: 15px;
+    padding: 0.5em;
+    content: 
+    oxy_buttonGroup(
+    label, 'Add/Delete',
+    fontInherit, true, 
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '\A<persName xmlns="http://www.music-encoding.org/ns/mei">\A<persName type="main"/>\A<persName type="alternative"/>\A<persName type="birth"/>\A<persName type="pseudonym"/>\A<identifier type="register-ID" label="persons"/>\A<identifier auth="GND"/>\A<famName/>\A<foreName/>\A<date>\A<date type="birth">\A<date/>\A<geogName/>\A</date>\A<date type="death">\A<date/>\A<geogName/>\A</date>\A</date>\A<ptr label="OeML" target="#"/>\A<ptr/>\A<annot label="short_vita">\A<p/></annot>\A<annot label="comment">\A<p>Example created by</p>\A</annot>\A</persName>\A',
+                arg-insertLocation, 'parent::li',
+                arg-insertPosition, 'Inside as last child'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   )
+   ;
+   
+    
+}
+
+
+
+
+persName>persName[type='main']:before {
+    
+    content:
+    oxy_label(
+        text, "Main name: ",
+        width, 175px)
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+
+persName>persName:before {
+    content: 
+       oxy_label(
+            text, "Alternate spelling: ",
+            width, 175px)
+    
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 450px
+        )  
+            
+        "  type: "
+            
+        oxy_combobox(           
+            edit, "@type",
+            fontInherit, true,
+            editable, false,
+            width, 200px,
+            values, "alternative, birth, baptismal, married, pseudonym, religious, patronym",
+            labels, "alternative, birth, baptismal, married, pseudonym, religious, patronym"
+)
+        
+        
+        oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<persName xmlns="http://www.music-encoding.org/ns/mei"></persName>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   );
+   
+   
+}
+
+
+li>persName>identifier[auth]:before {
+    content:
+    oxy_label(
+        text, "Authority: ",
+        width, 175px)
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 25%
+     )  
+      "   "
+    oxy_combobox(           
+            edit, "@auth",
+            fontInherit, true,
+            editable, false,
+            width, 25%,
+            values, "GND, VIAF, LCCN",
+            labels, "GND, VIAF, LCCN")
+      
+    oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" auth=""></identifier>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   );        
+}
+
+
+
+li>persName>famName {
+    content:
+        oxy_label(
+            text, "Surname: ",
+            width, 175px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            
+            );
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);   
+    width: 40%;
+    margin-top: 15px;
+    margin-left: 6px
+}
+
+li>persName>foreName {
+    content:
+        oxy_label(
+            text, "   Forename: ",
+            width, 177px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+    margin-top: 15px;
+    margin-left:-5px;
+    
+}
+
+/*li>persName>foreName {
+    content: '\A';
+}*/
+
+li>persName>nameLink {
+    content: 
+        oxy_label(
+            text, "Name link.: ",
+            width, 175px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+}
+
+li>persName>roleName {
+    content:
+        oxy_label(
+            text, "   Role name: ",
+            width, 177px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin-top: 15px;
+    margin-left:-16px;
+  
+}
+
+/*li>persName>addName {
+    content:'\A';
+    
+    }*/
+
+
+li>persName>addName {
+    content:
+        oxy_label(
+            text, "Add Name: ",
+            width, 175px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin-left: 10px
+    
+}
+
+li>persName>genName {
+    content:
+        oxy_label(
+            text, "   Generation name: ",
+            width, 175px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin-left:-16px;
+    
+}
+
+
+
+date[type='birth']>date{
+    content:
+        oxy_label(
+            text, "Birth: ",
+            width, 160px,
+            styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 130px
+           )  
+            
+            "   "
+                   
+        oxy_datePicker(
+            columns, 16, 
+            edit, "@isodate",
+            format, "yyyy-MM-dd"
+            validateInput, false
+            );
+     display: inline-block;
+     width: 5%;
+     
+}
+
+
+date[type='birth']>geogName:first-of-type {
+    content:
+        oxy_label(
+            text, "Birthplace: ",
+            width, 120px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 250px
+            )  ;
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+
+date[type='death']>date{
+    content:
+        oxy_label(
+            text, "Death: ",
+            width, 160px,
+            styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 130px
+           )  
+            
+            "   "
+                   
+        oxy_datePicker(
+            columns, 16, 
+            edit, "@isodate",
+            format, "yyyy-MM-dd"
+            validateInput, false
+            );
+     display: inline-block;
+     width: 5%;
+     
+    
+}
+
+date[type='death']>geogName:first-of-type {
+    content:
+        oxy_label(
+            text, "Place of death: ",
+            width, 120px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 250px
+            )  ;
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 25px;
+    
+    
+}
+
+persName>date {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 8px 29px -3px rgba(82,80,82,1);
+    content:
+    oxy_label(
+        text, "Lebensdaten: ",
+        width, 75px)
+}
+
+
+
+
+persName>ptr:before {
+    content: 
+       oxy_label(
+        text, "Link: ",
+        width, 75px)
+    
+    oxy_textfield(
+            fontInherit, true,
+            edit, '@label',
+            width, 150px
+            )  
+    "   "
+       oxy_urlChooser(
+        fontInherit, true,
+        edit, "@target",
+        width, 70%,
+        columns 25)
+    
+       /*display: block;*/
+       oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<ptr xmlns="http://www.music-encoding.org/ns/mei"/>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+
+
+
+
+persName>annot[label='short_vita']>p{
+        content:
+        oxy_label(
+            text, "Short biography: ",
+            width, 200px)
+                   
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            rows, 5,
+            width, 75%,
+            contentType, 'text/xml');
+         white-space: pre-wrap;
+         margin-top: 15px;
+}
+
+persName>annot[label='comment']>p:first-child{
+        content:
+        oxy_label(
+            text, "Responsibility: ",
+            width, 200px)
+                   
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            width, 75%,
+            rows 5,
+            contentType, 'text/xml');
+        white-space: pre-wrap;
+        margin-top: 15px;
+        
+        
+}
+
+
+ 
+
+
+encodingDesc, revisionDesc, pubStmt ,seriesStmt, workList, manifestationList, li>persName>identifier[type='register-ID'], notesStmt, sourceDesc, geogName:nth-last-of-type(1){
+    display: none;
+    
+}
+
+
+li>persName>*{
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+
+list>head {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+ 
+li>persName>persName {
+    margin-top: 1px;
+    visibility: -oxy-collapse-text;
+}
+
+li>persName>identifier[auth]{
+    visibility: -oxy-collapse-text;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+persName>ptr{
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+persName>annot>p{
+    visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+famName, 
+nameLink,
+addName{
+    margin-top: 15px;
+    visibility: -oxy-collapse-text;
+    margin-bottom: 15px;
+    content: '\A';
+    }
+
+
+
+foreName,
+roleName,
+genName{
+    margin-top: 15px;
+    visibility: -oxy-collapse-text;
+    margin-bottom: 15px;
+    }
+
+
+date>date>date, date>date>geogName {
+    visibility: -oxy-collapse-text;
+}
+
+
+li>persName{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child: persName;
+    padding: 0.5em;
+}
+
+
+

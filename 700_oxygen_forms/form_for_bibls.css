@@ -1,0 +1,679 @@
+* {
+    display: block;
+    /*margin-left: 5px;*/
+    width: 1000px;
+    white-space: nowrap;
+    font-family: 'Georgia', 'Myriad Pro', 'Helvetica', sans-serif; 
+    line-height: 0.1cm;
+}
+
+fileDesc>titleStmt>title {
+    font-size: 28px;
+font-weight: 600;
+line-height: 36px;
+margin-top: 15px;
+margin-bottom: 15px;
+padding-bottom: 10px;
+padding-top: 10px;
+border-bottom: none;
+text-align: center;
+}
+
+
+respStmt {
+    border: thin solid grey;
+    height: 200px;
+    padding: 0.5em;
+    margin-left: 20px;
+    position: relative;
+    text-align: right;
+    width: 1120px;
+    /*margin: 50%;*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+     /*margin-left: auto; */
+      margin-right: auto; 
+}
+
+
+li>bibl {
+    width: 100%;
+    border: thin solid grey;
+    /*margin-top:20px;*/
+    margin-left: 20px;
+    font-size: 18px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom:15px;
+    /*margin-top: 15px;
+    overflow-x: auto;
+    white-space: nowrap;*/
+}
+
+
+
+li>bibl:after {
+    margin: 15px 15px 15px 850px;
+    margin-top: 15px;
+    padding: 0.5em;
+    content: 
+    oxy_buttonGroup(
+    label, 'Add/Delete',
+    fontInherit, true, 
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add book', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '\A<bibl xmlns="http://www.music-encoding.org/ns/mei">\A<genre>book</genre>\A<title level="m"/>\A<title level="s"/>\A<author>\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</author>\A<biblScope unit="vol"/>\A<biblScope unit="issue"/>\A<biblScope unit="page"/>\A<imprint>\A<publisher/>\A<pubPlace/>\A<date/>\A</imprint>\A<identifier type="Bibl-Register-ID"/>\A<identifier auth=""/>\A<annot label="full_citation">\A<p/>\A</annot>\A<ptr/>\A</bibl>',
+                arg-insertLocation, 'parent::li',
+                arg-insertPosition, 'Inside as last child'
+          ),
+          oxy_action(
+                name, 'Add article (book)', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                
+                arg-fragment, '\A<bibl>\A<genre>article</genre>\A<genre>book</genre>\A<title level="a"/>\A<title level="m"/>\A<title level="s"/>\A<author>\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</author>\A<editor>\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</editor>\A<biblScope unit="vol"/>\A<biblScope unit="issue"/>\A<biblScope unit="page"/>\A<imprint>\A<publisher/>\A<pubPlace/>\A<date/>\A</imprint>\A<ptr/>\A<identifier type="Bibl-Register-ID"/>\A<identifier auth=""/>\A<annot label="full_citation">\A<p/>\A</annot>\A</bibl>',
+                arg-insertLocation, 'parent::li',
+                arg-insertPosition, 'Inside as last child'
+          ),
+          oxy_action(
+                name, 'Add article (journal)', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '\A<bibl xmlns="http://www.music-encoding.org/ns/mei">\A<genre>article</genre>\A<genre>journal</genre>\A<title level="a"/>\A<title level="j"/>\A<author>\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</author>\A<editor>\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</editor>\A<biblScope unit="vol"/>\A<biblScope unit="issue"/>\A<biblScope unit="page"/>\A<imprint>\A<publisher/>\A<pubPlace/>\A<date/>\A</imprint>\A<ptr/>\A<ptr/>\A<identifier type="Bibl-Register-ID"/>\A<identifier auth=""/>\A<annot label="full_citation">\A<p/>\A</annot>\A</bibl>',
+                arg-insertLocation, 'parent::li',
+                arg-insertPosition, 'Inside as last child'
+          ),
+          
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   )
+   ;
+   
+    
+}
+
+bibl>genre:first-of-type{
+    content:
+    oxy_label(
+        text, "Publication type: ",
+        styles, "font-weight:bold;"
+        width, 5%);
+}
+
+
+bibl>genre:first-of-type{
+display: inline-block;
+   width: 40%;
+   margin-top: 15px;
+   margin-left: -20px;
+}
+
+bibl>genre:not(:first-of-type){
+    content:
+    oxy_label(
+        text, "in: ",
+        styles, "font-weight:bold;"
+        width, 5%);
+}
+
+
+bibl>genre:not(:first-of-type){
+display: inline-block;
+   width: 40%;
+   margin-top: 15px;
+   margin-left: -20px;
+}
+
+
+bibl>title[level='m']:before {
+    
+    content:
+    oxy_label(
+        text, "Title (monograph): ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+bibl>title[level='a']:before {
+    
+    content:
+    oxy_label(
+        text, "Title (article): ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+bibl>title[level='s']:before {
+    
+    content:
+    oxy_label(
+        text, "Title (series): ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+bibl>title[level='j']:before {
+    
+    content:
+    oxy_label(
+        text, "Title (journal): ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+bibl>title[level='c']:before {
+    
+    content:
+    oxy_label(
+        text, "Title (collection): ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+
+bibl>author {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 8px 29px -3px rgba(82,80,82,1);
+    content:
+    
+    oxy_label(
+        text, "Author: ",
+        width, 75px,
+        styles, "font-weight:bold;")
+        
+        ;
+}
+
+bibl>author:after{
+   display: grid; 
+    grid-template-columns: repeat(3, 1fr);   
+   content:
+ 
+    oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add author', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<author xmlns="http://www.music-encoding.org/ns/mei">\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</author>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+
+author>persName>famName {
+    content:
+        oxy_label(
+            text, "Surname: ",
+            width, 125px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            
+            );
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);   
+    width: 40%;
+    margin-top: 15px;
+    margin-left: 45px;
+    visibility: -oxy-collapse-text;
+}
+
+author>persName>foreName {
+    content:
+        oxy_label(
+            text, "   Forename: ",
+            width, 150px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+    margin-top: 15px;
+    margin-left:-5px;
+    visibility: -oxy-collapse-text;
+    
+}
+
+bibl>editor {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 8px 29px -3px rgba(82,80,82,1);
+    content:
+    
+    oxy_label(
+        text, "Editor: ",
+        width, 75px,
+        styles, "font-weight:bold;")
+        
+        ;
+}
+
+bibl>editor:after{
+   text-align: right;
+   content:
+ 
+    oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add editor', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<editor xmlns="http://www.music-encoding.org/ns/mei">\A<persName>\A<famName/>\A<foreName/>\A</persName>\A</editor>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+
+
+editor>persName>famName {
+    content:
+        oxy_label(
+            text, "Surname: ",
+            width, 125px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            
+            );
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);   
+    width: 40%;
+    margin-top: 15px;
+    margin-left: 45px;
+    visibility: -oxy-collapse-text;
+}
+
+editor>persName>foreName {
+    content:
+        oxy_label(
+            text, "   Forename: ",
+            width, 150px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 275px
+            )  ;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+    margin-top: 15px;
+    margin-left:-5px;
+    visibility: -oxy-collapse-text;
+    
+}
+
+
+li>bibl>identifier[auth]:before {
+    content:
+    oxy_label(
+        text, "Authority: ",
+        width, 200px,
+        styles, "font-weight:bold;")
+    
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 25%
+     )  
+      "   "
+    oxy_combobox(           
+            edit, "@auth",
+            fontInherit, true,
+            editable, false,
+            width, 25%,
+            values, "DOI, Permalink, LoC",
+            labels, "DOI, Permalink, LoC")
+      
+    oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei"></identifier>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   );        
+}
+
+
+
+bibl>imprint {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 8px 29px -3px rgba(82,80,82,1);
+    content:
+    
+    oxy_label(
+        text, "Imprint: ",
+        width, 75px);
+}
+
+
+imprint>pubPlace{
+    content:
+    oxy_label(
+        text, "Publication place: ",
+        width, 200px,
+        styles, "font-weight:bold;")
+    
+    oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 250px);
+    
+    margin-top: 15px;
+    visibility: -oxy-collapse-text;
+}
+
+
+imprint>publisher{
+    content:
+    oxy_label(
+        text, "Publisher: ",
+        width, 200px,
+        styles, "font-weight:bold;")
+        
+     oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 250px);
+     margin-top: 15px;
+     visibility: -oxy-collapse-text;
+}
+
+imprint>date{
+    content:
+        oxy_label(
+            text, "Publication year: ",
+            width, 200px,
+        styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 130px
+           /* contentType, 'text/xml'*/)  
+            
+            "   "
+                   
+        oxy_datePicker(
+            columns, 16, 
+            edit, "@isodate",
+            format, "yyyy");
+    
+     width: 5%;
+     margin-top: 15px;
+     visibility: -oxy-collapse-text;
+    
+}
+
+
+bibl>biblScope[unit='vol']{
+        content:
+        oxy_label(
+            text, "Volume: ",
+            width, 50px,
+            styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 100px
+            /* contentType, 'text/xml'*/) ;
+        display: inline-block;
+        width: 15%;
+        margin-top: 15px;
+        visibility: -oxy-collapse-text;
+         
+}
+
+bibl>biblScope[unit='issue']{
+        content:
+        oxy_label(
+            text, "Issue: ",
+            width, 50px,
+            styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 100px
+            /* contentType, 'text/xml'*/) ;
+        display: inline-block;
+        width: 15%;
+        margin-top: 15px;
+        visibility: -oxy-collapse-text;
+         
+}
+
+bibl>biblScope[unit='page']{
+        content:
+        oxy_label(
+            text, "Page(s): ",
+            width, 50px,
+        styles, "font-weight:bold;")
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 100px
+            /* contentType, 'text/xml'*/) ;
+        display: inline-block;
+        width: 15%;
+        margin-top: 15px;
+        visibility: -oxy-collapse-text;
+         
+}
+
+
+bibl>annot[label='full_citation']>p{
+        content:
+        oxy_label(
+            text, "Full citation: ",
+            width, 200px,
+        styles, "font-weight:bold;")
+                   
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            rows, 5,
+            width, 75%,
+            contentType, 'text/xml');
+         white-space: pre-wrap;
+         margin-top: 15px;
+         visibility: -oxy-collapse-text;
+}
+
+bibl>ptr:before {
+    content: 
+       oxy_label(
+        text, "Link: ",
+        width, 200px,
+        styles, "font-weight:bold;")
+    
+     oxy_urlChooser(
+        fontInherit, true,
+        edit, "@target",
+        width, 48%,
+        columns 25)
+    
+    "Label: "
+    oxy_textfield(
+            
+            fontInherit, true,
+            edit, '@label',
+            width, 150px
+            )  
+    "   "
+      
+    
+       /*display: block;*/
+       oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '\A<ptr xmlns="http://www.music-encoding.org/ns/mei"/>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+ 
+
+
+encodingDesc, revisionDesc, pubStmt ,seriesStmt, workList, manifestationList, li>bibl>identifier[type='Bibl-Register-ID'], notesStmt, sourceDesc {
+    display: none;
+    
+}
+
+
+li>bibl>*{
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+
+list>head {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+bibl>ptr{
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+bibl>identifier[auth]{
+     visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+
+
+bibl>title{
+    visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+li>bibl{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    padding: 0.5em;
+    -oxy-not-foldable-child: annot;
+}
+
+bibl>imprint{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    padding: 0.5em;
+}
+
+famName, 
+nameLink,
+addName{
+    margin-top: 15px;
+    visibility: -oxy-collapse-text;
+    margin-bottom: 15px;
+    content: '\A';
+}

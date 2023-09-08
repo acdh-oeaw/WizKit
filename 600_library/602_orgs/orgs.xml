@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../../700_oxygen_forms/form_for_orgs.css" title="Forms" alternate="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei"
+     xmlns:xl="http://www.w3.org/1999/xlink"
+     meiversion="4.0.0"
+     xml:id="mei_5607df02-a8c8-4760-a721-4336707cc0da">
+   <meiHead meiversion="4.0.0">
+      <fileDesc>
+         <titleStmt>
+            <title>Register of organizations</title>
+            <respStmt>
+               <persName role="edt" xml:id="PP">Peter Provaznik</persName>
+               <persName role="edt" xml:id="PG">Paul Gulewycz</persName>
+               <persName role="edt" xml:id="CG">Clemens Gubsch</persName>
+            </respStmt>
+         </titleStmt>
+         <pubStmt/>
+         <seriesStmt>
+            <title>WizKit</title>
+            <identifier type="file_collection">Register</identifier>
+         </seriesStmt>
+         <notesStmt>
+            <annot type="private_notes">
+               <p/>
+            </annot>
+         </notesStmt>
+         <sourceDesc>
+            <source/>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Each organization named in the database shall receive a personal entry. The register could contains organizations, like orchestras, libraries, publishers or other institutions.</p>
+         </projectDesc>
+      </encodingDesc>
+      <workList>
+         <work>
+            <title/>
+         </work>
+      </workList>
+      <manifestationList>
+         <manifestation/>
+      </manifestationList>
+      <revisionDesc>
+         <change isodate="2023">
+            <respStmt>
+               <name>CG</name>
+            </respStmt>
+            <changeDesc>
+               <p>Examples created</p>
+            </changeDesc>
+         </change>
+      </revisionDesc>
+   </meiHead>
+   <music meiversion="4.0.0">
+      <body>
+         <div>
+            <list>
+               <head>organizations</head>
+               <li>
+                  <corpName xml:id="d2e153">
+                     <corpName type="main" role="publisher">Cappi und Diabelli</corpName>
+                     <corpName type="alternative">Firma Cappi und Diabelli</corpName>
+                     <corpName type="alternative">Verlag Cappi und Diabelli</corpName>
+                     <corpName type="alternative">Cappi &amp; Diabelli</corpName>
+                     <corpName type="alternative">C &amp; D Wien</corpName>
+                     <identifier type="register-ID" label="orgs" codedval="000002">000002</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">2093947-4</identifier>
+                     <persName role="founder owner">
+                        <famName>Cappi</famName>
+                        <foreName>Pietro</foreName>
+                        <date startdate="1818" enddate="1824">1818–1824</date>
+                     </persName>
+                     <persName role="owner">
+                        <famName>Diabelli</famName>
+                        <foreName>Anton</foreName>
+                     </persName>
+                     <geogName>
+                        <country>Österreich</country>
+                        <region>Wien</region>
+                     </geogName>
+                     <date>
+                        <date type="establishment">
+                           <date isodate="1818">1818</date>
+                           <geogName>Wien</geogName>
+                           <annot>
+                              <p/>
+                           </annot>
+                        </date>
+                        <date type="liquidation">
+                           <date isodate="1824-09-27">27.09.1824</date>
+                           <geogName>Wien</geogName>
+                           <annot>
+                              <p>OeML Diabelli: 1823 trat Diabelli aus der Verlagsgemeinschaft aus. OeML Cappi: Mit 27.9.1824 wurde diese Verlagsgemeinschaft aufgelöst. Schubert-Drucke-Verzeichnis: "Nach Cappis Ausscheiden..." (S. 39)</p>
+                           </annot>
+                        </date>
+                     </date>
+                     <ptr label="OeML"
+                          target="https://www.musiklexikon.ac.at/ml/musik_C/Cappi_Familie.xml"/>
+                     <!--  <ptr label="OeML"
+                          target="https://www.musiklexikon.ac.at/ml/musik_D/Diabelli_Anton.xml"/>-->
+                     <ptr label="OeBL"
+                          target="https://www.biographien.ac.at/oebl/oebl_D/Diabelli_Anton_1781_1858.xml"/>
+                     <annot label="Kommentar">
+                        <p>Example created by</p>
+                     </annot>
+                  </corpName>
+                  <corpName xml:id="d1e93">
+                     <corpName type="main">Orchester des Konservatoriums der Gesellschaft der
+                                Musikfreunde</corpName>
+                     <corpName type="alternative">Orchester des Konservatoriums der
+                                Gesellschaft der Musikfreunde in Wien</corpName>
+                     <corpName type="alternative">Orchester des Konservatoriums der
+                                GdM</corpName>
+                     <identifier type="register-ID" label="orgs" codedval="000001">000001</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/"/>
+                     <date>
+                        <date label="">
+                           <date>12.05.1891</date>
+                           <geogName>Wien</geogName>
+                           <annot label="desc">
+                              <p>Das Orchester wurde gegründet.</p>
+                           </annot>
+                        </date>
+                     </date>
+                     <term/>
+                     <ptr label="OeML" target="#"/>
+                     <ptr label="OeBL" target="#"/>
+                     <ptr label="BMLO" target="#"/>
+                     <annot label="short_desc">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </corpName>
+               </li>
+            </list>
+         </div>
+      </body>
+   </music>
+</mei>

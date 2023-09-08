@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../../700_oxygen_forms/form_for_persons.css" title="Forms" alternate="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei"
+     xmlns:xl="http://www.w3.org/1999/xlink"
+     meiversion="4.0.0"
+     xml:id="mei_5607df02-a8c8-4760-a721-4336707cc0da">
+   <meiHead meiversion="4.0.0">
+      <fileDesc>
+         <titleStmt>
+            <title>Register of persons</title>
+            <respStmt>
+               <persName role="edt" xml:id="PP">Peter Provaznik</persName>
+               <persName role="edt" xml:id="PG">Paul Gulewycz</persName>
+               <persName role="edt" xml:id="CG">Clemens Gubsch</persName>
+            </respStmt>
+         </titleStmt>
+         <pubStmt/>
+         <seriesStmt>
+            <title>WizKit</title>
+            <identifier type="file_collection">Register</identifier>
+         </seriesStmt>
+         <notesStmt>
+            <annot type="private_notes">
+               <p/>
+            </annot>
+         </notesStmt>
+         <sourceDesc>
+            <source/>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Each person named in the database shall receive a personal entry. The register
+                    contains only persons, not libraries, publishers or other institutions.</p>
+         </projectDesc>
+      </encodingDesc>
+      <workList>
+         <work>
+            <title/>
+         </work>
+      </workList>
+      <manifestationList>
+         <manifestation/>
+      </manifestationList>
+      <revisionDesc>
+         <change isodate="2023">
+            <respStmt>
+               <name>CG</name>
+            </respStmt>
+            <changeDesc>
+               <p>Examples created</p>
+            </changeDesc>
+         </change>
+      </revisionDesc>
+   </meiHead>
+   <music meiversion="4.0.0">
+      <body>
+         <div>
+            <list>
+               <head>persons</head>
+               <li>
+                  <persName xml:id="d1e631">
+                     <persName type="main">Beethoven, Ludwig van</persName>
+                     <persName type="alternative">Beethoven, Ludwig von</persName>
+                     <persName type="alternative">Bethoven, Ludwig von</persName>
+                     <persName type="alternative">Beethofen</persName>
+                     <persName type="alternative">Beethoven, Ludvig van</persName>
+                     <identifier type="register-ID" label="persons" codedval="000002">000002</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118508288</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">32182557</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n79107741</identifier>
+                     <famName>Beethoven</famName>
+                     <foreName>Ludwig</foreName>
+                     <nameLink>van</nameLink>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1770-12-16">16.12.1770</date>
+                           <geogName>Bonn</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1827-03-26">26.03.1827</date>
+                           <geogName>Wien</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML"
+                          target="https://www.musiklexikon.ac.at/ml/musik_B/Beethoven_Ludwig_van.xml"/>
+                     <ptr label="MGG3"
+                          target=" https://www-1mgg-2online-1com-10047903e012f.han.onb.ac.at/mgg/stable/19165"/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+                  <persName xml:id="d1e442">
+                     <persName type="main">Goethe, Johann Wolfgang von</persName>
+                     <persName type="alternative">Göthe, Johann Wolfgang von</persName>
+                     <persName type="birth">Goethe, Johann Wolfgang</persName>
+                     <persName type="pseudonym"/>
+                     <identifier type="register-ID" label="persons" codedval="000005">000005</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118540238</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">24602065</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n79003362</identifier>
+                     <famName>Goethe</famName>
+                     <foreName>Johann Wolfgang von</foreName>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1749-08-28">28.08.1749</date>
+                           <geogName>Frankfurt am Main</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1832-03-22">22.03.1832</date>
+                           <geogName>Weimar</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML" target="#"/>
+                     <ptr/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+                  <persName xml:id="d1e8036">
+                     <persName type="main">Mozart, Wolfgang Amadeus</persName>
+                     <persName type="alternative">Mozart, Wolfgang Amadé</persName>
+                     <persName type="alternative">Mozart, Johannes Chrisostomus Wolfgangus
+                                Theophilus</persName>
+                     <identifier type="register-ID" label="persons" codedval="000003">000003</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118584596</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">32197206</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n80022788</identifier>
+                     <famName>Mozart</famName>
+                     <foreName>Wolfgang Amadeus</foreName>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1756-01-27">27.01.1756</date>
+                           <geogName>Salzburg</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1791-12-05">05.12.1791</date>
+                           <geogName>Wien</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML"
+                          target="https://www.musiklexikon.ac.at/ml/musik_M/Mozart_Familie.xml"/>
+                     <ptr label="MGG3"
+                          target=" https://www-1mgg-2online-1com-1004790cb0000.han.onb.ac.at/mgg/stable/45483"/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+                  <persName xml:id="d1e507">
+                     <persName type="main">Schiller, Friedrich</persName>
+                     <persName type="alternative">Schiller, Friedrich von</persName>
+                     <persName type="birth">Schiller, Johann Christoph Friedrich</persName>
+                     <persName type="pseudonym">Hogarth</persName>
+                     <identifier type="register-ID" label="persons" codedval="000006">000006</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118607626</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">96994450</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n79111538</identifier>
+                     <famName>Schiller</famName>
+                     <foreName>Friedrich</foreName>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1759-11-10">10.11.1759</date>
+                           <geogName>Marbach am Neckar</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1805-05-09">09.05.1805</date>
+                           <geogName>Weimar</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML" target="#"/>
+                     <ptr/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+                  <persName xml:id="d1e11184">
+                     <persName type="main">Schubert, Franz</persName>
+                     <persName type="alternative">Schubert, Franz Peter</persName>
+                     <persName type="alternative">Schubert, Franz Seraph Peter</persName>
+                     <identifier type="register-ID" label="persons" codedval="000001">000001</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118610961</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">29719275</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n50000561</identifier>
+                     <famName>Schubert</famName>
+                     <foreName>Franz</foreName>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1797-01-31">31.01.1797</date>
+                           <geogName>Wien</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1828-11-19">19.11.1828</date>
+                           <geogName>Wien</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML"
+                          target="https://www.musiklexikon.ac.at/ml/musik_S/Schubert_Familie.xml"/>
+                     <ptr label="MGG3"
+                          target="https://www-1mgg-2online-1com-10047909g0000.han.onb.ac.at/mgg/stable/13688"/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+                  <persName xml:id="d1e298">
+                     <persName type="main">Wagner, Richard</persName>
+                     <persName type="alternative">Wagner, Rich.</persName>
+                     <persName type="alternative">Wagner, R.</persName>
+                     <persName type="alternative">Wagner</persName>
+                     <persName type="pseudonym">Valentino, H.</persName>
+                     <persName type="alternative">Vagner, Rihard</persName>
+                     <persName type="alternative">Vagner, Vilʹgelʹm Richard (Sowj.
+                                Enz.)</persName>
+                     <persName type="alternative">Vagneri, Rihard</persName>
+                     <persName type="alternative">Wagner, Wilhelm R.</persName>
+                     <persName type="alternative">Wāgunā, R.</persName>
+                     <persName type="alternative">Wāgunā</persName>
+                     <persName type="alternative">Wagner, Richard Wilhelm</persName>
+                     <persName type="alternative">Li cha de Wa ge na</persName>
+                     <persName type="alternative">Lichade-Wagena</persName>
+                     <persName type="alternative">Wagena, Lichade</persName>
+                     <persName type="alternative">Wagner, Riccardo</persName>
+                     <persName type="alternative">Wâgner, Rîkard</persName>
+                     <persName type="pseudonym">Freigedank, K.</persName>
+                     <persName type="alternative">Wagner, Richardus</persName>
+                     <persName type="pseudonym">Drach, Wilhelm</persName>
+                     <persName type="alternative">Wagner, Ricardo</persName>
+                     <persName type="alternative">Wagner, Riccardus</persName>
+                     <persName type="alternative">Vagner, Richard</persName>
+                     <persName type="alternative">Wagner, Wilhelm Richard</persName>
+                     <persName type="alternative">Wâgner, Rikard</persName>
+                     <persName type="pseudonym">Freigedank, K.</persName>
+                     <persName type="pseudonym">Valentino, H.</persName>
+                     <persName type="alternative"/>
+                     <persName type="birth"/>
+                     <persName type="pseudonym"/>
+                     <identifier type="register-ID" label="persons" codedval="000004">000004</identifier>
+                     <identifier auth="GND" auth.uri="https://d-nb.info/gnd/">118594117</identifier>
+                     <identifier auth="VIAF" auth.uri="https://viaf.org/viaf/">29732107</identifier>
+                     <identifier auth="LCCN" auth.uri="https://lccn.loc.gov/">n79089831</identifier>
+                     <famName>Wagner</famName>
+                     <foreName>Richard</foreName>
+                     <date>
+                        <date type="birth">
+                           <date isodate="1813-05-22">22.05.1813</date>
+                           <geogName>Leipzig</geogName>
+                        </date>
+                        <date type="death">
+                           <date isodate="1883-02-13">13.02.1886</date>
+                           <geogName>Venedig</geogName>
+                        </date>
+                     </date>
+                     <ptr label="OeML" target="#"/>
+                     <ptr/>
+                     <annot label="short_vita">
+                        <p/>
+                     </annot>
+                     <annot label="comment">
+                        <p>Example created by</p>
+                     </annot>
+                  </persName>
+               </li>
+            </list>
+         </div>
+      </body>
+   </music>
+</mei>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: 800_frameworks/schema/mei-all_wizkit.rng is used for schema validation. -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Missa in C</title>
+                <respStmt>
+                    <persName role="cmp" auth="GND" codedval="118508288" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Ludwig van Beethoven</persName>
+                    <persName role="lyr" auth="GND" codedval="118607626" auth.uri="https://d-nb.info/gnd/" corresp="not_found">Friedrich Schiller</persName>
+                    <persName role="edt" xml:id="PP" corresp="not_found">Peter Provaznik</persName>
+                    <persName role="edt" xml:id="PG" corresp="not_found">Paul Gulewycz</persName>
+                    <persName role="edt" xml:id="CG" corresp="not_found">Clemens Gubsch</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Digital catalogue raisonné</title>
+                <identifier type="file-collection">000003</identifier>
+            </seriesStmt>
+            <sourceDesc>
+                <source/>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> </encodingDesc>
+        <workList>
+            <work xml:id="work_op125">
+                <identifier label="KV" type="work">317</identifier>
+                <identifier type="Normdata" label="-" auth="GND" codedval="300109644"/>
+                <identifier type="Normdata" label="-" auth="VIAF" codedval="175810102"/>
+                <title xml:lang="de" xml:id="Sinfonie">Missa in C</title>
+                <contributor>
+                    <persName auth.uri="" auth="http://d-nb.info/gnd/" role="cmp" codedval="118584596">Mozart, Wolfgang Amadeus</persName>
+                </contributor>
+                <tempo/>
+                <key mode="major" pname="c" accid="n">C major</key>
+                <creation>
+                    <date startdate="1779-01-17" enddate="1779-03-23">January 17th, 1779–March 23rd, 1779</date>
+                </creation>
+                <history>
+                    <eventList type="composition">
+                        <event>
+                            <date>January 17th, 1779–March 23rd, 1779</date>
+                            <desc/>
+                        </event>
+                    </eventList>
+                    <eventList type="performances">
+                        <event>
+                            <date isodate="1779-04-04">4. April 1779</date>
+                            <geogName role="place" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"> Salzburg</geogName>
+                            <geogName role="venue" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <persName role="" auth.uri="http://d-nb.info/gnd/" auth="GND" codedval="-"/>
+                            <corpName role="emb"/>
+                            <desc>First performance (either on 4 or 5 April 1779)</desc>
+                        </event>
+                    </eventList>
+                </history>
+                <perfMedium analog="marc:048" auth.uri="https://www.loc.gov/marc/bibliographic/bd048.html">
+                    <perfResList>
+                        <perfResList codedval="oa">
+                            <head>Orchestra</head>
+                            <perfRes codedval="wb" count="2">Oboe</perfRes>
+                            <perfRes codedval="wd" count="1">Bassoon</perfRes>
+                            <perfRes codedval="ba" count="2">Horn</perfRes>
+                            <perfRes codedval="bb" count="2">Trumpet</perfRes>
+                            <perfRes codedval="bd" count="3">Trombone</perfRes>
+                            <perfRes codedval="pa" count="1">Timpani</perfRes>
+                            <perfRes codedval="sa" count="1">Violin I</perfRes>
+                            <perfRes codedval="sa" count="1">Violin II</perfRes>
+                            <perfRes codedval="sb" count="1">Viola</perfRes>
+                            <perfRes codedval="sc" count="1">Violoncello</perfRes>
+                            <perfRes codedval="sd" count="1">Double bass</perfRes>
+                            <perfRes codedval="kb" count="1">Organ</perfRes>
+                        </perfResList>
+                        <perfResList codedval="ca">
+                            <head>Choir</head>
+                            <perfRes codedval="va" count="1">Soprano</perfRes>
+                            <perfRes codedval="vc" count="1">Alto</perfRes>
+                            <perfRes codedval="vd" count="1">Tenor</perfRes>
+                            <perfRes codedval="vf" count="1">Bass</perfRes>
+                        </perfResList>
+                        <perfResList codedval="cn">
+                            <head>Soloists</head>
+                            <perfRes codedval="va" count="1">Soprano</perfRes>
+                            <perfRes codedval="vc" count="1">Alto</perfRes>
+                            <perfRes codedval="vd" count="1">Tenor</perfRes>
+                            <perfRes codedval="vf" count="1">Bass</perfRes>
+                        </perfResList>
+                    </perfResList>
+                </perfMedium>
+                <classification>
+                    <termList>
+                        <term label="nn" type="1">Vocal music</term>
+                        <term label="ms" type="2">Mass</term>
+                    </termList>
+                </classification>
+                <expressionList>
+                    <expression xml:id="expression_op125">
+                        <title>Missa in C</title>
+                        <componentList>
+                            <expression xml:id="expression_125-1" n="1">
+                                <title type="main" xml:lang="de">Kyrie</title>
+                                <tempo>Andante maestoso</tempo>
+                                <key mode="major" pname="c" accid="n">C major</key>
+                                <meter count="4" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem>
+                                            <role></role>
+                                            <perfRes></perfRes>
+                                            <roleDesc></roleDesc>
+                                        </castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList codedval="-">
+                                            <head/>
+                                            <perfRes codedval="-" count="1"/>
+                                        </perfResList>
+                                        <perfResList codedval="-">
+                                            <head/>
+                                            <perfRes codedval="-" count="1"/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                            <expression>
+                                <title>Gloria</title>
+                                <tempo>Allegro con spirito</tempo>
+                                <key pname="c" accid="n" mode="major">C majos</key>
+                                <meter count="3" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList>
+                                            <head/>
+                                            <perfRes/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                            <expression>
+                                <title>Credo</title>
+                                <tempo>Allegro molte</tempo>
+                                <key pname="c" accid="n" mode="major">C major</key>
+                                <meter count="4" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList>
+                                            <head/>
+                                            <perfRes/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                            <expression>
+                                <title>Sanctus</title>
+                                <tempo>Andante maestoso</tempo>
+                                <key pname="c" accid="n" mode="major">C major</key>
+                                <meter count="3" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList>
+                                            <head/>
+                                            <perfRes/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                            <expression>
+                                <title>Benedictus</title>
+                                <tempo>Allegretto</tempo>
+                                <key pname="c" accid="n" mode="major">C major</key>
+                                <meter count="2" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList>
+                                            <head/>
+                                            <perfRes/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                            <expression>
+                                <title>Agnus Dei</title>
+                                <tempo>Andante sostenuto</tempo>
+                                <key pname="f" accid="n" mode="major">F major</key>
+                                <meter count="3" unit="4"/>
+                                <perfMedium>
+                                    <castList>
+                                        <castItem><role/><perfRes/><roleDesc/></castItem>
+                                    </castList>
+                                    <perfResList>
+                                        <perfResList>
+                                            <head/>
+                                            <perfRes/>
+                                        </perfResList>
+                                    </perfResList>
+                                </perfMedium>
+                            </expression>
+                        </componentList>
+                    </expression>
+                </expressionList>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation singleton="true">
+                <titleStmt>
+                    <title>autograph score</title>
+                </titleStmt>
+                <physDesc>
+                    <physMedium>58 folios (29 double leaves), 10 staves, 22,5 to 23 cm x 16,5 to 17 cm (horizontal), one blank page (fol. 58v), watermark Tyson WK Nr. 42, medium thickness, remaining of a sticker on fol. 1v </physMedium>
+                    <condition>The edges are tanned.</condition>
+                    <titlePage label="cover">
+                        <p>Half leather cover 24,5 cm x 17,7 cm
+on a label in the upper left quarter: „Mozart | Aut. 317“</p>
+                    </titlePage>
+                    <titlePage label="head">
+                        <p>fol. 1r: Kyrie
+fol. 6r: Gloria
+fol. 21r: Credo
+fol. 39r: Sanctus
+fol. 42r: Benedictus
+fol. 47v: Agnus Dei</p>
+                    </titlePage>
+                    <titlePage label="head"><p>fol. 55r: Missa</p></titlePage>
+                    <titlePage label="single"><p>fol. 55r: Kyrie
+fol. 55r: Gloria
+fol. 56r: Credo 
+fol. 57r: Sanctus
+fol. 57r: Benedictus
+fol. 57v: Agnus Dei</p></titlePage>
+                    <handList>
+                        <hand medium="ink" type="main" xml:id="hand_a929b301">
+                            <persName auth="GND" auth.uri="http://d-nb.info/gnd" codedval="-" corresp="-">Mozart, Wolfgang Amadeus</persName>
+                        </hand>
+                        <hand medium="ink" type="minor">
+<persName role="scribe" auth="" auth.uri="" codedval="-" corresp="">Mozart, Wolfgang Amadeus</persName>
+</hand>
+                        <hand type="minor" medium="pencil">
+<persName role="scribe" auth="" auth.uri="" codedval="-" corresp="">André, Julius</persName>
+</hand>
+                        <hand medium="ink black-brown" type="minor">
+<persName role="scribe" auth="" auth.uri="" codedval="-" corresp="">Nissen, Georg Nikolaus</persName>
+</hand>
+                    </handList>
+                    <supportDesc>
+                        <foliation>Autograph foliiation on the fol. 1 to 54 in the upper right corner; the fol. 55r to 58r have been paginated (1–7) by Julius André</foliation>
+                    </supportDesc>
+                    <addDesc>
+                        <annot label="autograph">fol. 54v: JOGDM [Imperatore Omnium Gentium Donatus Mozart]
+</annot>
+                        <annot label="foreign">fol. 1r upper left corner in pencil: 14
+
+In black-brown ink Georg Nikolaus Nissen wrote in the upper right corner: „Eigne | Handschrift“.</annot>
+                        <annot label="dating">fol. 1r: del Signor Amadeo Wolfgangs Mozart. | li 23 di marzo 1779</annot>
+                    </addDesc>
+                </physDesc>
+                <physLoc>
+                    <repository>
+                        <corpName>Biblioteka Jagiellońska  </corpName>
+                        <geogName>Karków</geogName>
+                        <identifier auth.uri="http://www.rism.info" auth="RISM">PL-Kj</identifier>
+                        <ptr label="catalog" target=""/>
+                        <ptr label="digital_image" target=""/>
+                    </repository>
+                    <identifier label="shelf_mark">Mus. ms. autogr. W. A. Mozart 317</identifier>
+                </physLoc>
+                <creation>
+                    <date isodate="-" startdate="1779-01-17" enddate="1779-03-23">January 17th, 1779–March 23rd, 1779</date>
+                </creation>
+            </manifestation>
+        </manifestationList>
+        <revisionDesc>
+            <change isodate="2023" resp="#CG">
+                <changeDesc>
+                    <p>Example created by CG</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+    <music>
+        <body>
+            <div/>
+        </body>
+    </music>
+</mei>

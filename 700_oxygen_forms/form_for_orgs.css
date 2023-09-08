@@ -1,0 +1,499 @@
+* {
+    display: block;
+    /*margin-left: 5px;*/
+    width: 1000px;
+    white-space: nowrap;
+    font-family: 'Georgia', 'Myriad Pro', 'Helvetica', sans-serif; 
+    line-height: 0.1cm;
+}
+
+fileDesc>titleStmt>title {
+    font-size: 28px;
+font-weight: 600;
+line-height: 36px;
+margin-top: 15px;
+margin-bottom: 15px;
+padding-bottom: 10px;
+padding-top: 10px;
+border-bottom: none;
+text-align: center;
+}
+
+
+respStmt {
+    border: thin solid grey;
+    height: 200px;
+    padding: 0.5em;
+    margin-left: 20px;
+    position: relative;
+    text-align: right;
+    width: 1120px;
+    /*margin: 50%;*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+     /*margin-left: auto; */
+      margin-right: auto; 
+}
+
+
+li>corpName {
+    width: 100%;
+    border: thin solid grey;
+    /*margin-top:20px;*/
+    margin-left: 20px;
+    font-size: 18px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom:15px;
+    /*margin-top: 15px;
+    overflow-x: auto;
+    white-space: nowrap;*/
+}
+
+
+
+li>corpName:after {
+    margin: 15px 15px 15px 850px;
+    margin-top: 15px;
+    padding: 0.5em;
+    content: 
+    oxy_buttonGroup(
+    label, 'Add/Delete',
+    fontInherit, true, 
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+               
+                           
+                            
+                       
+                arg-fragment, '\A<corpName xmlns="http://www.music-encoding.org/ns/mei">\A<corpName type="main"/>\A<corpName type="alternative"/>\A<identifier type="Org-Register-ID" label="organisations"/>\A<identifier auth="GND"/>\A<date>\A<date label="">\A<date/>\A<geogName/>\A<annot label="desc">\A<p/>\A</annot>\A</date>\A</date>\A<term/>\A<ptr label="OeML" target="#"/>\A<ptr/>\A<annot label="short_vita">\A<p/></annot>\A<annot label="comment">\A<p>Example created by</p>\A</annot>\A</corpName>\A',
+                arg-insertLocation, 'parent::li',
+                arg-insertPosition, 'Inside as last child'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   )
+   ;
+   
+    
+}
+
+
+
+
+corpName>corpName[type='main']:before {
+    
+    content:
+    oxy_label(
+        text, "Main name: ",
+        width, 175px)
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 450px
+    )  
+      "   "
+}
+
+
+corpName>corpName:before {
+    content: 
+       oxy_label(
+            text, "Alternate spelling: ",
+            width, 175px)
+    
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 450px
+        )  
+            
+        "  type: "
+            
+        oxy_combobox(           
+            edit, "@type",
+            fontInherit, true,
+            editable, false,
+            width, 200px,
+            values, "alternative, acronym, regional, merged, pseudonym, previous, patronym",
+            labels, "alternative, acronym, regional, merged, pseudonym, previous, patronym"
+)
+        
+        
+        oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<corpName xmlns="http://www.music-encoding.org/ns/mei"></corpName>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   );
+   
+   
+}
+
+
+li>corpName>identifier[auth]:before {
+    content:
+    oxy_label(
+        text, "Authority: ",
+        width, 175px)
+    oxy_textfield(
+      fontInherit, true,
+      edit, '#text',
+      width, 25%
+     )  
+      "   "
+    oxy_combobox(           
+            edit, "@auth",
+            fontInherit, true,
+            editable, false,
+            width, 25%,
+            values, "GND, VIAF, LCCN",
+            labels, "GND, VIAF, LCCN")
+      
+    oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<identifier xmlns="http://www.music-encoding.org/ns/mei" auth=""></identifier>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   );        
+}
+
+date>date {
+    content:
+        oxy_label(
+            text, "history event: ",
+            width, 175px
+            )
+            
+            oxy_combobox(           
+            edit, "@label",
+            fontInherit, true,
+            editable, false,
+            width, 25%,
+            values, "establishment, liquidation, refoundation, merger, disbanding, renaming",
+            labels, "establishment, liquidation, refoundation, merger, disbanding, renaming")
+      
+    oxy_buttonGroup(
+    label, '+', 
+    fontInherit, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<date xmlns="http://www.music-encoding.org/ns/mei" label=""><date></date><geogName></geogName><annot label="desc"><p></p></annot></date>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+          ),
+          oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+          )
+      )
+   ); 
+    
+}
+
+
+
+
+date>date>date{
+    content:
+        oxy_label(
+            text, "Event date: ",
+            width, 175px
+            )
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 130px
+           )  
+            
+            "   "
+                   
+        oxy_datePicker(
+            columns, 16, 
+            edit, "@isodate",
+            format, "yyyy-MM-dd"
+            validateInput, false
+            );
+     
+}
+
+
+date>date>geogName{
+    content:
+        oxy_label(
+            text, "Event place: ",
+            width, 175px)
+                   
+        oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 250px
+            )  ;
+  
+}
+
+
+
+
+corpName>date>date>annot[label='desc']>p{
+        content:
+        oxy_label(
+            text, "Event description: ",
+            width, 175px)
+
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            rows, 5,
+            width, 75%,
+            contentType, 'text/xml');
+         white-space: pre-wrap;
+         margin-top: 15px;
+}
+
+
+corpName>date {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 8px 29px -3px rgba(82,80,82,1);
+    content:
+    oxy_label(
+        text, "Organisational history: ",
+        width, 75px)
+}
+
+corpName>term {
+    content: 
+       oxy_label(
+        text, "Classification: ",
+        width, 75px)
+         "   "
+        
+       oxy_textfield(
+            fontInherit, true,
+            edit, '#text',
+            width, 450px 
+            values, "orchestra, quartet, ensemble, choral society, choir, choir (male), choir (female), choir (mixed), corporation (any), antiquarian Bookshop, school, prints publisher, publisher, library, collection, printer, auctionhouse, musicshop, gallery, artshop, family"
+             )
+             oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<term xmlns="http://www.music-encoding.org/ns/mei"/>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+
+corpName>ptr:before {
+    content: 
+       oxy_label(
+        text, "Link: ",
+        width, 75px)
+    
+    oxy_textfield(
+            fontInherit, true,
+            edit, '@label',
+            width, 150px
+            )  
+    "   "
+       oxy_urlChooser(
+        fontInherit, true,
+        edit, "@target",
+        width, 70%,
+        columns 25)
+    
+       /*display: block;*/
+       oxy_buttonGroup(
+        label, '+', 
+        fontInherit, true,
+        actions, 
+        oxy_action_list(
+            oxy_action(
+                name, 'Add', 
+                description, 'Insert an element after the current one', 
+                operation, 'InsertFragmentOperation', 
+                arg-fragment, '<ptr xmlns="http://www.music-encoding.org/ns/mei"/>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Delete', 
+                description, 'Deletes the current element', 
+                operation, 'DeleteElementOperation' 
+            )
+        )
+      );
+}
+
+
+
+
+corpName>annot[label='short_desc']>p{
+        content:
+        oxy_label(
+            text, "Short description: ",
+            width, 200px)
+                   
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            rows, 5,
+            width, 75%,
+            contentType, 'text/xml');
+         white-space: pre-wrap;
+         margin-top: 15px;
+}
+
+corpName>annot[label='comment']>p:first-child{
+        content:
+        oxy_label(
+            text, "Responsibility: ",
+            width, 200px)
+                   
+        oxy_textArea(
+            fontInherit, true,
+            edit, '#content',
+            width, 75%,
+            rows 5,
+            contentType, 'text/xml');
+        white-space: pre-wrap;
+        margin-top: 15px;
+        
+        
+}
+
+
+ 
+
+
+encodingDesc, revisionDesc, pubStmt ,seriesStmt, workList, manifestationList, li>corpName>identifier[type='Org-Register-ID'], notesStmt, sourceDesc {
+    display: none;
+    
+}
+
+
+li>corpName>*{
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+
+list>head {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+ 
+li>corpName>corpName {
+    margin-top: 1px;
+    visibility: -oxy-collapse-text;
+}
+
+li>corpName>identifier[auth]{
+    visibility: -oxy-collapse-text;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+corpName>ptr{
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+corpName>annot>p{
+    visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+date>annot>p{
+    visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+corpName>term{
+    visibility: -oxy-collapse-text;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+date>date>date, date>date>geogName {
+    visibility: -oxy-collapse-text;
+}
+
+
+li>corpName{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child: corpName;
+    padding: 0.5em;
+}
+
+corpName>date>date{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    /*-oxy-not-foldable-child: corpName;*/
+    padding: 0.5em;
+}
+

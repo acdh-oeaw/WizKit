@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.oxygenxml.com/doc/versions/23.1/ug-editor/topics/configuring-content-completion-proposals.html -->
+<config xmlns="http://www.oxygenxml.com/ns/ccfilter/config">
+  <match elementName="persName" elementNS="http://www.music-encoding.org/ns/mei">
+    <xslt href="get_completion_persons.xsl" useCache="false" action="replace"/>
+  </match>
+  <match elementName="corpName" elementNS="http://www.music-encoding.org/ns/mei">
+    <xslt href="get_completion_institutions.xsl" useCache="false" action="replace"/>
+  </match>
+</config>

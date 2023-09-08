@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main" level="a">Documentation</title>
+                <title level="m">WizKit</title>
+                <author>
+                    <persName xml:id="CG">Clemens Gubsch</persName>
+                </author>
+                <author>
+                    <persName xml:id="PG">Paul Gulewycz</persName>
+                </author>
+                <author>
+                    <persName xml:id="PP">Peter Provaznik</persName>
+                </author>
+                <respStmt>
+                    <resp>Automatische Konvertierung nach TEI P5</resp>
+                    <name corresp="#CG">Clemens Gubsch</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2023-09-01</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Österreichische Akademie der Wissenschaften <lb/>Austrian Centre for Digital Humanities, <lb/>Abteilung Musikwissenschaft</publisher>
+                <pubPlace>Wien</pubPlace>
+                <idno type="Bruckner_Kopisten">d1e00002</idno>
+                <date when-iso="2021-10"/>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term>Documentation</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>WizKit is a work package for editing and enriching metadata for musical works.</p>
+            </projectDesc>
+            <editorialDecl>
+                <p/>
+            </editorialDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#cg" status="created">Erstellt und geprüft</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div xml:id="content-d1e00002">
+                <div xml:lang="en">
+                    <head>Get started</head>
+                    <p><hi rend="bold">Step 1</hi>: Clone/Download the repository [<ref target="https://github.com/acdh-oeaw/wizkit">Link</ref>] to your local directory.</p>
+                    <p><hi rend="bold">Step 2</hi>: Open the project file (wizkit.xpr) in Oxygen XML Editor (Note: If the project has opened, the directory tree should be visible).</p>
+                    <p><hi rend="bold">Step 3</hi>: You can now open a new work file. To do so, click on “New File” and select the file format “XML-Document [Work]” or type “work” into the search bar and select it (Note: If you do not find the file format in the selection, the project is probably not opened properly).</p>
+                    <p><hi rend="bold">Step 4</hi>: You are now ready to enter work information.</p> 
+                </div>
+                <div>
+                    <head>Enter work information</head>
+                    <p><hi rend="bold">Structure</hi>: A great variety of information can be entered for a work entry. In addition to the basic information such as title, composer, work numbers, dating, tempo and key of the work, five larger areas are available for data entry: History, Instrumentation, Classification, Work Parts, and Sources.</p>
+                    <p><hi rend="bold">History</hi>: This area is divided into two sections: In “Composition”, it is possible to document different stages and points in time in the creation of the work. Under “Performances”, the history of performances and reception of the work can be documented.</p>
+                    <p><hi rend="bold">Instrumentation</hi>: The instrumentation of the work can include individual instruments, full orchestras as well as dramatic roles. If you want to add an instrumentation, there are several predefined templates such as orchestra, string quartet or choir. For standardisation purposes, <ref target="https://www.loc.gov/marc/bibliographic/bd048.html">MARC:048</ref> can be referred to for instruments and singers. (Note: If you need a more specific list of instruments, you can also refer to other standard data such as <ref target="https://www.iflastandards.info/unimarc.html">UNIMARC</ref>. For this purpose, the dropdown entry can be left empty and you need to insert the desired value in <code>@codedval</code> in the text mode of Oxygen XML Editor).</p>
+                    <p><hi rend="bold">Classification</hi>: In order to classify a work in a superordinate classification system, terms can be set here. To distinguish between top levels and subgroups within a group of works, values can be entered via the dropdown list “Level”: e.g., instrumental music (level 1), symphonies (level 2).</p>
+                    <p><hi rend="bold">Work parts</hi>: Individual parts of the work can be indicated here, if, e.g., the work contains several movements or acts or if it is a song cycle.</p>
+                    <p><hi rend="bold">Sources</hi>: The sources associated with a work can be recorded here: A distinction can be made between manuscripts (<code>@singleton="true"</code>) and prints (<code>@singleton="false"</code>). (Note: WizKit makes use of MEI's FRBR implementation here. You can find further information at <ref target="https://www.ifla.org/g/bcm-rg/frbr-bibliography/">IFLA</ref>). In WizKit, the main difference is that for prints, multiple items and thus repositories can be assigned, while manuscripts are only stored in one repository/place.</p>
+                </div>
+                <div>
+                    <head>Registers</head>
+                    <p>WizKit provides several registers that are linked to the work input. Persons, organisations and literature can be systematically entered. In all registers, it is possible to add new entities via the “Add” button. As soon as a new entry is added, it is recommended to press the “POWL” button (<graphic url="images/wizkit_red_16.png"/>).</p>
+                    <p>The new entry receives an ID and is sorted alphabetically (Note: Only after the “POWL” button has been pressed, the new entry is available in the work entries via the autocomplete function).</p>
+                    <p>For persons and corporations, the specified name with <code>@type="main"</code> is crucial. To avoid complicated post-processing, it is advisable to store literature directly in the desired output form in the element <code>&lt;annot label="full_citation"/&gt;</code>.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

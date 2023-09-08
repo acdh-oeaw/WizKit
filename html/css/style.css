@@ -1,0 +1,76 @@
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222;
+  margin: 1rem;
+}
+
+div#page > div.container-fluid {
+  max-width: 80rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.fade {
+  display: none;
+}
+
+table.t20 td:first-of-type,
+table.t20 th:first-of-type {
+  width: 20%;
+}
+
+.allAccOpenBtn,
+.allAccCloseBtn {
+  border: 0;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  background-color: transparent;
+  font-size: smaller;
+  margin-bottom: 0.35rem;
+  padding-right: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.table-kv tr > th {
+  width: 20%;
+  font-variant: small-caps;
+  font-weight: normal;
+}
+
+.label-inline {
+  font-variant: small-caps;
+  margin-right: 0.6rem;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+.ms-head {
+  font-size: 1.25rem;
+  font-variant: small-caps;
+  font-weight: 500;
+  background-color: #8eb3fa82;
+  border-block-color: black;
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+  box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.list-componentlist {
+  padding-left: 0;
+}
+
+.list-componentlist .list-componentlist {
+  padding-left: 2rem;
+}
+
+.navbar-margin {
+    margin-left: 6.25rem;
+    margin-right: 6.5rem;
+}

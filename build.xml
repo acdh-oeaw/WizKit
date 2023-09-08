@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wizkit">
+  <include file="build.worksdir.xml"/>
+  <property name="saxon" value="net.sf.saxon.TransformerFactoryImpl"/>
+  <property name="target" value="${basedir}/html"/>
+  <mkdir dir="${target}"/>
+  <delete>
+    <fileset dir="${target}" includes="*.html"/>
+  </delete>
+  <xslt style="${basedir}/200_xslt/works.xsl"
+        in="${basedir}/200_xslt/works.xsl"
+        out="${target}/works.html">
+    <param name="worksDir" type="STRING" expression="file:///${worksDir}"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${basedir}/200_xslt/register.xsl"
+        in="${basedir}/600_library/601_persons/persons.xml"
+        out="${target}/persons.html">
+    <param name="worksDir" type="STRING" expression="file:///${worksDir}"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${basedir}/200_xslt/register.xsl"
+        in="${basedir}/600_library/602_orgs/orgs.xml"
+        out="${target}/organisations.html">
+    <param name="worksDir" type="STRING" expression="file:///${worksDir}"/>
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${basedir}/200_xslt/index.xsl"
+        in="${basedir}/200_xslt/index.xsl"
+        out="${target}/index.html">
+    <factory name="${saxon}"/>
+  </xslt>
+  <xslt style="${basedir}/200_xslt/tei2html.xsl"
+        in="${basedir}/documentation.xml"
+        out="${target}/documentation.html">
+    <factory name="${saxon}"/>
+  </xslt>
+</project>

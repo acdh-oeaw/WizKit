@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="worksdir">
+  <pathconvert property="basedirU" targetos="unix">
+    <path>
+      <pathelement path="${basedir}"/>
+    </path>
+  </pathconvert>
+  <property name="300works" value="${basedirU}/300_mei/works"/>
+  <property name="900samples" value="${basedirU}/900_sample_files"/>
+  <fileset dir="${300works}" id="workXML">
+    <include name="*.xml"/>
+  </fileset>
+  <pathconvert refid="workXML" property="workFilesFound" setonempty="false"/>
+  <condition property="worksDir" value="${300works}">
+    <isset property="workFilesFound"/>
+  </condition>
+  <property name="worksDir" value="${900samples}"/>
+</project>
