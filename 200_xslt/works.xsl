@@ -36,9 +36,6 @@
     </script>
   </xsl:template>
 
-  
-
-
   <xsl:template match="m:persName|m:corpName">
     <xsl:param name="showRole" as="xs:boolean" select="true()"/>
     <xsl:variable name="fromRegister" as="element()?" select="u:findInRegister(.)"/>
@@ -72,16 +69,16 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:if test="position() != last() and position() != last()-1">
-            <xsl:value-of select="."/>
-            <xsl:text>, </xsl:text>
-          </xsl:if>
+          <xsl:value-of select="."/>
+          <xsl:text>, </xsl:text>
+        </xsl:if>
         <xsl:if test="position() = last()-1">
           <xsl:value-of select="."/>
         </xsl:if>
-          <xsl:if test="position() = last()">
-            <xsl:text> and </xsl:text>
-            <xsl:value-of select="."/>
-          </xsl:if>
+        <xsl:if test="position() = last()">
+          <xsl:text> and </xsl:text>
+          <xsl:value-of select="."/>
+        </xsl:if>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -194,30 +191,30 @@
 
   <xsl:template match="m:hand">
     <xsl:if test="m:persName !=''">
-    <span>
-      <xsl:apply-templates select="m:persName|m:corpName">
-        <xsl:with-param name="showRole" select="false()"/>
-      </xsl:apply-templates>
-      <xsl:text> (</xsl:text>
-      <xsl:choose>
-        <xsl:when test="@type='main'">
-          <xsl:text>main scribe of the source in </xsl:text>
-          <xsl:value-of select="@medium"/>
-        </xsl:when>
-        <xsl:when test="@type='minor'">
-          <xsl:text>minor additions in </xsl:text>
-          <xsl:value-of select="@medium"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>additions in </xsl:text>
-          <xsl:value-of select="@medium"/>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:text>)</xsl:text>
-      <xsl:if test="position() != last()">
-        <xsl:text>; </xsl:text>
-      </xsl:if>
-    </span>
+      <span>
+        <xsl:apply-templates select="m:persName|m:corpName">
+          <xsl:with-param name="showRole" select="false()"/>
+        </xsl:apply-templates>
+        <xsl:text> (</xsl:text>
+        <xsl:choose>
+          <xsl:when test="@type='main'">
+            <xsl:text>main scribe of the source in </xsl:text>
+            <xsl:value-of select="@medium"/>
+          </xsl:when>
+          <xsl:when test="@type='minor'">
+            <xsl:text>minor additions in </xsl:text>
+            <xsl:value-of select="@medium"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>additions in </xsl:text>
+            <xsl:value-of select="@medium"/>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>)</xsl:text>
+        <xsl:if test="position() != last()">
+          <xsl:text>; </xsl:text>
+        </xsl:if>
+      </span>
     </xsl:if>
   </xsl:template>
 
@@ -242,37 +239,33 @@
       </xsl:if>
     </span>
   </xsl:template>
-  
+
   <xsl:template match="m:castList">
     <span>
-      <strong>Cast </strong>
-        
-          <xsl:apply-templates select="m:castItem"/>
-        
-      </span>
+      <strong>Cast</strong>
+      <xsl:apply-templates select="m:castItem"/>
+    </span>
   </xsl:template>
-  
-  
+
   <xsl:template match="m:castItem">
-    
-          <xsl:value-of select="m:role"/>
-          <xsl:if test="m:roleDesc !=''">
-            <xsl:text>, </xsl:text>
-            <xsl:value-of select="m:roleDesc"/>
-          </xsl:if>
-          <xsl:if test="m:perfRes/@codedval !=''">
-            <xsl:text> (</xsl:text>
-            <xsl:variable name="mmp" select="($v:marcmusperf(m:perfRes/@codedval), m:perfRes/@codedval) [1]"/>
-            <xsl:value-of select="if(contains($mmp, ' - ')) then substring-after($mmp, ' - ') else $mmp"/>
-            <xsl:text>)</xsl:text>
-          </xsl:if>
-          <xsl:if test="position() != last()">
-            <xsl:text>; </xsl:text>
-          </xsl:if>
-          <xsl:if test="position() = last()">
-            <xsl:text>.</xsl:text>
-          </xsl:if>
-    
+    <xsl:value-of select="m:role"/>
+    <xsl:if test="m:roleDesc !=''">
+      <xsl:text>, </xsl:text>
+      <xsl:value-of select="m:roleDesc"/>
+    </xsl:if>
+    <xsl:if test="m:perfRes/@codedval !=''">
+      <xsl:text> (</xsl:text>
+      <xsl:variable name="mmp"
+                    select="($v:marcmusperf(m:perfRes/@codedval), m:perfRes/@codedval) [1]"/>
+      <xsl:value-of select="if(contains($mmp, ' - ')) then substring-after($mmp, ' - ') else $mmp"/>
+      <xsl:text>)</xsl:text>
+    </xsl:if>
+    <xsl:if test="position() != last()">
+      <xsl:text>; </xsl:text>
+    </xsl:if>
+    <xsl:if test="position() = last()">
+      <xsl:text>.</xsl:text>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="m:identifier">
@@ -706,12 +699,12 @@
                                         </ul>
                                       </xsl:variable>
                                       <xsl:if test="m:physLoc/m:repository/m:corpName!=''">
-                                      <tr>
-                                        <th>Provenance</th>
-                                        <td>
-                                          <xsl:sequence select="$provenance"/>
-                                        </td>
-                                      </tr>
+                                        <tr>
+                                          <th>Provenance</th>
+                                          <td>
+                                            <xsl:sequence select="$provenance"/>
+                                          </td>
+                                        </tr>
                                       </xsl:if>
                                     </table>
                                   </xsl:with-param>
@@ -904,58 +897,58 @@
                       <table class="table table-kv">
                         <tr>
                           <th style="width:20%; font-variant: small-caps; font-weight: normal;">Recommended citation</th>
-                        <td>
+                          <td>
                             <cite>
                               <xsl:value-of select="$title"/>
                             </cite>
-                          <xsl:text> [work catalog record], in: WizKIT, ed. by </xsl:text>
-                          <xsl:apply-templates select="ancestor::m:mei/m:meiHead/m:fileDesc/m:titleStmt/m:respStmt/m:persName[@role='edt']"/>
-                          <xsl:text>, requested on </xsl:text>
-                          <script>document.write(new Date().toISOString().substring(0, 10));</script>
-                          <xsl:text> </xsl:text>
-                          <xsl:element name="a">
-                            <xsl:attribute name="href">
-                              <xsl:value-of select="u:workLink(.)"/>
-                            </xsl:attribute>
-                            <xsl:attribute name="target">
-                              <xsl:text>_blank</xsl:text>
-                            </xsl:attribute>
-                            <xsl:value-of select="$title"/>
-                            <xsl:text>.</xsl:text>
-                          </xsl:element>
+                            <xsl:text> [work catalog record], in: WizKIT, ed. by </xsl:text>
+                            <xsl:apply-templates select="ancestor::m:mei/m:meiHead/m:fileDesc/m:titleStmt/m:respStmt/m:persName[@role='edt']"/>
+                            <xsl:text>, requested on </xsl:text>
+                            <script>document.write(new Date().toISOString().substring(0, 10));</script>
+                            <xsl:text> </xsl:text>
+                            <xsl:element name="a">
+                              <xsl:attribute name="href">
+                                <xsl:value-of select="u:workLink(.)"/>
+                              </xsl:attribute>
+                              <xsl:attribute name="target">
+                                <xsl:text>_blank</xsl:text>
+                              </xsl:attribute>
+                              <xsl:value-of select="$title"/>
+                              <xsl:text>.</xsl:text>
+                            </xsl:element>
                           </td>
                         </tr>
                         <tr>
-                            <th>GND</th>
-                            <td>
-                              <xsl:call-template name="u:externalLink">
-                                <xsl:with-param name="href"
-                                  select="m:identifier[@auth='GND']/@auth.uri || m:identifier[@auth='GND']/@codedval"/>
-                                <xsl:with-param name="text" select="m:identifier[@auth='GND']/@codedval"/>
-                              </xsl:call-template>
-                            </td>
-                          </tr>
+                          <th>GND</th>
+                          <td>
+                            <xsl:call-template name="u:externalLink">
+                              <xsl:with-param name="href"
+                                              select="m:identifier[@auth='GND']/@auth.uri || m:identifier[@auth='GND']/@codedval"/>
+                              <xsl:with-param name="text" select="m:identifier[@auth='GND']/@codedval"/>
+                            </xsl:call-template>
+                          </td>
+                        </tr>
                         <tr>
-                            <th>VIAF</th>
-                            <td>
-                              <xsl:call-template name="u:externalLink">
-                                <xsl:with-param name="href"
-                                  select="m:identifier[@auth='VIAF']/@auth.uri || m:identifier[@auth='VIAF']/@codedval"/>
-                                <xsl:with-param name="text" select="m:identifier[@auth='VIAF']/@codedval"/>
-                              </xsl:call-template>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>LCCN</th>
-                            <td>
-                              <xsl:call-template name="u:externalLink">
-                                <xsl:with-param name="href"
-                                  select="m:identifier[@auth='LCCN']/@auth.uri || m:identifier[@auth='LCCN']/@codedval"/>
-                                <xsl:with-param name="text" select="m:identifier[@auth='LCCN']/@codedval"/>
-                              </xsl:call-template>
-                            </td>
-                          </tr>
-                        </table>
+                          <th>VIAF</th>
+                          <td>
+                            <xsl:call-template name="u:externalLink">
+                              <xsl:with-param name="href"
+                                              select="m:identifier[@auth='VIAF']/@auth.uri || m:identifier[@auth='VIAF']/@codedval"/>
+                              <xsl:with-param name="text" select="m:identifier[@auth='VIAF']/@codedval"/>
+                            </xsl:call-template>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>LCCN</th>
+                          <td>
+                            <xsl:call-template name="u:externalLink">
+                              <xsl:with-param name="href"
+                                              select="m:identifier[@auth='LCCN']/@auth.uri || m:identifier[@auth='LCCN']/@codedval"/>
+                              <xsl:with-param name="text" select="m:identifier[@auth='LCCN']/@codedval"/>
+                            </xsl:call-template>
+                          </td>
+                        </tr>
+                      </table>
                     </xsl:with-param>
                   </xsl:call-template>
                 </div>
@@ -978,7 +971,7 @@
         <xsl:call-template name="worksTable"/>
       </xsl:with-param>
     </xsl:call-template>
-    <xsl:apply-templates select="collection($worksDir)/m:mei/m:meiHead/m:workList/m:work"
+    <xsl:apply-templates select="collection($worksDir || '?select=*.xml')/m:mei/m:meiHead/m:workList/m:work"
                          mode="page"/>
   </xsl:template>
 </xsl:stylesheet>
